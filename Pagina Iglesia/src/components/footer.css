@@ -1,0 +1,80 @@
+footer {
+    margin-top: 50px;
+    border-top: 3px solid #46e5fd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 20px 0; /* Añadido un padding para mejorar la apariencia */
+}
+
+a {
+    color: #000;
+}
+
+.container-logo-iglesia-footer {
+    text-align: center;
+}
+
+.logo-iglesia {
+    width: 130px;
+}
+
+.titulo-footer {
+    text-align: center;
+    margin-top: 20px; /* Espacio adicional entre el título y los iconos de redes sociales */
+}
+
+.container-icons-redes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; /* Alinea los iconos al centro */
+}
+
+.icons-redes-footer {
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 100%;
+    margin: 10px; /* Espacio entre los iconos */
+    background-color: rgb(219, 218, 218);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Añadida transición a todos los cambios */
+}
+
+.icons-redes-footer:hover {
+    transform: scale(1.08);
+}
+
+.icon-instagram:hover {
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+}
+
+.icon-youtube:hover {
+    background: #f50808;
+    color: #fff;
+}
+
+.icon-facebook:hover {
+    background: #1164f1;
+    color: #fff;
+}
+
+.texto-derechos {
+	text-align: center;
+	color: #8E8E8E;
+}
+
+.email {
+    font-weight: bold;
+}
+
+/* Media queries para hacer el footer responsive */
+@media screen and (max-width: 768px) {
+    .container-icons-redes {
+        flex-wrap: wrap; /* Los iconos se envuelven en varias líneas */
+        justify-content: center; /* Alinea los iconos al centro */
+    }
+
+    .icons-redes-footer {
+        margin: 5px; /* Espacio entre los iconos */
+    }
+}

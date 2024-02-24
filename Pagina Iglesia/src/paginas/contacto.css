@@ -1,0 +1,27 @@
+.titulo-contacto {
+	text-align: center;
+	margin-top: 200px;
+}
+
+.container-map {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: red; */
+}
+
+.mapa {
+	width: 660px;
+	height: 450px;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.txt-ubi {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
