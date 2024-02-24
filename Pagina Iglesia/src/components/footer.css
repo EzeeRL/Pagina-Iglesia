@@ -3,7 +3,7 @@ footer {
     border-top: 3px solid #46e5fd;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 20px 0; /* Añadido un padding para mejorar la apariencia */
+    padding: 20px 0;
 }
 
 a {
@@ -20,23 +20,23 @@ a {
 
 .titulo-footer {
     text-align: center;
-    margin-top: 20px; /* Espacio adicional entre el título y los iconos de redes sociales */
+    margin-top: 20px;
 }
 
 .container-icons-redes {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center; /* Alinea los iconos al centro */
+    justify-content: center;
 }
 
 .icons-redes-footer {
     font-size: 30px;
     padding: 15px;
     border-radius: 100%;
-    margin: 10px; /* Espacio entre los iconos */
+    margin: 10px;
     background-color: rgb(219, 218, 218);
-    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Añadida transición a todos los cambios */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .icons-redes-footer:hover {
@@ -58,6 +58,10 @@ a {
     color: #fff;
 }
 
+.texto-spam {
+    text-align: center;
+}
+
 .texto-derechos {
 	text-align: center;
 	color: #8E8E8E;
@@ -67,14 +71,13 @@ a {
     font-weight: bold;
 }
 
-/* Media queries para hacer el footer responsive */
 @media screen and (max-width: 768px) {
     .container-icons-redes {
-        flex-wrap: wrap; /* Los iconos se envuelven en varias líneas */
-        justify-content: center; /* Alinea los iconos al centro */
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .icons-redes-footer {
-        margin: 5px; /* Espacio entre los iconos */
+        margin: 5px;
     }
 }

@@ -51,6 +51,12 @@ function Home() {
 						<div className='slick-slide'>
 							<img src="./public/placa-viernes.png" alt="" className='img-slider'/>
 						</div>
+						<div className='slick-slide'>
+							<img src="./public/916.jpg" alt="" className='img-slider'/>
+						</div>
+						<div className='slick-slide'>
+							<img src="./public/PreAdos.jpg" alt="" className='img-slider'/>
+						</div>
 					</Slider>
 				</div>
 			</main>
