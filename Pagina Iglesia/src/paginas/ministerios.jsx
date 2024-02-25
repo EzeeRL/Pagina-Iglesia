@@ -33,7 +33,12 @@ const Ministerios = () => {
                             <td><Link to='/EspacioVaron'>Espacio Varón</Link></td>
                             <td><Link to='/Viernes'>Reunión de oración y estudio de la palabra</Link></td>
                             <td><Link to='/JovenesYAdolescentes'>Actividad de Jóvenes y Adolescentes</Link></td>
-                            <td><Link to='/Domingos'>Cena del Señor y Predicación del Evangelio</Link></td>
+                            <td><Link to='/Domingos'>Cena del Señor y Predicación del Evangelio. Escuela Biblica Dominical</Link></td>
+
+                            {/* MATRIMONIOS +10 Y -10*/}
+                            {/* NUNCA MAS SOLOS */}
+                            {/* ESPACIO MUJER */}
+                            {/* EVNAGELISMO */}
                         </tr>
                     </tbody>
                 </table>

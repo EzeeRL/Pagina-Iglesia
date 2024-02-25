@@ -9,13 +9,13 @@ function Nav() {
         setShowMenu(!showMenu);
     };
 
-    const handleScrollToNoticias = (event) => {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-        const noticiasSection = document.getElementById('noticias-section');
-        if (noticiasSection) {
-            scrollToSection(noticiasSection);
-        }
-    };
+    // const handleScrollToNoticias = (event) => {
+    //     event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    //     const noticiasSection = document.getElementById('noticias-section');
+    //     if (noticiasSection) {
+    //         scrollToSection(noticiasSection);
+    //     }
+    // };
 
     const scrollToSection = (section) => {
         const scrollPosition = section.offsetTop - (window.innerHeight / 2) + (section.offsetHeight / 2);

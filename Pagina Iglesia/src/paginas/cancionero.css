@@ -1,5 +1,10 @@
 .container-cancionero {
-	background-color: #f8f4f4;
+	/* background-color: #eeeeee; */
+	/* background-image: url("../public/background-pagina.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover; */
 }
 
 .titulo-cancionero {
@@ -20,8 +25,9 @@
 	height: 20px;
 	border: none;
 	border-bottom: 3px solid #46e5fd;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	/* border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px; */
+	border-radius: 5px;
 	outline: none;
 	font-size: 18px;
 	color: #000;
@@ -40,8 +46,9 @@
 	font-weight: bold;
 	border: none;
 	border-bottom: 3px solid #46e5fd;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	/* border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px; */
+	border-radius: 5px;
 	outline: none;
 	cursor: pointer;
 }
@@ -78,8 +85,9 @@
 	line-height: 35px;
 	background-color: #fff;
 	border-top: 3px solid #46e5fd;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	/* border-top-left-radius: 15px;
+	border-top-right-radius: 15px; */
+	border-radius: 15px;
 }
 
 .link-canciones {

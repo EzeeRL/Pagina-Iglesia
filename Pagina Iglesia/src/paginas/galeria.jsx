@@ -1,7 +1,11 @@
+import './galeria.css';
+
 const Galeria = () => {
 	return (
 		<>
-		<h1>Galeria</h1>
+		<div className="container-galeria">
+			<h1>Galeria</h1>
+		</div>
 		</>
 	)
 }

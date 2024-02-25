@@ -4,6 +4,13 @@ footer {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 20px 0;
+    /* height: -100px; */
+    background-color: #fff;
+    /* background-image: url("../public/bg-4.jpg");
+    background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover; */
 }
 
 a {
@@ -79,5 +86,8 @@ a {
 
     .icons-redes-footer {
         margin: 5px;
+    }
+    footer {
+    width: 103%;
     }
 }

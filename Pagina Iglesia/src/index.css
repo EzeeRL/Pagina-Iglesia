@@ -1,0 +1,9 @@
+body {
+	/* background-color: #eeeeee; */
+	/* background-image: url("../public/916.jpg"); */
+	background-image: url("../public/bg-6.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
