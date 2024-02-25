@@ -19,6 +19,11 @@ import Domingos from './paginas/domingos.jsx';
 import Viernes from './paginas/viernes.jsx';
 
 
+// SUBIR ACTUALIZACIONES A GITHUB:
+// git add . (prepara todos los cambios)
+//git commit -m "aca va un comentario de la actualizacion"
+//git push (enviar actualizacion a gitHub)
+
 
 function App() {
   return (
