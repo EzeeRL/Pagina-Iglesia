@@ -71,4 +71,8 @@ img {
 	.column {
 		flex: 100%;
 	}
+    .modal-content {
+        max-width: 100%; /* Limita el ancho máximo del contenido del modal en dispositivos móviles */
+        max-height: auto; /* Limita la altura máxima del contenido del modal al 90% de la altura visible del dispositivo */
+    }
 }
