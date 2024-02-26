@@ -65,6 +65,7 @@ function Home() {
 			</main>
 
       <h2 className='titulo-noticias'><b className='underline-noticias'>Noticias</b></h2>
+	  
       <div className="container-noticias" id='noticias-section'>
         <article className='article-container'>
           <div className="container-img">

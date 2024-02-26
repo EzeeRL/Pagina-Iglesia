@@ -104,7 +104,8 @@
 	height: 400px;
 	margin: 50px;
 	border-radius: 10px;
-	background-color: rgb(219, 218, 218);
+	background-color: rgb(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
