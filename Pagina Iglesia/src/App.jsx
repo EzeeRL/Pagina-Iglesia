@@ -17,12 +17,13 @@ import EspacioVaron from './paginas/ev.jsx';
 import JovenesYAdolescentes from './paginas/jov-ados.jsx';
 import Domingos from './paginas/domingos.jsx';
 import Viernes from './paginas/viernes.jsx';
+import Campamento from './paginas/inscripcion-campa.jsx';
 
 
 // SUBIR ACTUALIZACIONES A GITHUB:
 // git add . (prepara todos los cambios)
-//git commit -m "aca va un comentario de la actualizacion"
-//git push (enviar actualizacion a gitHub)
+// git commit -m "aca va un comentario de la actualizacion"
+// git push (enviar actualizacion a gitHub)
 
 
 function App() {
@@ -42,15 +43,10 @@ function App() {
 		<Route path='/Viernes' element={<Viernes/>}/>
 		<Route path='/JovenesYAdolescentes' element={<JovenesYAdolescentes/>}/>
 		<Route path='/Domingos' element={<Domingos/>}/>
+		<Route path='/Campamento' element={<Campamento/>}/>
 	</Routes>
 	</>
   )
 }
 
 export default App
-
-// SOLUCIONAR ERROR DE QUE CUANDO SE PONE LA VISTA PARA MOBILE Y SE USAN LOS LINKS PARA IR AL 
-//CANCIONERO, POR EJEMPLO, Y LUEGO CUANDO SE VUELVE QUEDA EL NAV ABIERTO DEL HOME, E INCLUSO 
-//SE DUPLICAN.
-
-//POSIBLE SOLUCIÓN: ¿Recargar la página al volver al home?

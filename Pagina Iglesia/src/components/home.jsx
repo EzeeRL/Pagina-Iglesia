@@ -6,6 +6,9 @@ import './home.css';
 import Nav from './nav';
 import Footer from './footer';
 
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 function Home() {
   // SETTINGS SLIDER
@@ -68,7 +71,7 @@ function Home() {
             <img src="./public/imagen-campa.jpeg" alt="" className='img-noticias'/>
             <h4 className='titulo-texto-noticias'>Campamento de Iglesia</h4>
             <p className='texto-noticias'>Inscribite al próximo campamento. <br /> ¡No te lo pierdas!</p><br />
-            <button className='button-inscripcion-campa'>Inscribite ahora <b className='txt-especial-button-noticias'>acá</b></button>
+            <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link>
           </div>
         </article>
         <article className='article-container'>

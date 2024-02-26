@@ -110,5 +110,9 @@ nav {
     .container-links-nav.show-menu {
         top: 87%; /* Cambiado de 0% a 100% */
     }
+    
+    .link-nav {
+        margin-bottom: 15px;
+    }
 
 }

@@ -13,35 +13,32 @@ const Ministerios = () => {
             </div>
 
             <div className="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lunes</th>
-                            <th>Martes</th>
-                            <th>Miércoles</th>
-                            <th>Jueves</th>
-                            <th>Viernes</th>
-                            <th>Sábado</th>
-                            <th>Domingo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><Link to='/AVI'>Adicciones vs Vida</Link></td>
-                            <td><Link to='/reunionFemenina'>Reunión Femenina</Link></td>
-                            <td><Link to='/AVI'>Adicciones vs Vida</Link></td>
-                            <td><Link to='/EspacioVaron'>Espacio Varón</Link></td>
-                            <td><Link to='/Viernes'>Reunión de oración y estudio de la palabra</Link></td>
-                            <td><Link to='/JovenesYAdolescentes'>Actividad de Jóvenes y Adolescentes</Link></td>
-                            <td><Link to='/Domingos'>Cena del Señor y Predicación del Evangelio. Escuela Biblica Dominical</Link></td>
-
-                            {/* MATRIMONIOS +10 Y -10*/}
-                            {/* NUNCA MAS SOLOS */}
-                            {/* ESPACIO MUJER */}
-                            {/* EVNAGELISMO */}
-                        </tr>
-                    </tbody>
-                </table>
+                <div className="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sábado</th>
+                                <th>Domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><Link to='/AVI'>Adicciones vs Vida</Link></td>
+                                <td><Link to='/reunionFemenina'>Reunión Femenina</Link></td>
+                                <td><Link to='/AVI'>Adicciones vs Vida</Link></td>
+                                <td><Link to='/EspacioVaron'>Espacio Varón</Link></td>
+                                <td><Link to='/Viernes'>Reunión de oración y estudio de la palabra</Link></td>
+                                <td><Link to='/JovenesYAdolescentes'>Actividad de Jóvenes y Adolescentes</Link></td>
+                                <td><Link to='/Domingos'>Cena del Señor y Predicación del Evangelio. Escuela Biblica Dominical</Link></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 		
