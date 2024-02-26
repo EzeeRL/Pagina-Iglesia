@@ -29,7 +29,7 @@ function Home() {
   return (
     <>
     <Nav></Nav>
-			<h2 className='titulo-main'>Algunas de Nuestras Actividades</h2>
+			<h1 className='titulo-main'>Algunas de Nuestras Actividades</h1>
 			<main className="main-container">
 				<div className="carrusel">
 					<Slider {...settings}>

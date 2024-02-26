@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './galeria.css';
 
+import Footer from '../components/footer.jsx';
+
+
 const Galeria = () => {
     const [fullscreen, setFullscreen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -71,7 +74,9 @@ const Galeria = () => {
                 <img className="modal-content" src={selectedImage} alt="fullscreen" />
                 <i className="fa-solid fa-download icono-descargar" onClick={handleDownloadClick}></i>
             </div>
-)}
+            )}
+
+            <Footer></Footer>
         </>
     );
 }

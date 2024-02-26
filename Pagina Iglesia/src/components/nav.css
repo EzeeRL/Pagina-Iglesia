@@ -97,7 +97,7 @@ nav {
         display: flex;
         position: absolute;
         top: -500%;
-        left: -1%;
+        /* left: 1%; */
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.7);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
