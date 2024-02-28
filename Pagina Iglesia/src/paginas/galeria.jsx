@@ -39,32 +39,32 @@ const Galeria = () => {
 
             <div className="row">
                 <div className="column">
-                    <img src="../public/img-1.jpg" alt="" onClick={() => handleImageClick("../public/img-1.jpg")} />
-                    <img src="../public/img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
-                    <img src="../public/img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
-                    <img src="../public/img-4.jpg" alt="" onClick={() => handleImageClick("../public/img-4.jpg")} />
-                    <img src="../public/img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
+                    <img src="img-1.jpg" alt="" onClick={() => handleImageClick("../public/img-1.jpg")} />
+                    <img src="img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
+                    <img src="img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
+                    <img src="img-4.jpg" alt="" onClick={() => handleImageClick("../public/img-4.jpg")} />
+                    <img src="img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
                 </div>
                 <div className="column">
-                <img src="../public/img-1.jpg" alt="" onClick={() => handleImageClick("../public/img-1.jpg")} />
-                    <img src="../public/img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
-                    <img src="../public/img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
-                    <img src="../public/img-4.jpg" alt="" onClick={() => handleImageClick("../public/img-4.jpg")} />
-                    <img src="../public/img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
+                <img src="img-1.jpg" alt="" onClick={() => handleImageClick("../public/img-1.jpg")} />
+                    <img src="img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
+                    <img src="img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
+                    <img src="img-4.jpg" alt="" onClick={() => handleImageClick("../public/img-4.jpg")} />
+                    <img src="img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
                 </div>
                 <div className="column">
                 <img src="../public/img-1-jpg" alt="" onClick={() => handleImageClick("../public/img-1.jpg")} />
-                    <img src="../public/img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
-                    <img src="../public/img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
-                    <img src="../public/img-4.jpg" alt="" onClick={() => handleImageClick("../public/img-4.jpg")} />
-                    <img src="../public/img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
+                    <img src="img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
+                    <img src="img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
+                    <img src="img-4.jpg" alt="" onClick={() => handleImageClick("../public/img-4.jpg")} />
+                    <img src="img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
                 </div>
                 <div className="column">
                 <img src="../public/img-1.jpg" alt="" onClick={() => handleImageClick("../public/img-1.jpg")} />
-                    <img src="../public/img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
-                    <img src="../public/img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
-                    <img src="../public/img-4.jpg" alt="" onClick={() => handleImageClick("../public//-4.jpg")} />
-                    <img src="../public/img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
+                    <img src="img-2.png" alt="" onClick={() => handleImageClick("../public/img-2.png")} />
+                    <img src="img-3.jfif" alt="" onClick={() => handleImageClick("../public/img-3.jfif")} />
+                    <img src="img-4.jpg" alt="" onClick={() => handleImageClick("../public//-4.jpg")} />
+                    <img src="img5.jpg" alt="" onClick={() => handleImageClick("../public/img5.jpg")} />
                 </div>
             </div>
 

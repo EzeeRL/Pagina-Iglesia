@@ -18,7 +18,7 @@ function Nav() {
     return (
         <nav>
             <div className="container-logo-iglesia">
-                <img src="./public/logo.png" alt="" className='logo-img' />
+                <img src="logo.png" alt="" className='logo-img' />
                 <h1 className='titulo-nav'>Iglesia<b className='texto-especial-nav'>VTL</b></h1>
             </div>
             <ul className={`container-links-nav ${showMenu ? 'show-menu' : ''}`}>
@@ -27,6 +27,7 @@ function Nav() {
                 <Link to='/Ministerios' className='link-nav'>Ministerios</Link>
                 <Link to='/Galeria' className='link-nav'>Galeria</Link>
                 <Link to='/Contacto' className='link-nav'>Contacto</Link>
+                <Link to='/Prueba' className='link-nav'>Prueba</Link>
             </ul>
             <div className="mobile-menu-icon" onClick={toggleMenu}>
                 <i className={`fas ${showMenu ? 'fa-times' : 'fa-bars menu-icon'}`}></i>
