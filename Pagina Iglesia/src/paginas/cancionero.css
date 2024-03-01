@@ -1,3 +1,7 @@
+.container-cancionero {
+	/* background-color: red; */
+}
+
 .titulo-cancionero {
 	text-align: center;
 	margin-top: 200px;
@@ -109,4 +113,16 @@
 	background: #dbdddd;
 	color: #000;
 	cursor: pointer;
+}
+
+
+
+
+.titulo-cancion-select {
+	text-align: center;
+}
+
+.letra-cancion-select {
+	font-size: 18px;
+	text-align: center;
 }

@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 // RUTAS
 
 import Home from './components/home.jsx';
-import Galeria from './paginas/galeria.jsx';
+// import Galeria from './paginas/galeria.jsx';
 import Ministerios from './paginas/ministerios.jsx';
 import Cancionero from './paginas/cancionero.jsx';
 import Contacto from './paginas/contacto.jsx';
@@ -20,7 +20,7 @@ import JovenesYAdolescentes from './paginas/jov-ados.jsx';
 import Domingos from './paginas/domingos.jsx';
 import Viernes from './paginas/viernes.jsx';
 import Campamento from './paginas/inscripcion-campa.jsx';
-import Prueba from './paginas/prueba.jsx';
+// import Prueba from './paginas/prueba.jsx';
 
 
 // SUBIR ACTUALIZACIONES A GITHUB:
@@ -38,7 +38,7 @@ function App() {
 		<Route path='/' element={<Home/>}/>
 		<Route path='/Cancionero' element={<Cancionero/>}/>
 		<Route path='/Ministerios' element={<Ministerios/>}/>
-		<Route path='/Galeria' element={<Galeria/>}/>
+		{/* <Route path='/Galeria' element={<Galeria/>}/> */}
 		<Route path='/Contacto' element={<Contacto/>}/>
 		<Route path='/AVI' element={<AVI/>}/>
 		<Route path='/ReunionFemenina' element={<ReunionFemenina/>}/>
@@ -47,7 +47,7 @@ function App() {
 		<Route path='/JovenesYAdolescentes' element={<JovenesYAdolescentes/>}/>
 		<Route path='/Domingos' element={<Domingos/>}/>
 		<Route path='/Campamento' element={<Campamento/>}/>
-		<Route path='/Prueba' element={<Prueba/>}/>
+		{/* <Route path='/Prueba' element={<Prueba/>}/> */}
 	</Routes>
 	</>
   )

@@ -5,15 +5,16 @@ import './prueba.css';
 
 
 const Prueba = () => {
-const handlePrueba = ()=>{
-	axios.get("https://icevtl.com:3113/status")
+const handlePrueba = async ()=>{
+	const respuesta = await axios.get("https://icevtl.com:3113/backend")
 	.then(response =>{
+		console.log(respuesta)
 		console.log(response.data)
 	})
 }
     return (
 		<>
-<button onClick={handlePrueba} className="button-prueba">prueba</button>
+<button onClick={handlePrueba} className="button-prueba">prueba -10</button>
 </>
     )
 }
