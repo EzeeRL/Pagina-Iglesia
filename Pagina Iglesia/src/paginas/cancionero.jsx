@@ -271,26 +271,21 @@ const Cancionero = () => {
     <div className="container-cancionero">
       <h1 className="titulo-cancionero">Cancionero</h1>
       <div className="container-buscador">
-
-
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-buscador">
           <input
-          type="text"
-          className="buscador"
-          placeholder="Buscar canción..."
-          value={busqueda}
-          onChange={handleBusqueda}
+            type="text"
+            className="buscador"
+            placeholder="Buscar canción..."
+            value={busqueda}
+            onChange={handleBusqueda}
           />
-          
           <button type="submit" className="button-submit">
-            <i className="fa-solid fa-magnifying-glass icono-buscador" type="submit"></i>
+            <i className="fa-solid fa-magnifying-glass icono-buscador"></i>
           </button>
-          
         </form>
 
-
-
-        <select name="" id="filtro">
+        {/* FILTRO
+        <select name="" id="filtro" className="filtro">
           <option value="Todos" className="options">
             Todos
           </option>
@@ -300,9 +295,10 @@ const Cancionero = () => {
           <option value="Himnos" className="options">
             Himnos
           </option>
-        </select>
-      </div>
+        </select> */}
 
+
+      </div>
       {!llave ? (
         <>
           <div className="container-titulo-indice">
@@ -310,25 +306,21 @@ const Cancionero = () => {
               <b className="txt-indice">Indice de Canciones</b>
             </h2>
           </div>
-
           <div className="container-indice-canciones">
-  {(resultadoBusqueda.length > 0 ? resultadoBusqueda : resultado).map(
-    (cancion) => (
-      <div className="container-indice" key={cancion.id}>
-        <a
-          href="#"
-          onClick={() => handleLetra(cancion.titulo)}
-          className="link-canciones"
-        >
-          {cancion.titulo}
-        </a>
-      </div>
-    )
-  )}
-</div>
-
-
-
+            {(resultadoBusqueda.length > 0 ? resultadoBusqueda : resultado).map(
+              (cancion) => (
+                <div className="container-indice" key={cancion.id}>
+                  <a
+                    href="#"
+                    onClick={() => handleLetra(cancion.titulo)}
+                    className="link-canciones"
+                  >
+                    {cancion.id}_{cancion.titulo}
+                  </a>
+                </div>
+              )
+            )}
+          </div>
           <div className="container-buttons-paginacion">
             <p>Siguiente página</p>
             <button
@@ -350,34 +342,33 @@ const Cancionero = () => {
         </>
       ) : (
         <div className="container-letra">
-          <button onClick={volverAtras} className="button-volver"><i className='fa-solid fa-circle-arrow-left icono-volver'></i></button>
+          <button onClick={volverAtras} className="button-volver">
+            <i className="fa-solid fa-circle-arrow-left icono-volver"></i>
+          </button>
           <h1 className="titulo-cancion-select">{tituloCancionSeleccionada}</h1>
           {versos.map((verso, index) => {
-  if (verso.startsWith("/est")) {
-    return (
-      <div key={index} className="texto-estrofa">
-        <p>{verso.replace("/est", "")}</p>
-      </div>
-    );
-  } else if (verso.startsWith("/es")) {
-    return (
-      <div key={index} className="texto-estribillo">
-        <p>{verso.replace("/es", "")}</p>
-      </div>
-    );
-  } else {
-    return (
-      <div key={index} className="parte-cancion">
-        <p className="texto-letra-general">{verso}</p>
-      </div>
-    );
-  }
-})}
-
-
-</div>
+            if (verso.startsWith("/est")) {
+              return (
+                <div key={index} className="texto-estrofa">
+                  <p>{verso.replace("/est", "")}</p>
+                </div>
+              );
+            } else if (verso.startsWith("/es")) {
+              return (
+                <div key={index} className="texto-estribillo">
+                  <p>{verso.replace("/es", "")}</p>
+                </div>
+              );
+            } else {
+              return (
+                <div key={index} className="parte-cancion">
+                  <p className="texto-letra-general">{verso}</p>
+                </div>
+              );
+            }
+          })}
+        </div>
       )}
-
       <Footer></Footer>
     </div>
   );

@@ -156,3 +156,21 @@
 .button-volver:hover {
 	transform: scale(1.1);
 }
+
+@media screen and (max-width: 768px) {
+	.container-buscador {
+	  position: relative;
+	}
+  
+	.icono-buscador {
+	  position: absolute;
+	  right: -50px;
+	  top: 5%;
+	  font-size: 20px;
+	}
+
+	.container-indice {
+		padding: 10px;
+	}
+  }
+  
