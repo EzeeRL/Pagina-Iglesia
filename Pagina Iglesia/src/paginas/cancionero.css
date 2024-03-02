@@ -1,7 +1,3 @@
-.container-cancionero {
-	/* background-color: red; */
-}
-
 .titulo-cancionero {
 	text-align: center;
 	margin-top: 200px;
@@ -27,6 +23,11 @@
 	font-size: 18px;
 	color: #000;
 	margin-right: 10px;
+}
+
+.button-submit {
+	border: none;
+	background-color: transparent;
 }
 
 .icono-buscador {
@@ -116,13 +117,42 @@
 }
 
 
-
+.container-letra {
+	width: 80%;
+	margin-top: 50px;
+	margin-left: 10%;
+}
 
 .titulo-cancion-select {
 	text-align: center;
 }
 
-.letra-cancion-select {
+.texto-letra-general {
 	font-size: 18px;
 	text-align: center;
+	line-height: 30px;
+}
+
+.texto-estribillo {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.texto-estrofa {
+	margin-top: 60px;
+}
+
+.button-volver {
+	position: relative;
+	top: 60px;
+	/* right: -260px; */
+	font-size: 30px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.button-volver:hover {
+	transform: scale(1.1);
 }
