@@ -85,7 +85,7 @@
 
 .titulo-noticias {
 	text-align: center;
-	margin-top: 250px;
+	margin-top: 100px;
 }
 
 .underline-noticias {
@@ -93,10 +93,10 @@
 }
 
 .container-noticias {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	/* margin-top: 0px; */
 }
 
 .article-container {
@@ -121,7 +121,7 @@
 
 @media (max-width: 767px) {
 	.article-reel {
-		width: 535px;
+		width: 90%;
 	}
 }
 
@@ -181,14 +181,14 @@
 
     .container-noticias {
         flex-direction: column;
+		justify-content: center;
         align-items: center;
     }
 
     .article-container {
-        width: 90%;
+        width: 80%;
 		height: auto;
 		padding: 25px;
-        margin: 20px 0;
     }
 
 	.texto-noticias {

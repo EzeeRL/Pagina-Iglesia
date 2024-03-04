@@ -61,7 +61,7 @@ nav {
 }
 
 .link-nav {
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -73,20 +73,20 @@ nav {
 }
 
 .mobile-menu-icon {
-    display: none; /* Oculta el icono de menú en dispositivos no móviles */
+    display: none;
 }
 
-/* Media query para dispositivos móviles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .container-links-nav {
-        display: none; /* Oculta los enlaces de navegación en dispositivos móviles */
+        display: none;
     }
 
     .mobile-menu-icon {
+        position: relative;
+        right: 40px;
         display: block;
         font-size: 20px;
         padding: 10px;
-        margin-right: 30px;
         border-radius: 100%;
         background-color: rgb(211, 210, 210);
         cursor: pointer;
@@ -97,7 +97,7 @@ nav {
         display: flex;
         position: absolute;
         top: -500%;
-        /* left: 1%; */
+        left: -4%;
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.7);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -107,7 +107,12 @@ nav {
         transition: top 1s ease;
     }
 
+    nav {
+        width: 100%;
+    }
+
     .container-links-nav.show-menu {
+        width: 100%;
         top: 87%;
     }
     
@@ -115,4 +120,49 @@ nav {
         margin-bottom: 15px;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    .container-links-nav {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        position: relative;
+        right: 40px;
+        display: block;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(211, 210, 210);
+        cursor: pointer;
+    }
+
+    .container-links-nav {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: -500%;
+        left: -2%;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        flex-direction: column;
+        padding: 10px;
+        transition: top 1s ease;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .container-links-nav.show-menu {
+        width: 100%;
+        top: 87%;
+    }
+    
+    .link-nav {
+        margin-bottom: 15px;
+    }
 }

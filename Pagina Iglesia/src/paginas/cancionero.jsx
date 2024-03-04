@@ -159,7 +159,7 @@ const Cancionero = () => {
     // Otras canciones aquí...
   ];
 
-  const paginacion = 30;
+  const paginacion = 73;
   const cuenta1 = currentPage * paginacion;
   const cuenta2 = cuenta1 - paginacion;
   const resultado = canciones.slice(cuenta2, cuenta1);
@@ -315,14 +315,14 @@ const Cancionero = () => {
                     onClick={() => handleLetra(cancion.titulo)}
                     className="link-canciones"
                   >
-                    {cancion.id}_{cancion.titulo}
+                    {cancion.id}_ {cancion.titulo}
                   </a>
                 </div>
               )
             )}
           </div>
           <div className="container-buttons-paginacion">
-            <p>Siguiente página</p>
+            <p>Página anterior</p>
             <button
               onClick={prev}
               disabled={currentPage === 1}
@@ -337,7 +337,7 @@ const Cancionero = () => {
             >
               <i className="fa-solid fa-chevron-right"></i>
             </button>
-            <p>Página anterior</p>
+            <p>Siguiente página</p>
           </div>
         </>
       ) : (

@@ -35,7 +35,7 @@ const [latestVideo, setLatestShort] = useState(null);
 useEffect(() => {
 	const fetchLatestShort = async () => {
 		try {
-		  const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAK6-kZIK18LUT0EerYfx2xfVCK23jNWdE&channelId=UCYCyujpetSCp4aq79i_HpwQ&part=snippet,id&order=date&maxResults=1&type=video&videoDuration=short`);
+		  const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyBSaOcJEpgiOEkE-VziGbQRvOMcoyADa2U&channelId=UCYCyujpetSCp4aq79i_HpwQ&part=snippet,id&order=date&maxResults=1&type=video&videoDuration=short`);
 		  const latestShortData = response.data.items[0].snippet;
 		  const latestShortInfo = {
 			title: latestShortData.title,
@@ -103,9 +103,9 @@ useEffect(() => {
         </article>
         <article className='article-container'>
           <div className="container-img">
-            <img src="reunion-alabanza.jpg" alt="" className='img-noticias'/>
-            <h4 className='titulo-texto-noticias'>Reunión de Alabanza</h4>
-            <p className='texto-noticias'>Próximo sabado 24 de Febrero <br />a las 20:00hs.</p>
+            <img src="noticia.jpg" alt="" className='img-noticias'/>
+            <h4 className='titulo-texto-noticias'>Picnic de Elim</h4>
+            <p className='texto-noticias'>Próximo sabado 16 de Marzo <br />a las 10:00hs.</p>
           </div>
         </article>
 
