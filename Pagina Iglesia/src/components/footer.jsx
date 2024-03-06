@@ -5,7 +5,7 @@ function Footer() {
         <>
             <footer id='footer-section'>
                 <div className="container-logo-iglesia-footer">
-                    <img src="logo.png" alt="" className='logo-iglesia' />
+                    <img src="logo/logo.png" alt="" className='logo-iglesia' />
                 </div>
                 <h3 className='titulo-footer'>¡Seguinos y contactános en nuestras Redes!</h3>
                 <div className="container-icons-redes">

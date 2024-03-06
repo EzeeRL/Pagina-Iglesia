@@ -51,7 +51,7 @@ a {
 }
 
 .icon-instagram:hover {
-    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
     color: #fff;
 }
 
@@ -76,6 +76,18 @@ a {
 
 .email {
     font-weight: bold;
+    border-bottom: 1px solid #000;
+    transition: 0.3s;
+}
+
+.email:hover {
+    color: #46e5fd;
+    border-bottom: 2px solid #46e5fd;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 @media screen and (max-width: 768px) {

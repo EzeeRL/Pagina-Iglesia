@@ -18,7 +18,7 @@ function Nav() {
     return (
         <nav>
             <div className="container-logo-iglesia">
-                <img src="logo.png" alt="" className='logo-img' />
+                <img src="logo/logo.png" alt="" className='logo-img' />
                 <h1 className='titulo-nav'>Iglesia<b className='texto-especial-nav'>VTL</b></h1>
             </div>
             <ul className={`container-links-nav ${showMenu ? 'show-menu' : ''}`}>

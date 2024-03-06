@@ -62,7 +62,7 @@
 	border-bottom-left-radius: 5px; /* SACAR SI NO SE LE VA A PONER SUBRAYADO */
 }
 
-.container-indice-canciones {
+.container-indice-coros {
 	width: 80%;
 	position: relative;
 	left: 10%;
@@ -76,14 +76,14 @@
 	border-radius: 15px;
 }
 
-.link-canciones {
+.link-coros {
 	font-size: 25px;
 	margin-left: 10px;
 	text-decoration: none;
 	transition: 0.3s;
 }
 
-.link-canciones:hover {
+.link-coros:hover {
 	font-size: 28px;
 	color: #46e5fd;
 }
