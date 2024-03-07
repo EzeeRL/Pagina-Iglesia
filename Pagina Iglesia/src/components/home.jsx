@@ -108,7 +108,7 @@ const handleFullscreenImage = (imageUrl) => {
       <div className="container-noticias" id='noticias-section'>
         <article className='article-container'>
           <div className="container-img">
-            <img src="noticias/noticia-2.jpeg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticia-2.jpeg")}/>
+            <img src="noticias/noticia-2.jpeg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-2.jpeg")}/>
             <h4 className='titulo-texto-noticias'>Taller de Evangelismo</h4>
             <p className='texto-noticias'>Próximo Sábado 9 de Marzo <br />a las 17:00hs</p>
             {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
@@ -116,7 +116,7 @@ const handleFullscreenImage = (imageUrl) => {
         </article>
         <article className='article-container'>
           <div className="container-img">
-            <img src="noticias/noticia-1.jpg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticia-1.jpg")}/>
+            <img src="noticias/noticia-1.jpg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-1.jpg")}/>
             <h4 className='titulo-texto-noticias'>Picnic de Elim</h4>
             <p className='texto-noticias'>Próximo sabado 16 de Marzo <br />a partir de las 10:00hs.</p>
           </div>

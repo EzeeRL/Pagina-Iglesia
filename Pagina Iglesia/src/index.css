@@ -1,7 +1,7 @@
 body {
 	/* background-color: #eeeeee; */
 	/* background-image: url("../public/916.jpg"); */
-	background-image: url("../public/background/background-pagina.jpg");
+	background-image: url("/background/background-pagina.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;

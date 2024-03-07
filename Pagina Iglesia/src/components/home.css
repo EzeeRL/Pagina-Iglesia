@@ -143,6 +143,7 @@
 	height: 200px;
 	margin-top: 10px;
 	border-radius: 10px;
+	cursor: pointer;
 }
 
 .titulo-texto-noticias {
