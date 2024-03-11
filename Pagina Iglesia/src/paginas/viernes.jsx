@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import Footer from '../components/footer.jsx';
+
 import { useState } from 'react';
 
 function Viernes() {
@@ -72,6 +74,8 @@ const handleCloseFullscreen = () => {
 				<img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
 			</div>
     )}
+
+	<Footer></Footer>
 		</>
 	)
 }

@@ -34,7 +34,7 @@ const Ministerios = () => {
                                 <td><Link to='/EspacioVaron'>Espacio Varón <br />20:00hs</Link></td>
                                 <td><Link to='/Viernes'>Reunión de oración y estudio de la palabra <br />20:00hs</Link></td>
                                 <td><Link to='/JovenesYAdolescentes'>Actividad de Jóvenes y Adolescentes <br />19:00hs</Link></td>
-                                <td><Link to='/Domingos'>Cena del Señor y Predicación del Evangelio. Escuela Biblica Dominical <br />10:00hs - 13:00hs</Link></td>
+                                <td><Link to='/Domingos'>Cena del Señor y Predicación del Evangelio.<br />10:00hs - 13:00hs</Link></td>
                             </tr>
                         </tbody>
                     </table>

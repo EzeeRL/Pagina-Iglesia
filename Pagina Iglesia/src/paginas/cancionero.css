@@ -53,6 +53,30 @@
 	font-weight: bold;
 }
 
+.button-cambiar {
+	width: 100px;
+	height: 40px;
+	border: none;
+	border-bottom: 3px solid #46e5fd;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+
+@media screen and (max-width: 768px) {
+	.button-cambiar {
+		width: 130px;
+		height: 45px;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 80px;
+	}
+  }
+
 .titulo-indice {
 	text-align: center;
 	margin-top: 100px;
@@ -96,6 +120,7 @@
 }
 
 .buttons-paginacion {
+	width: 40px;
 	font-size: 20px;
 	margin: 10px;
 	border: none;
@@ -105,11 +130,20 @@
 	cursor: pointer;
 }
 
+.texto-pag-sig-and-next {
+	font-size: 20px;
+}
 
 .container-letra {
 	width: 80%;
 	margin-top: 50px;
 	margin-left: 10%;
+}
+
+@media screen and (max-width:768px) {
+	.container-letra {
+		margin-top: 70px;
+	}
 }
 
 .titulo-cancion-select {
@@ -158,6 +192,12 @@
 	  right: -70px;
 	  top: 11%;
 	  font-size: 28px;
+	}
+
+	.button-volver {
+		position: relative;
+		top: 0px;
+		left: 43.4%;
 	}
 
 	.container-indice {

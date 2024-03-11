@@ -73,32 +73,32 @@ const handleFullscreenImage = (imageUrl) => {
 				<div className="carrusel">
 					<Slider {...settings}>
 						<div className='slick-slide'>
-							<img src="placas-slider/placa-avi.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-avi.jpg")}/>
+							<img src="placas-slider/placa-avi.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-avi.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="placas-slider/placa-campa.png" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-campa.png")}/>
+							<img src="placas-slider/placa-viernes.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-viernes.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="placas-slider/placa-espacio-mujer.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-espacio-mujer.jpg")}/>
+							<img src="placas-slider/placa-evangelismo.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-evangelismo.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="placas-slider/placa-evangelista.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-evangelista.jpg")}/>
+							<img src="placas-slider/placa-espacio-mujer.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-espacio-mujer.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="placas-slider/placa-predicacion.png" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-predicacion.png")}/>
+							<img src="placas-slider/placa-domingos.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-domingos.jpeg")}/>
+						</div>
+						<div className='slick-slide'>
+							<img src="placas-slider/placa-pre.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-pre.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
 							<img src="placas-slider/placa-semillero.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-semillero.jpg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="placas-slider/placa-viernes.png" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-viernes.png")}/>
+							<img src="placas-slider/placa-campa.png" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/placa-campa.png")}/>
 						</div>
 						{/* <div className='slick-slide'>
 							<img src="916.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("noticia-1.jpg")}/>
 						</div> */}
-						<div className='slick-slide'>
-							<img src="placas-slider/PreAdos.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("placas-slider/PreAdos.jpg")}/>
-						</div>
 					</Slider>
 				</div>
 			</main>
@@ -108,24 +108,15 @@ const handleFullscreenImage = (imageUrl) => {
       <div className="container-noticias" id='noticias-section'>
         <article className='article-container'>
           <div className="container-img">
-            <img src="noticias/noticia-2.jpeg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-2.jpeg")}/>
-            <h4 className='titulo-texto-noticias'>Taller de Evangelismo</h4>
-            <p className='texto-noticias'>Próximo Sábado 9 de Marzo <br />a las 17:00hs</p>
+            {/* <img src="noticias/noticia-2.jpeg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-2.jpeg")}/> */}
+			<video src="noticias/noticia-video.mp4" className='noticia-video' controls></video>
+            <h4 className='titulo-texto-noticias'>Espacio Varón</h4>
+            <p className='texto-noticias'>Próximo Jueves 14 de Marzo <br />a las <b className='txt-horario-noticia'>20:00hs</b></p>
             {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
           </div>
         </article>
-        <article className='article-container'>
-          <div className="container-img">
-            <img src="noticias/noticia-1.jpg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-1.jpg")}/>
-            <h4 className='titulo-texto-noticias'>Picnic de Elim</h4>
-            <p className='texto-noticias'>Próximo sabado 16 de Marzo <br />a partir de las 10:00hs.</p>
-          </div>
-        </article>
 
-
-
-
-        <article className='article-reel'>
+		<article className='article-reel'>
           <div className="container-reel">
             {latestVideo ? (
               <>
@@ -147,6 +138,16 @@ const handleFullscreenImage = (imageUrl) => {
             )}
           </div>
         </article>
+
+        <article className='article-container'>
+          <div className="container-img">
+            <img src="noticias/noticia-1.jpg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-1.jpg")}/>
+            <h4 className='titulo-texto-noticias'>Picnic de Elim</h4>
+            <p className='texto-noticias'>Próximo sabado 16 de Marzo <br />a partir de las <b className='txt-horario-noticia'>10:00hs</b></p>
+          </div>
+        </article>
+
+
 
     {/* Fullscreen Image Modal */}
     {fullscreenImage && (

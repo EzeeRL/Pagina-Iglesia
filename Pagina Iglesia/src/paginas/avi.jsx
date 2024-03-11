@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import Footer from '../components/footer.jsx';
+
 import { useState } from 'react';
 
 function AVI() {
@@ -32,7 +34,7 @@ const handleCloseFullscreen = () => {
 	setFullscreenImage(null);
 };
 	return (
-		<>
+		<div className='container-avi'>
 		<h1 className='titulo-avi'>Adicciones vs Vida</h1>
 
 		{/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
@@ -40,25 +42,10 @@ const handleCloseFullscreen = () => {
 				<div className="carrusel">
 					<Slider {...settings}>
 						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-1.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-1.jpeg")}/>
+							<img src="avi/avi-placa.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("avi/avi-placa.jpg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-2.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-2.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-3.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-3.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-4.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-4.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-5.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-5.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-6.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-6.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-7.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-7.jpeg")}/>
+							<img src="avi/foto-avi.png" alt="" className='img-slider' onClick={() => handleFullscreenImage("avi/foto-avi.png")}/>
 						</div>
 					</Slider>
 				</div>
@@ -72,7 +59,16 @@ const handleCloseFullscreen = () => {
 				<img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
 			</div>
     )}
-		</>
+
+	<div className="container-info">
+		<p>Adicciones vs Vida Argentina es una fundación conformada por personas de diferentes partes del país y que se ocupa de ayudar a personas con problemáticas como adicciones a drogas, alcohol, tabaco. También, depresión, ansiedad, entre otras cosas.
+
+Usamos un modo ambulatorio y nuestros encuentros son los días lunes y miércoles mediante Zoom Meetings.
+Cada mes hacemos un taller presencial en el que se tratan temas como la depresión y el suicidio, la ansiedad, las convicciones o la mentira y el autoengaño.</p>
+	</div>
+
+	<Footer></Footer>
+		</div>
 	)
 }
 

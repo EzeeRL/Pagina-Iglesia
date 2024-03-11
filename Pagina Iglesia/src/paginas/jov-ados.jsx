@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import Footer from '../components/footer.jsx';
+
 import { useState } from 'react';
 
 function JovenesYAdolescentes() {
@@ -63,6 +65,9 @@ const handleCloseFullscreen = () => {
 					</Slider>
 				</div>
 			</main>
+
+			<h3 className='txt-reuniones'>Reuniones de Jóvenes y Adolescentes todos los Sábados</h3>
+
 			
 			{fullscreenImage && (
 			<div className="fullscreen-modal" onClick={handleCloseFullscreen}>
@@ -72,6 +77,8 @@ const handleCloseFullscreen = () => {
 				<img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
 			</div>
     )}
+
+	<Footer></Footer>
 		</>
 	)
 }

@@ -11,7 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/home.jsx';
 // import Galeria from './paginas/galeria.jsx';
 import Ministerios from './paginas/ministerios.jsx';
-import Cancionero from './paginas/cancionero.jsx';
+import Cancionero from './paginas/coros.jsx';
 import Contacto from './paginas/contacto.jsx';
 import AVI from './paginas/avi.jsx';
 import ReunionFemenina from './paginas/reu-fem.jsx';
@@ -20,6 +20,8 @@ import JovenesYAdolescentes from './paginas/jov-ados.jsx';
 import Domingos from './paginas/domingos.jsx';
 import Viernes from './paginas/viernes.jsx';
 import Campamento from './paginas/inscripcion-campa.jsx';
+import Himnos from './paginas/himnos.jsx';
+import Coros from './paginas/coros.jsx';
 // import Prueba from './paginas/prueba.jsx';
 
 
@@ -36,7 +38,7 @@ function App() {
 
 	 <Routes>
 		<Route path='/' element={<Home/>}/>
-		<Route path='/Cancionero' element={<Cancionero/>}/>
+		<Route path='/Coros' element={<Coros/>}/>
 		<Route path='/Ministerios' element={<Ministerios/>}/>
 		{/* <Route path='/Galeria' element={<Galeria/>}/> */}
 		<Route path='/Contacto' element={<Contacto/>}/>
@@ -48,6 +50,7 @@ function App() {
 		<Route path='/Domingos' element={<Domingos/>}/>
 		<Route path='/Campamento' element={<Campamento/>}/>
 		{/* <Route path='/Prueba' element={<Prueba/>}/> */}
+		<Route path='/Himnos' element={<Himnos/>}/>
 	</Routes>
 	</>
   )

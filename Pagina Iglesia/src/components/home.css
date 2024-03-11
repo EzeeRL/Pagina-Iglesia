@@ -197,6 +197,20 @@
      1px  1px 0 #000;
 }
 
+.link-reels-aux {
+	width: 150px;
+	height: 40px;
+	padding: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	background-color: #46e5fd;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: 0.3s;
+	position: relative;
+	top: 200px;
+}
 
 @media screen and (max-width: 767px) {
     .titulo-noticias {
@@ -267,4 +281,15 @@
 .close-button:hover {
 	background-color: #000;
     color: #fff;
+}
+
+.noticia-video {
+	width: 90%;
+	height: auto;
+	border-radius: 15px;
+	margin-top: 10px;
+}
+
+.txt-horario-noticia {
+	font-weight: 700;
 }

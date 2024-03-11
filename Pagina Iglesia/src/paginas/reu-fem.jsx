@@ -1,5 +1,7 @@
 import './reu-fem.css';
 
+import Footer from '../components/footer.jsx';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -39,25 +41,16 @@ const handleCloseFullscreen = () => {
 				<div className="carrusel">
 					<Slider {...settings}>
 						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-1.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-1.jpeg")}/>
+							<img src="actividad-femenina/foto-2.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("actividad-femenina/foto-2.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-2.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-2.jpeg")}/>
+							<img src="actividad-femenina/foto-3.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("actividad-femenina/foto-3.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-3.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-3.jpeg")}/>
+							<img src="actividad-femenina/foto-4.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("actividad-femenina/foto-4.jpeg")}/>
 						</div>
 						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-4.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-4.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-5.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-5.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-6.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-6.jpeg")}/>
-						</div>
-						<div className='slick-slide'>
-							<img src="fotos-domingos/foto-domingo-7.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-7.jpeg")}/>
+							<img src="actividad-femenina/foto-5.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("actividad-femenina/foto-5.jpeg")}/>
 						</div>
 					</Slider>
 				</div>
@@ -71,6 +64,8 @@ const handleCloseFullscreen = () => {
 				<img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
 			</div>
     )}
+
+	<Footer></Footer>
 		</>
 	)
 }

@@ -23,7 +23,7 @@ function Nav() {
             </div>
             <ul className={`container-links-nav ${showMenu ? 'show-menu' : ''}`}>
                 <Link to='/' className='link-nav'>Inicio</Link>
-                <Link to='/Cancionero' className='link-nav'>Cancionero</Link>
+                <Link to='/Coros' className='link-nav'>Cancionero</Link>
                 <Link to='/Ministerios' className='link-nav'>Ministerios</Link>
                 {/* <Link to='/Galeria' className='link-nav'>Galeria</Link> */}
                 <Link to='/Contacto' className='link-nav'>Contacto</Link>

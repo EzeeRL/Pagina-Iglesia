@@ -1,4 +1,37 @@
 .titulo-ev {
-	text-align: center;
-	margin-top: 200px;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.main-container-ev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vh; /* Usamos unidades relativas para el margen superior */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-img {
+	padding: 15px;
+}
+
+.noticia-video-ev {
+    width: 90%; /* Usamos un ancho relativo */
+    max-width: 800px; /* Limitamos el ancho máximo */
+    height: auto; /* Mantenemos la relación de aspecto */
+    border-radius: 15px;
+}
+
+.article-container-ev {
+    width: 90%; /* Usamos un ancho relativo */
+    max-width: 800px; /* Limitamos el ancho máximo */
+    height: auto; /* Mantenemos la relación de aspecto */
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
