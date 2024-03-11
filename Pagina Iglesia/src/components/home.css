@@ -112,7 +112,8 @@
 
 .article-reel {
 	width: 320px;
-	height: 480px;
+	height: 480px; /* PARA CUANDO SI ANDA EL REEL */
+	height: 400px; /* AUXILIAR PARA CUANDO NO ANDA LA CARGA DEL REEL*/
 	margin: 50px;
 	border-radius: 15px;
 	background-color: rgb(255, 255, 255, 0.4);
@@ -141,20 +142,21 @@
 .img-noticias {
 	width: 300px;
 	height: 200px;
+	margin-left: -5px;
 	margin-top: 10px;
 	border-radius: 10px;
 	cursor: pointer;
 }
 
 .titulo-texto-noticias {
+	text-align: center;
 	font-size: 18px;
 	font-weight: bold;
 }
 
 .texto-noticias {
 	font-size: 18px;
-	margin-left: 10px;
-	text-align: start;
+	text-align: center;
 }
 
 .link-inscripcion-campa {
@@ -197,6 +199,11 @@
      1px  1px 0 #000;
 }
 
+.txt-aux-reel {
+	font-size: 18px;
+	margin-top: 50px;
+}
+
 .link-reels-aux {
 	width: 150px;
 	height: 40px;
@@ -209,12 +216,13 @@
 	cursor: pointer;
 	transition: 0.3s;
 	position: relative;
-	top: 200px;
+	top: 100px;
+	right: 47px;
 }
 
 @media screen and (max-width: 767px) {
     .titulo-noticias {
-        margin-top: 50px;
+        margin-top: -50px;
     }
 
     .container-noticias {
@@ -292,4 +300,61 @@
 
 .txt-horario-noticia {
 	font-weight: 700;
+}
+
+.container-noticias-2 {
+	display: flex;
+	justify-content: center;
+}
+
+.article-container-2 {
+	width: 320px;
+	height: auto;
+	margin: 50px;
+	border-radius: 15px;
+	background-color: rgb(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+	.container-noticias-2 {
+		display: block;
+	}
+
+	.article-container-2 {
+        width: 80%;
+		height: auto;
+		padding: 25px;
+		margin-left: 15px;
+	}
+}
+
+.icon-youtube-aux {
+	position: relative;
+	top: 10px;
+	left: 70px;
+	animation: animation-icon-youtube 3s linear infinite;
+}
+
+@keyframes animation-icon-youtube {
+	0% {
+		transform: scale(1.0);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1.0);
+	}
+}
+
+.icon-youtube-aux:hover {
+    background: #f50808;
+    color: #fff;
+	cursor: pointer;
+}
+
+.titulo-aux {
+	margin-top: 30px;
 }
