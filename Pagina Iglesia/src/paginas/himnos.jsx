@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./cancionero.css";
+import "./himnos.css";
 import Footer from "../components/footer.jsx";
 
 function Himnos() {
@@ -670,7 +670,7 @@ function Himnos() {
           </option>
         </select> */}
 
-        <button onClick={handleCoros} className="button-cambiar">Ver Coros</button>
+        <button onClick={handleCoros} className="button-cambiar-himnos">Ver Coros</button>
 
       </div>
       {!llave ? (

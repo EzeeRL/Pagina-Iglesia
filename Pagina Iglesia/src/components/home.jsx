@@ -132,7 +132,7 @@ function Home() {
                 }
               />
             </div>
-            <div className="slick-slide">
+            {/* <div className="slick-slide">
               <img
                 src="placas-slider/placa-semillero.jpg"
                 alt=""
@@ -141,7 +141,7 @@ function Home() {
                   handleFullscreenImage("placas-slider/placa-semillero.jpg")
                 }
               />
-            </div>
+            </div> */}
             {/* <div className='slick-slide'>
 							<img src="916.jpg" alt="" className='img-slider' onClick={() => handleFullscreenImage("noticia-1.jpg")}/>
 						</div> */}
@@ -154,7 +154,7 @@ function Home() {
       </h2>
 
       <div className="container-noticias" id="noticias-section">
-        <article className="article-container">
+        <article className="article-video">
           <div className="container-img">
             {/* <img src="noticias/noticia-2.jpeg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-2.jpeg")}/> */}
             <video
@@ -164,10 +164,26 @@ function Home() {
             ></video>
             <h4 className="titulo-texto-noticias">Espacio Varón</h4>
             <p className="texto-noticias">
-              Próximo Jueves 14 de Marzo <br />a las{" "}
-              <b className="txt-horario-noticia">20:00hs</b>
+              Próximo Jueves 14 de Marzo <br />a las
+              <b className="txt-horario-noticia"> 20:00hs</b>
             </p>
             {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
+          </div>
+        </article>
+
+        <article className="article-container">
+          <div className="container-img">
+            <img
+              src="noticias/noticia-2.jpg"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/noticia-2.jpg")}
+            />
+            <h4 className="titulo-texto-noticias">Picnic de Elim</h4>
+            <p className="texto-noticias">
+              Próximo sábado 16 de Marzo <br />a partir de las{" "}
+              <b className="txt-horario-noticia">10:00hs</b>
+            </p>
           </div>
         </article>
 
@@ -218,38 +234,22 @@ function Home() {
             )}
           </div>
         </article>
-
-        <article className="article-container">
-          <div className="container-img">
-            <img
-              src="noticias/noticia-2.jpg"
-              alt=""
-              className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-1.jpg")}
-            />
-            <h4 className="titulo-texto-noticias">Picnic de Elim</h4>
-            <p className="texto-noticias">
-              Próximo sabado 16 de Marzo <br />a partir de las{" "}
-              <b className="txt-horario-noticia">10:00hs</b>
-            </p>
-          </div>
-        </article>
       </div>
 
       <div className="container-noticias-2">
         <article className="article-container-2">
           <div className="container-img">
             <img
-              src="noticias/noticia-3.jpg"
+              src="noticias/noticia-3.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-3.jpg")}
+              onClick={() => handleFullscreenImage("noticias/noticia-3.jpeg")}
             />
             <h4 className="titulo-texto-noticias">
               Actividad de Jóvenes y Adolescentes
             </h4>
             <p className="texto-noticias">
-              Próximo sabado 16 de Marzo <br />a partir de las{" "}
+              Próximo sábado 16 de Marzo <br />a partir de las{" "}
               <b className="txt-horario-noticia">18:00hs</b>
             </p>
           </div>

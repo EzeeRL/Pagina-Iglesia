@@ -53,16 +53,15 @@
 	font-weight: bold;
 }
 
-.button-cambiar {
+.button-cambiar-coros {
 	width: 100px;
-	height: 40px;
+	height: auto;
 	border: none;
 	border-bottom: 3px solid #46e5fd;
 	border-radius: 5px;
 	font-size: 18px;
 	font-weight: bold;
 	cursor: pointer;
-
 }
 
 @media screen and (max-width: 768px) {

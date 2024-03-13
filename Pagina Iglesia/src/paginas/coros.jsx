@@ -388,7 +388,7 @@ const handleHimnos = () => {
           </option>
         </select> */}
 
-        <button onClick={handleHimnos} className="button-cambiar">Ver Himnos</button>
+        <button onClick={handleHimnos} className="button-cambiar-coros">Ver Himnos</button>
 
       </div>
       {!llave ? (

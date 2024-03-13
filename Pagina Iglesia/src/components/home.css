@@ -112,8 +112,8 @@
 
 .article-reel {
 	width: 320px;
-	height: 480px; /* PARA CUANDO SI ANDA EL REEL */
-	height: 400px; /* AUXILIAR PARA CUANDO NO ANDA LA CARGA DEL REEL*/
+	height: 512px; /* PARA CUANDO SI ANDA EL REEL */
+	/* height: 400px; AUXILIAR PARA CUANDO NO ANDA LA CARGA DEL REEL */
 	margin: 50px;
 	border-radius: 15px;
 	background-color: rgb(255, 255, 255, 0.4);
@@ -128,9 +128,20 @@
 }
 
 .video-player {
-	margin-top: 10px;
+	margin-top: 30px;
 	border: none;
 	border-radius: 10px;
+}
+
+.article-video {
+	width: 320px;
+	height: 510px; /* PARA CUANDO SI ANDA EL REEL */
+	/* height: 400px; AUXILIAR PARA CUANDO NO ANDA LA CARGA DEL REEL */
+	margin: 50px;
+	border-radius: 15px;
+	background-color: rgb(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .texto-reel {
@@ -143,7 +154,7 @@
 	width: 300px;
 	height: 200px;
 	margin-left: -5px;
-	margin-top: 10px;
+	margin-top: 0px;
 	border-radius: 10px;
 	cursor: pointer;
 }
@@ -292,8 +303,8 @@
 }
 
 .noticia-video {
-	width: 90%;
-	height: auto;
+	width: 60%;
+	height: 320px;
 	border-radius: 15px;
 	margin-top: 10px;
 }
@@ -326,7 +337,13 @@
         width: 80%;
 		height: auto;
 		padding: 25px;
-		margin-left: 15px;
+		margin-left: 10px;
+	}
+}
+
+@media screen and (min-width: 550px) {
+	.article-container-2 {
+		margin-left: 30px;
 	}
 }
 
