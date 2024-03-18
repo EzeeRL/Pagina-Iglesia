@@ -53,9 +53,14 @@
 	font-weight: bold;
 }
 
+.container-button-cambiar {
+	text-align: center;
+}
+
 .button-cambiar-coros {
 	width: 100px;
 	height: auto;
+	margin-top: 20px;
 	border: none;
 	border-bottom: 3px solid #46e5fd;
 	border-radius: 5px;
@@ -91,8 +96,8 @@
 	left: 10%;
 	text-align: center;
 	line-height: 35px;
-	backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
 	border-top: 3px solid #46e5fd;
 	/* border-top-left-radius: 15px;
 	border-top-right-radius: 15px; */
@@ -137,6 +142,10 @@
 	width: 80%;
 	margin-top: 50px;
 	margin-left: 10%;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	border-top: 3px solid #46e5fd;
+	border-radius: 15px;
 }
 
 @media screen and (max-width:768px) {
@@ -147,6 +156,7 @@
 
 .titulo-cancion-select {
 	text-align: center;
+	margin-top: 10px;
 }
 
 .texto-letra-general {
@@ -166,7 +176,7 @@
 
 .button-volver {
 	position: relative;
-	top: 60px;
+	top: 50px;
 	/* right: -260px; */
 	font-size: 30px;
 	border: none;

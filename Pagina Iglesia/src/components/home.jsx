@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./home.css";
 import Nav from "./nav";
 import Footer from "./footer";
+import Cumpleaños from "../paginas/cumpleaños";
 
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -149,41 +149,28 @@ function Home() {
         </div>
       </main>
 
-      <h2 className="titulo-noticias">
+      <h1 className="titulo-noticias">
         <b className="underline-noticias">Noticias</b>
-      </h2>
+      </h1>
 
       <div className="container-noticias" id="noticias-section">
-        <article className="article-video">
+        <article 
+        // className="article-video"
+        className="article-container"
+        >
           <div className="container-img">
-            {/* <img src="noticias/noticia-2.jpeg" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-2.jpeg")}/> */}
-            <video
+            <img src="noticias/noticia-1.png" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-1.png")}/>
+            {/* <video
               src="noticias/noticia-1.mp4"
               className="noticia-video"
               controls
-            ></video>
-            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            ></video> */}
+            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
             <p className="texto-noticias">
-              Próximo Jueves 14 de Marzo <br />a las
-              <b className="txt-horario-noticia"> 20:00hs</b>
+              Sábado 06 de Abril <br />a las
+              <b className="txt-horario-noticia"> 19:00hs</b>
             </p>
             {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
-          </div>
-        </article>
-
-        <article className="article-container">
-          <div className="container-img">
-            <img
-              src="noticias/noticia-2.jpg"
-              alt=""
-              className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-2.jpg")}
-            />
-            <h4 className="titulo-texto-noticias">Picnic de Elim</h4>
-            <p className="texto-noticias">
-              Próximo sábado 16 de Marzo <br />a partir de las{" "}
-              <b className="txt-horario-noticia">10:00hs</b>
-            </p>
           </div>
         </article>
 
@@ -234,23 +221,39 @@ function Home() {
             )}
           </div>
         </article>
+
+        <article className="article-container">
+          <div className="container-img">
+            <img
+              src="noticias/noticia-2.jpg"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/noticia-2.jpg")}
+            />
+            <h4 className="titulo-texto-noticias">Picnic de Elim</h4>
+            <p className="texto-noticias">
+              Próximo sábado 16 de Marzo <br />a partir de las
+              <b className="txt-horario-noticia"> 10:00hs</b>
+            </p>
+          </div>
+        </article>
       </div>
 
       <div className="container-noticias-2">
         <article className="article-container-2">
           <div className="container-img">
             <img
-              src="noticias/noticia-3.jpeg"
+              src="noticias/placa-viernes.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-3.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
             />
             <h4 className="titulo-texto-noticias">
-              Actividad de Jóvenes y Adolescentes
+              Reunión de Oración y estudio de la palabra
             </h4>
             <p className="texto-noticias">
-              Próximo sábado 16 de Marzo <br />a partir de las{" "}
-              <b className="txt-horario-noticia">18:00hs</b>
+              Viernes 22 de Marzo<br />a partir de las
+              <b className="txt-horario-noticia"> 20:00hs</b>
             </p>
           </div>
         </article>
@@ -267,8 +270,8 @@ function Home() {
               Inicio Escuela Bíblica Dominical
             </h4>
             <p className="texto-noticias">
-              Domingo 24 de Marzo <br />a partir de las{" "}
-              <b className="txt-horario-noticia">11:30hs</b>
+              Domingo 24 de Marzo <br />a partir de las
+              <b className="txt-horario-noticia"> 11:30hs</b>
             </p>
           </div>
         </article>
@@ -303,6 +306,8 @@ function Home() {
           />
         </div>
       )}
+
+      {/* <Cumpleaños></Cumpleaños> */}
 
       <Footer></Footer>
     </>

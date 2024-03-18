@@ -22,11 +22,11 @@ function Nav() {
                 <h1 className='titulo-nav'>Iglesia<b className='texto-especial-nav'>VTL</b></h1>
             </div>
             <ul className={`container-links-nav ${showMenu ? 'show-menu' : ''}`}>
-                <Link to='/' className='link-nav'>Inicio</Link>
-                <Link to='/Coros' className='link-nav'>Cancionero</Link>
-                <Link to='/Ministerios' className='link-nav'>Ministerios</Link>
+                <Link to='/' className='link-nav'><i className="fa-solid fa-house"></i> Inicio</Link>
+                <Link to='/Coros' className='link-nav'><i className="fa-solid fa-music"></i> Cancionero</Link>
+                <Link to='/Ministerios' className='link-nav'><i className="fa-solid fa-calendar-days"></i> Ministerios</Link>
                 {/* <Link to='/Galeria' className='link-nav'>Galeria</Link> */}
-                <Link to='/Contacto' className='link-nav'>Contacto</Link>
+                <Link to='/Contacto' className='link-nav'><i className="fa-solid fa-user"></i> Contacto</Link>
                 {/* <Link to='/Prueba' className='link-nav'>Prueba</Link> */}
             </ul>
             <div className="mobile-menu-icon" onClick={toggleMenu}>

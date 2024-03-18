@@ -11,7 +11,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/home.jsx';
 // import Galeria from './paginas/galeria.jsx';
 import Ministerios from './paginas/ministerios.jsx';
-import Cancionero from './paginas/coros.jsx';
 import Contacto from './paginas/contacto.jsx';
 import AVI from './paginas/avi.jsx';
 import ReunionFemenina from './paginas/reu-fem.jsx';

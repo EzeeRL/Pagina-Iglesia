@@ -18,7 +18,7 @@ function Campamento() {
     const [detallesDieta, setDetallesDieta] = useState('');
     const [formularioEnviado, setFormularioEnviado] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (
             nombre.trim() !== '' &&
@@ -34,14 +34,65 @@ function Campamento() {
             necesitaDieta.trim() !== '' &&
             necesitaDieta === 'no' ? true : detallesDieta.trim() !== ''
         ) {
-            // Simular envío de formulario (puedes agregar tu lógica real de envío aquí)
-            setTimeout(() => {
-                setFormularioEnviado(true);
-            }, 1000);
+            const data = {
+                nombre,
+                apellido,
+                edad,
+                fechaNacimiento,
+                sexo,
+                email,
+                alergias,
+                detallesAlergias,
+                tomaMedicamentos,
+                detallesMedicamentos,
+                necesitaDieta,
+                detallesDieta
+            };
+
+            try {
+                const response = await fetch('URL_DEL_BACKEND', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    setFormularioEnviado(true);
+                } else {
+                    throw new Error('Error al enviar el formulario');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar el formulario. Por favor, inténtelo nuevamente. Si el error continúa, intentelo más tarde');
+            }
         } else {
-            console.log("Por favor completa todos los campos");
+            alert("Por favor, completa todos los campos")
         }
     };
+
+    const guardarDatosEnArchivo = (jsonData) => {
+        // Crear un Blob con los datos JSON
+        const blob = new Blob([jsonData], { type: 'application/json' });
+
+        // Crear una URL para el Blob
+        const url = URL.createObjectURL(blob);
+
+        // Crear un enlace para descargar el archivo
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'formulario.json';
+
+        // Simular un clic en el enlace para iniciar la descarga
+        document.body.appendChild(a);
+        a.click();
+
+        // Liberar recursos
+        URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    };
+
 
     return (
         <>

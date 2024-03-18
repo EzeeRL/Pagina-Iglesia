@@ -670,9 +670,13 @@ function Himnos() {
           </option>
         </select> */}
 
-        <button onClick={handleCoros} className="button-cambiar-himnos">Ver Coros</button>
-
       </div>
+
+	  <div className="container-button-cambiar">
+		<button onClick={handleCoros} className="button-cambiar-himnos">Ver Coros</button>
+	  </div>
+	  
+
       {!llave ? (
         <>
           <div className="container-titulo-indice">
@@ -695,24 +699,30 @@ function Himnos() {
               )
             )}
           </div>
+
+
           <div className="container-buttons-paginacion">
-            {currentPage > 1 && (
-              <>
-                <p className="texto-pag-sig-and-next">Página anterior</p>
-                <button onClick={prev} className="buttons-paginacion">
-                  <i className="fa-solid fa-chevron-left"></i>
-                </button>
-              </>
-            )}
-            {cuenta1 < himnos.length && (
-              <>
-                <button onClick={next} className="buttons-paginacion">
-                  <i className="fa-solid fa-chevron-right"></i>
-                </button>
-                <p className="texto-pag-sig-and-next">Siguiente página</p>
-              </>
-            )}
-          </div>
+  {currentPage > 1 && (
+    <>
+      <p className="texto-pag-sig-and-next">Página anterior</p>
+      <button onClick={prev} className="buttons-paginacion">
+        <i className="fa-solid fa-chevron-left"></i>
+      </button>
+    </>
+  )}
+  {resultadoBusqueda.length > paginacion || (resultadoBusqueda.length === 0 && himnos.length > paginacion) && (
+    <>
+    {cuenta1 < himnos.length && (
+      <>
+      <button onClick={next} className="buttons-paginacion">
+        <i className="fa-solid fa-chevron-right"></i>
+      </button>
+      <p className="texto-pag-sig-and-next">Siguiente página</p>
+      </>
+    )}
+    </>
+  )}
+</div>
         </>
       ) : (
         <div className="container-letra">

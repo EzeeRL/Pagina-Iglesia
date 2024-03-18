@@ -1,6 +1,7 @@
 .button-cambiar-himnos {
 	width: 100px;
-	height: auto;
+	height: 40px;
+	margin-top: 20px;
 	border: none;
 	border-bottom: 3px solid #46e5fd;
 	border-radius: 5px;

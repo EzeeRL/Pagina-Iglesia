@@ -49,7 +49,7 @@ const Coros = () => {
     {"id":"41","titulo":"Conozco que todo lo puedes, que mi pensamiento no ","letra":"Job 42:2– 5\r\n\r\nConozco que todo lo puedes,\r\nque mi pensamiento no lo puedo esconder.\r\nHablaba lo que no entendía\r\ny de oídas te había oído.\r\n\r\nMas ahora mis ojos te ven,\r\nyo te preguntaré y Tú me enseñaras.\r\nMas ahora mis ojos te ven,\r\nme rindo a tus pies\r\ny me arrepiento, Señor."},
     {"id":"42","titulo":"Consagrarme todo entero.","letra":"Himnario: 365\r\n\r\nConsagrarme todo entero.\r\nAlma, vida, y corazón,\r\nEs el íntimo deseo\r\nQue hoy me anima, buen Señor.\r\n\r\nHéme aquí, Señor, \r\nA tus plantas hoy,\r\nPues a ti consagrar quiero\r\nTodo lo que soy.\r\n\r\nAl contrito has prometido\r\nQue de Ti no arrojaras,\r\nHoy propicio eres conmigo\r\nY tu espíritu me das.\r\n\r\nConfesando mis pecados,\r\nQue sin número han de ser,\r\nY arrojando todo a un lado,\r\nA servirte aprenderé.\r\n\r\nMi canción constante sea,\r\nY mi sola inspiración,\r\nProclamar la dicha eterna\r\nDel que vive para Dios.\r\n\r\n¡Oh qué gozo llena mi alma \r\nAl pensar que suyo soy,\r\nY que pronto en las moradas \r\nEstaré de mi Señor!"},
     {"id":"43","titulo":"Creo en Dios, Él está dentro de mí","letra":"Creo en Dios, Él está dentro de mí. \r\nCreo en Dios, desde que a Jesús yo fui.\r\nVoy a Él, cuándo le hablo en oración. \r\nTengo fe que Él escucha mi clamor.\r\n\r\nOh Señor, tú conoces mi interior, \r\nante Ti nada puedo esconder.\r\nClamo hoy, limpia este pobre ser. \r\nLléname cada día más de Ti."},
-    {"id":"44","titulo":"Cristo en su amor me guía, andando cada día muy ce","letra":"Cristo en su amor me guía,\r\nandando cada día muy cerca de mí.\r\nNo desespero, pues se que en el sendero\r\ntomado de su mano cuidará de mí.\r\n\r\nAunque procuren apartarme\r\ndel recto derrotero\r\npoder me infundirá su amor.\r\n\r\nOh Cristo te amo, ya ves te soy sincero,\r\nme amaste Tú primero y siempre te amaré."},
+    {"id":"44","titulo":"Cristo en su amor me guía.","letra":"Cristo en su amor me guía,\r\nandando cada día muy cerca de mí.\r\nNo desespero, pues se que en el sendero\r\ntomado de su mano cuidará de mí.\r\n\r\nAunque procuren apartarme\r\ndel recto derrotero\r\npoder me infundirá su amor.\r\n\r\nOh Cristo te amo, ya ves te soy sincero,\r\nme amaste Tú primero y siempre te amaré."},
     {"id":"45","titulo":"Cristo es la peña de Oreb ","letra":"Cristo es la peña de Oreb que está brotando,\r\nagua de vida saludable para ti.\r\nCristo es la peña de Oreb que está brotando,\r\nagua de vida saludable para ti.\r\n\r\nVen a beberla que es más dulce que la miel,\r\nrefresca el alma, refresca todo tu ser.\r\nCristo es la peña de Oreb que está brotando,\r\nagua de vida saludable para ti.\r\n\r\nCristo es el lirio del valle de las flores,\r\nÉl es la rosa blanca y pura de Saron.\r\nCristo es la vida y amor de los amores,\r\nÉl es la eterna fuente de la salvación."},
     {"id":"46","titulo":"Cristo te exalto, Cristo te adoro ","letra":"Cristo te exalto, Cristo te adoro \r\nPorque Tú eres mi Señor.\r\nSólo a Ti daré la gloria y honor.\r\nCristo te exalto, Cristo te adoro \r\nporque Tú eres mi Señor.\r\nSólo a Ti daré la gloria y honor.\r\n\r\nGloriosa es tu presencia, \r\nme cubre y me da paz.\r\nMi ser siempre proclamará \r\nque sólo Tú eres digno, \r\nque sólo Tú eres digno,\r\nque sólo Tú eres digno de adorar."},
     {"id":"47","titulo":"Cristo, salvador de nuestra vida","letra":"Cristo, salvador de nuestra vida, \r\nte coronamos hoy por siempre.\r\nCristo, Redentor y soberano, \r\nte damos toda la gloria.\r\n\r\n\/Se conmueve nuestra voz ante tanta majestad,\r\ndisfrutamos de tu amor, recibimos tu bondad.\r\nOh Cristo santo, \r\nno hay otro como Tú y hoy te amamos.\/"},
@@ -59,7 +59,7 @@ const Coros = () => {
     {"id":"51","titulo":"Cuando Cristo vino a mi corazón, mi vida entera cambió","letra":"Cuando Cristo vino a mi corazón, \r\nmi vida entera cambió.\r\nSu paz y su amor alejaron de mi \r\nlas dudas, las sombras y el temor.\r\n\r\nMi vida comenzó cuando el Señor llegó \r\ny hoy puedo cantar de su amor.\r\nMi vida comenzó cuando el Señor llegó \r\ny hoy puedo cantar de su amor.\r\n\r\nHoy quiero que Cristo te transforme a ti, \r\nque cambie tu vida también.\r\nPiensa en la cruz donde murió por ti \r\ny ábrele tu corazón."},
     {"id":"52","titulo":"Cuando la trompeta del Señor se toque la final","letra":"Himnario: 155\r\n\r\nCuando la trompeta del Señor \r\nse toque la final,\r\nCon fulgor apunte el día eternal;\r\nY los redimidos suban \r\na su casa celestial,\r\nCuando allá se pase lista yo estaré.\r\n\r\nCuando allá se pase lista, \r\nCuando allá se pase lista.\r\nCuando allá se pase lista,\r\nCierto estoy que por su gracia allí estaré.\r\n\r\nCuando todas sombras huyan \r\nen la gran resurrección\r\nDe los muertos en Jesús sin corrupción,\r\nY en las nubes al Señor reciban, \r\n¡qué consolación!\r\nCuando allá se pase lista yo estaré.\r\n\r\nTrabajar es mi deseo \r\nsin cesar por el Señor,\r\nSiempre hablando de su gracia y de su amor;\r\nCuando acabe aquí mi obra \r\ny me llame el salvador,\r\nCuando allá se pase lista yo estaré."},
     {"id":"53","titulo":"Cuando nadie me ve, en la intimidad","letra":"Cuando nadie me ve, en la intimidad\r\nDonde no puedo hablar más que la verdad\r\nDonde no hay apariencias\r\nDonde al descubierto queda mi corazón\r\n\r\nAllí soy sincero\r\nAllí mi apariencia de piedad se va\r\nAllí es Tu gracia lo que cuenta\r\nTu perdón lo que sustenta\r\nPara estar de pie\r\n\r\nY no podría dar la cara\r\nSi no fuera porque soy\r\nRevestido de la gracia\r\nY la justicia del Señor\r\nSi me vieran tal cual soy\r\nSe enterarían que es Jesús\r\nLo que han visto reflejado en mí\r\nTan solo fue su luz\r\n\r\nY es por Tu gracia y Tu perdón\r\nQue podemos ser llamados\r\nInstrumentos de Tu amor\r\nY es por Tu gracia y Tu perdón\r\nMi justicia queda lejos\r\nDe Tu perfección\r\n\r\nY no podría dar la cara\r\nSi no fuera porque soy\r\nRevestido de la gracia\r\nY la justicia del Señor\r\nSi me vieran tal cual soy\r\nSe enterarían que es Jesús\r\nLo que han visto reflejado en mí\r\nTan solo fue su luz\r\n\r\nY es por Tu gracia y Tu perdón\r\nQue podemos ser llamados\r\nInstrumentos de Tu amor\r\nY es por Tu gracia y Tu perdón\r\nMi justicia queda lejos\r\nDe Tu perfección"},
-    {"id":"54","titulo":"Cuando pienso en tu amor tan bello y te veo a Ti e","letra":"Cuando pienso en tu amor tan bello \r\ny te veo a Ti en santidad.\r\nY tú divinidad que excede las riquezas \r\nde este mundo.\r\nCuando alcanzo a tu corazón, \r\ncuando yo estoy en tu amor,\r\ncuando todo es como las sombras \r\nal lado de tu luz.\r\n\r\nTe adoro a Ti Señor Jesús, \r\nte adoro a Ti mi salvador.\r\nLa razón por la cual yo vivo es para adorarte.\r\nTe adoro a Ti Señor Jesús, \r\nte adoro a Ti mi salvador.\r\nLa razón por la cual yo vivo (será por Ti).\r\nLa razón por la cual yo vivo (será por Ti).\r\nLa razón por la cual yo vivo es para adorarte."},
+    {"id":"54","titulo":"Cuando pienso en tu amor tan bello y te veo a Ti en santidad","letra":"Cuando pienso en tu amor tan bello \r\ny te veo a Ti en santidad.\r\nY tú divinidad que excede las riquezas \r\nde este mundo.\r\nCuando alcanzo a tu corazón, \r\ncuando yo estoy en tu amor,\r\ncuando todo es como las sombras \r\nal lado de tu luz.\r\n\r\nTe adoro a Ti Señor Jesús, \r\nte adoro a Ti mi salvador.\r\nLa razón por la cual yo vivo es para adorarte.\r\nTe adoro a Ti Señor Jesús, \r\nte adoro a Ti mi salvador.\r\nLa razón por la cual yo vivo (será por Ti).\r\nLa razón por la cual yo vivo (será por Ti).\r\nLa razón por la cual yo vivo es para adorarte."},
     {"id":"55","titulo":"Cuando te alabo arde en mí el fuego de tu Espíritu","letra":"Cuando te alabo arde en mí \r\nel fuego de tu Espíritu que inunda mi ser.\r\nNo, no, no, no callaré, no callaré,\r\ncon nuevos cantos de alabanzas te exaltaré."},
     {"id":"56","titulo":"Cuando veo tu amor, cuando escucho tu verdad","letra":"Cuando veo tu amor, \r\ncuando escucho tu verdad,\r\ncuando siento tu calor y admiro tu bondad.\r\n\r\nMe deleito en Ti Señor, yo me gozo sólo en Ti.\r\nMe sustento en tu amor, \r\ny por siempre te alabaré sólo a Ti. \r\n\r\nYo me postro en tu presencia, \r\nte adoro en santidad,\r\nte bendigo con mi vida \r\ny yo quiero ofrendarme a Ti en santidad."},
     {"id":"57","titulo":"Dad gracias de corazón, dad gracias al Santo Dios","letra":"2ªCorintios 8:9, Santiago 2:5\r\n\r\n\/\/ Dad gracias de corazón, \r\ndad gracias al Santo Dios.\r\nDad gracias porque ha dado al Señor Jesús. \/\/\r\n\r\n\/\/ Y ahora diga el débil fuerte soy, \r\ndiga el pobre, rico soy\r\npor lo que hizo en la cruz por mí. \/\/\r\n\r\nDad gracias."},
@@ -388,9 +388,11 @@ const handleHimnos = () => {
           </option>
         </select> */}
 
-        <button onClick={handleHimnos} className="button-cambiar-coros">Ver Himnos</button>
-
       </div>
+      <div className="container-button-cambiar">
+        <button onClick={handleHimnos} className="button-cambiar-coros">Ver Himnos</button>
+      </div>
+      
       {!llave ? (
         <>
           <div className="container-titulo-indice">
@@ -415,29 +417,31 @@ const handleHimnos = () => {
           </div>
           
           <div className="container-buttons-paginacion">
-            {currentPage > 1 && (
-            <>
-            <p className="texto-pag-sig-and-next">Página anterior</p>
-            <button
-        onClick={prev}
-        className="buttons-paginacion"
-      >
+  {currentPage > 1 && (
+    <>
+      <p className="texto-pag-sig-and-next">Página anterior</p>
+      <button onClick={prev} className="buttons-paginacion">
         <i className="fa-solid fa-chevron-left"></i>
       </button>
     </>
   )}
-  {cuenta1 < coros.length && (
+  {resultadoBusqueda.length > paginacion || (resultadoBusqueda.length === 0 && coros.length > paginacion) && (
     <>
-      <button
-        onClick={next}
-        className="buttons-paginacion"
-      >
+    {cuenta1 < coros.length && (
+      <>
+      <button onClick={next} className="buttons-paginacion">
         <i className="fa-solid fa-chevron-right"></i>
       </button>
       <p className="texto-pag-sig-and-next">Siguiente página</p>
+      </>
+    )}
     </>
   )}
 </div>
+
+
+
+
 
         </>
       ) : (
