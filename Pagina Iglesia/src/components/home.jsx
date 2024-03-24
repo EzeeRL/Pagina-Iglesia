@@ -82,6 +82,16 @@ function Home() {
             </div>
             <div className="slick-slide">
               <img
+                src="placas-slider/placa-ev.jpeg"
+                alt=""
+                className="img-slider"
+                onClick={() =>
+                  handleFullscreenImage("placas-slider/placa-ev.jpeg")
+                }
+              />
+            </div>
+            <div className="slick-slide">
+              <img
                 src="placas-slider/placa-viernes.jpeg"
                 alt=""
                 className="img-slider"
@@ -165,9 +175,9 @@ function Home() {
               className="noticia-video"
               controls
             ></video> */}
-            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
+            <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
             <p className="texto-noticias">
-              Sábado 06 de Abril <br />a las
+              26 al 28 de Abril. <br />a las
               <b className="txt-horario-noticia"> 19:00hs</b>
             </p>
             {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
@@ -225,35 +235,35 @@ function Home() {
         <article className="article-container">
           <div className="container-img">
             <img
-              src="noticias/noticia-2.jpg"
+              src="noticias/noticia-2.png"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-2.jpg")}
+              onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
             />
-            <h4 className="titulo-texto-noticias">Picnic de Elim</h4>
+            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
             <p className="texto-noticias">
-              Próximo sábado 16 de Marzo <br />a partir de las
-              <b className="txt-horario-noticia"> 10:00hs</b>
+              Sábado 6 de Abril<br />a partir de las
+              <b className="txt-horario-noticia"> 19:00hs</b>
             </p>
           </div>
         </article>
       </div>
 
-      <div className="container-noticias-2">
+      {/* <div className="container-noticias-2">
         <article className="article-container-2">
           <div className="container-img">
             <img
-              src="noticias/placa-viernes.jpeg"
+              src="noticias/noticia-3.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/noticia-3.jpeg")}
             />
             <h4 className="titulo-texto-noticias">
-              Reunión de Oración y estudio de la palabra
+              Actividad de Jóvenes y Adolescentes
             </h4>
             <p className="texto-noticias">
-              Viernes 22 de Marzo<br />a partir de las
-              <b className="txt-horario-noticia"> 20:00hs</b>
+              Sábado 23 de Marzo<br />a partir de las
+              <b className="txt-horario-noticia"> 16:00hs</b>
             </p>
           </div>
         </article>
@@ -279,10 +289,10 @@ function Home() {
         <article className="article-container-2">
           <div className="container-img">
             <img
-              src="noticias/noticia-5.jpg"
+              src="noticias/noticia-5.png"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-5.jpg")}
+              onClick={() => handleFullscreenImage("noticias/noticia-5.png")}
             />
             <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
             <p className="texto-noticias">
@@ -291,7 +301,7 @@ function Home() {
             </p>
           </div>
         </article>
-      </div>
+      </div> */}
 
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (

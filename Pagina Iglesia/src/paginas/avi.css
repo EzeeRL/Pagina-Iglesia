@@ -1,6 +1,6 @@
 .titulo-avi {
 	text-align: center;
-	margin-top: 200px;
+	margin-top: 130px;
 }
 
 .container-info {
@@ -8,8 +8,12 @@
 	font-size: 20px;
 	justify-content: center;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: -150px;
 	margin-left: 15%;
 	width: 70%;
 	/* background-color: red; */
+}
+
+.container-info p {
+	font-weight: bold;
 }

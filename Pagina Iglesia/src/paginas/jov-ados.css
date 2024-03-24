@@ -4,6 +4,10 @@
 }
 
 .txt-reuniones {
-	margin-top: 80px;
 	text-align: center;
+}
+
+.actividades-titulo {
+	text-align: center;
+	margin-top: -80px;
 }

@@ -3,6 +3,10 @@
 	margin-top: 200px;
 }
 
+.subtitle {
+	text-align: center;
+}
+
 .container-buscador {
 	width: 100%;
 	display: flex;

@@ -21,6 +21,7 @@ import Viernes from './paginas/viernes.jsx';
 import Campamento from './paginas/inscripcion-campa.jsx';
 import Himnos from './paginas/himnos.jsx';
 import Coros from './paginas/coros.jsx';
+import MotivosDeOracion from './paginas/oracion.jsx';
 // import Prueba from './paginas/prueba.jsx';
 
 
@@ -50,6 +51,7 @@ function App() {
 		<Route path='/Campamento' element={<Campamento/>}/>
 		{/* <Route path='/Prueba' element={<Prueba/>}/> */}
 		<Route path='/Himnos' element={<Himnos/>}/>
+		<Route path='/MotivosDeOracion' element={<MotivosDeOracion/>}/>
 	</Routes>
 	</>
   )

@@ -282,6 +282,16 @@ const Coros = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     
+    // Función para normalizar texto
+    const normalizeText = (text) => {
+      return text
+        .normalize("NFD") // Normalización de caracteres diacríticos
+        .replace(/[\u0300-\u036f]/g, ""); // Remoción de diacríticos
+    };
+  
+    // Normalizar la búsqueda
+    const busquedaNormalized = normalizeText(busqueda);
+  
     // Verificar si la búsqueda es un número
     const esNumero = !isNaN(busqueda);
   
@@ -298,11 +308,12 @@ const Coros = () => {
         setLlave(false);
         setLetra([]);
         setTituloCancionSeleccionada("Canción no encontrada");
+        alert("Coro no encontrado.")
       }
     } else {
       // Buscar por título
       const resultadosPorTitulo = coros.filter((cancion) =>
-        cancion.titulo.toLowerCase().includes(busqueda.toLowerCase())
+        normalizeText(cancion.titulo).toLowerCase().includes(busquedaNormalized.toLowerCase())
       );
   
       // Si se encontraron resultados por título, mostrarlos
@@ -319,7 +330,7 @@ const Coros = () => {
       } else {
         // Buscar por contenido de la letra
         const resultadosPorLetra = coros.filter((cancion) =>
-          cancion.letra.toLowerCase().includes(busqueda.toLowerCase())
+          normalizeText(cancion.letra).toLowerCase().includes(busquedaNormalized.toLowerCase())
         );
   
         // Si se encontraron resultados por letra, mostrarlos
@@ -338,11 +349,12 @@ const Coros = () => {
           setResultadoBusqueda([]);
           setLlave(false);
           setLetra([]);
-          setTituloCancionSeleccionada("Canción no encontrada");
+          alert("Coro no encontrado");
         }
       }
     }
   };
+  
   
   
   
@@ -365,6 +377,7 @@ const handleHimnos = () => {
   return (
     <div className="container-cancionero">
       <h1 className="titulo-cancionero">Coros</h1>
+      <h3 className="subtitle">Por favor, no dejar espacios al final del texto de la búsqueda</h3>
       <div className="container-buscador">
         <form onSubmit={handleSubmit} className="form-buscador">
           <input

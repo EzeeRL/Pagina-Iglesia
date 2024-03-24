@@ -26,6 +26,7 @@ function Nav() {
                 <Link to='/Coros' className='link-nav'><i className="fa-solid fa-music"></i> Cancionero</Link>
                 <Link to='/Ministerios' className='link-nav'><i className="fa-solid fa-calendar-days"></i> Ministerios</Link>
                 {/* <Link to='/Galeria' className='link-nav'>Galeria</Link> */}
+                <Link to='/MotivosdeOracion' className='link-nav'><i class="fa-solid fa-hands-praying"></i> Enviar pedido de Oración</Link>
                 <Link to='/Contacto' className='link-nav'><i className="fa-solid fa-user"></i> Contacto</Link>
                 {/* <Link to='/Prueba' className='link-nav'>Prueba</Link> */}
             </ul>

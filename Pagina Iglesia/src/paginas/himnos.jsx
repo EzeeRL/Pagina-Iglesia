@@ -562,69 +562,83 @@ function Himnos() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    
-    // Verificar si la búsqueda es un número
-    const esNumero = !isNaN(busqueda);
+	event.preventDefault();
+	
+	// Función para normalizar texto
+	const normalizeText = (text) => {
+	  return text
+		.normalize("NFD") // Normalización de caracteres diacríticos
+		.replace(/[\u0300-\u036f]/g, ""); // Remoción de diacríticos
+	};
   
-    // Si es un número, buscar por ID
-    if (esNumero) {
-      const cancionPorId = himnos.find((himno) => himno.ID === busqueda);
-      if (cancionPorId) {
-        setResultadoBusqueda([cancionPorId]);
-        setLlave(true);
-        setLetra(cancionPorId.Letra);
-        setTituloCancionSeleccionada(cancionPorId.Titulo);
-      } else {
-        setResultadoBusqueda([]);
-        setLlave(false);
-        setLetra([]);
-        setTituloCancionSeleccionada("Canción no encontrada");
-      }
-    } else {
-      // Buscar por título
-      const resultadosPorTitulo = himnos.filter((himno) =>
-        himno.Titulo.toLowerCase().includes(busqueda.toLowerCase())
-      );
+	// Normalizar la búsqueda
+	const busquedaNormalized = normalizeText(busqueda);
   
-      // Si se encontraron resultados por título, mostrarlos
-      if (resultadosPorTitulo.length > 0) {
-        setResultadoBusqueda(resultadosPorTitulo);
+	// Verificar si la búsqueda es un número
+	const esNumero = !isNaN(busqueda);
   
-        // Si hay solo un resultado en la búsqueda, mostrar automáticamente la Letra
-        if (resultadosPorTitulo.length === 1) {
-          const cancionSeleccionada = resultadosPorTitulo[0];
-          setLlave(true);
-          setLetra(cancionSeleccionada.Letra);
-          setTituloCancionSeleccionada(cancionSeleccionada.Titulo);
-        }
-      } else {
-        // Buscar por contenido de la Letra
-        const resultadosPorLetra = himnos.filter((himno) =>
-          himno.Letra.toLowerCase().includes(busqueda.toLowerCase())
-        );
+	// Si es un número, buscar por ID
+	if (esNumero) {
+	  const cancionPorId = himnos.find((himno) => himno.ID === busqueda);
+	  if (cancionPorId) {
+		setResultadoBusqueda([cancionPorId]);
+		setLlave(true);
+		setLetra(cancionPorId.Letra);
+		setTituloCancionSeleccionada(cancionPorId.Titulo);
+	  } else {
+		setResultadoBusqueda([]);
+		setLlave(false);
+		setLetra([]);
+		setTituloCancionSeleccionada("Canción no encontrada");
+		alert("Himno no encontrado.");
+	  }
+	} else {
+	  // Buscar por título
+	  const resultadosPorTitulo = himnos.filter((himno) =>
+		normalizeText(himno.Titulo).toLowerCase().includes(busquedaNormalized.toLowerCase())
+	  );
   
-        // Si se encontraron resultados por Letra, mostrarlos
-        if (resultadosPorLetra.length > 0) {
-          setResultadoBusqueda(resultadosPorLetra);
+	  // Si se encontraron resultados por título, mostrarlos
+	  if (resultadosPorTitulo.length > 0) {
+		setResultadoBusqueda(resultadosPorTitulo);
   
-          // Si hay solo un resultado en la búsqueda, mostrar automáticamente la Letra
-          if (resultadosPorLetra.length === 1) {
-            const cancionSeleccionada = resultadosPorLetra[0];
-            setLlave(true);
-            setLetra(cancionSeleccionada.Letra);
-            setTituloCancionSeleccionada(cancionSeleccionada.Titulo);
-          }
-        } else {
-          // Si no se encontraron resultados, mostrar mensaje
-          setResultadoBusqueda([]);
-          setLlave(false);
-          setLetra([]);
-          setTituloCancionSeleccionada("Canción no encontrada");
-        }
-      }
-    }
+		// Si hay solo un resultado en la búsqueda, mostrar automáticamente la Letra
+		if (resultadosPorTitulo.length === 1) {
+		  const cancionSeleccionada = resultadosPorTitulo[0];
+		  setLlave(true);
+		  setLetra(cancionSeleccionada.Letra);
+		  setTituloCancionSeleccionada(cancionSeleccionada.Titulo);
+		}
+	  } else {
+		// Buscar por contenido de la Letra
+		const resultadosPorLetra = himnos.filter((himno) =>
+		  normalizeText(himno.Letra).toLowerCase().includes(busquedaNormalized.toLowerCase())
+		);
+  
+		// Si se encontraron resultados por Letra, mostrarlos
+		if (resultadosPorLetra.length > 0) {
+		  setResultadoBusqueda(resultadosPorLetra);
+  
+		  // Si hay solo un resultado en la búsqueda, mostrar automáticamente la Letra
+		  if (resultadosPorLetra.length === 1) {
+			const cancionSeleccionada = resultadosPorLetra[0];
+			setLlave(true);
+			setLetra(cancionSeleccionada.Letra);
+			setTituloCancionSeleccionada(cancionSeleccionada.Titulo);
+		  }
+		} else {
+		  // Si no se encontraron resultados, mostrar mensaje
+		  setResultadoBusqueda([]);
+		  setLlave(false);
+		  setLetra([]);
+		  setTituloCancionSeleccionada("Canción no encontrada");
+		  alert("Himno no encontrado");
+		}
+	  }
+	}
   };
+  
+  
   
   
   
@@ -647,6 +661,7 @@ function Himnos() {
   return (
     <div className="container-cancionero">
       <h1 className="titulo-cancionero">Himnos</h1>
+	  <h3 className="subtitle">Por favor, no dejar espacios al final del texto de la búsqueda</h3>
       <div className="container-buscador">
         <form onSubmit={handleSubmit} className="form-buscador">
           <input
