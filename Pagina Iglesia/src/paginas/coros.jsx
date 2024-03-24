@@ -308,7 +308,7 @@ const Coros = () => {
         setLlave(false);
         setLetra([]);
         setTituloCancionSeleccionada("Canción no encontrada");
-        alert("Coro no encontrado.")
+        alert(`Coro no encontrado para el término: ${busqueda}.`)
       }
     } else {
       // Buscar por título
@@ -349,7 +349,7 @@ const Coros = () => {
           setResultadoBusqueda([]);
           setLlave(false);
           setLetra([]);
-          alert("Coro no encontrado");
+          alert(`Coro no encontrado para el término: ${busqueda}.`)
         }
       }
     }

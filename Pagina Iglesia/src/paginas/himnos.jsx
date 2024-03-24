@@ -590,7 +590,7 @@ function Himnos() {
 		setLlave(false);
 		setLetra([]);
 		setTituloCancionSeleccionada("Canción no encontrada");
-		alert("Himno no encontrado.");
+		alert(`Himno no encontrado para el término: ${busqueda}.`);
 	  }
 	} else {
 	  // Buscar por título
@@ -632,7 +632,7 @@ function Himnos() {
 		  setLlave(false);
 		  setLetra([]);
 		  setTituloCancionSeleccionada("Canción no encontrada");
-		  alert("Himno no encontrado");
+		  alert(`Himno no encontrado para el término: ${busqueda}.`);
 		}
 	  }
 	}
