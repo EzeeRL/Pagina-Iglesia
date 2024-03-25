@@ -124,11 +124,11 @@ function Home() {
             </div>
             <div className="slick-slide">
               <img
-                src="placas-slider/placa-domingos.jpeg"
+                src="placas-slider/placa-domingo.jpeg"
                 alt=""
                 className="img-slider"
                 onClick={() =>
-                  handleFullscreenImage("placas-slider/placa-domingos.jpeg")
+                  handleFullscreenImage("placas-slider/placa-domingo.jpeg")
                 }
               />
             </div>
@@ -169,7 +169,7 @@ function Home() {
         className="article-container"
         >
           <div className="container-img">
-            <img src="noticias/noticia-1.png" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/noticia-1.png")}/>
+            <img src="noticias/placa-campa.png" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/placa-campa.png")}/>
             {/* <video
               src="noticias/noticia-1.mp4"
               className="noticia-video"

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import "./oracion.css"; // Asegúrate de tener tus estilos CSS en este archivo
+import "./oracion.css";
+
+import Footer from '../components/footer.jsx';
+
 
 function MotivosDeOracion() {
   const [state, handleSubmit] = useForm("xkndvqaa");
@@ -88,6 +91,8 @@ function MotivosDeOracion() {
           </ul>
         </div> */}
       </main>
+
+      <Footer></Footer>
     </>
   );
 }
