@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Footer from "../components/footer.jsx";
 
+import { useSpring, animated } from 'react-spring';
+
 import { useState } from "react";
 
 function AVI() {
@@ -33,12 +35,24 @@ function AVI() {
   const handleCloseFullscreen = () => {
     setFullscreenImage(null);
   };
+
+  // ANIMACIONES
+
+  const [isVisible] = useState(true);
+
+  // Animación de escala para el contenedor de la imagen
+  const containerAnimation = useSpring({
+      from: { transform: 'scale(0)' }, // Escala inicial
+      to: { transform: isVisible ? 'scale(1)' : 'scale(0)' }, // Escala final basada en isVisible
+      config: { tension: 200, friction: 20 } // Configuración de la animación
+  });
+
   return (
     <div className="container-avi">
       <h1 className="titulo-avi">Adicciones vs Vida</h1>
 
       {/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
-      <main className="main-container">
+      <animated.main className="main-container" style={containerAnimation}>
         <div className="carrusel">
           <Slider {...settings}>
             <div className="slick-slide">
@@ -59,7 +73,7 @@ function AVI() {
             </div>
           </Slider>
         </div>
-      </main>
+      </animated.main>
 
       <div className="container-info">
         <p>

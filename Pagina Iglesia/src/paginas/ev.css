@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 5vh; /* Usamos unidades relativas para el margen superior */
+    margin-top: 5vh;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-left: auto;
@@ -17,17 +17,28 @@
 
 .container-img {
 	padding: 15px;
-}
-
-.noticia-video-ev {
-    width: 90%; /* Usamos un ancho relativo */
-    max-width: 800px; /* Limitamos el ancho máximo */
-    height: auto; /* Mantenemos la relación de aspecto */
+    border-top: 3px solid #46e5fd;
+	border-bottom: 3px solid #46e5fd;
     border-radius: 15px;
 }
 
+/* .noticia-video-ev {
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+} */
+
+.placa-ev {
+    width: 500px;
+    height: 400px;
+    border-radius: 15px;
+    border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
 .article-container-ev {
-    width: 90%; /* Usamos un ancho relativo */
+    width: auto; /* Usamos un ancho relativo */
     max-width: 800px; /* Limitamos el ancho máximo */
     height: auto; /* Mantenemos la relación de aspecto */
     border-radius: 15px;

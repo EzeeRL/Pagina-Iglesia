@@ -6,7 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Footer from "../components/footer.jsx";
 
-import { useState } from "react";
+import { useSpring, animated } from 'react-spring';
+
+import { useState, useEffect } from "react";
 
 function JovenesYAdolescentes() {
   // SETTINGS SLIDER
@@ -33,6 +35,52 @@ function JovenesYAdolescentes() {
   const handleCloseFullscreen = () => {
     setFullscreenImage(null);
   };
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [isSliderVisible, setIsSliderVisible] = useState(false);
+
+  useEffect(() => {
+    setIsSliderVisible(true);
+  }, []);
+
+  const containerAnimation = useSpring({
+    from: { transform: 'scale(0)' },
+    to: { transform: isSliderVisible ? 'scale(1)' : 'scale(0)' },
+    config: { tension: 200, friction: 20 }
+  });
+
+  useEffect(() => {
+    const handleVisibility = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          setIsVisible(true);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleVisibility, {
+      threshold: 0.5,
+    });
+
+    const section = document.querySelector(".container-noticias-2");
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  const opacityAnimation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    from: { transform: 'scale(0)' },
+    to: { transform: isVisible ? 'scale(1)' : 'scale(0)' },
+    config: { tension: 200, friction: 20 },
+  });
+
   return (
     <>
       <h1 className="titulo-jov-ados">Jóvenes y Adolescentes</h1>
@@ -42,7 +90,7 @@ function JovenesYAdolescentes() {
       </h3>
       {/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
       <main className="main-container">
-        <div className="carrusel">
+        <animated.div className="carrusel" style={containerAnimation}>
           <Slider {...settings}>
             <div className="slick-slide">
               <img
@@ -101,13 +149,13 @@ function JovenesYAdolescentes() {
               />
             </div>
           </Slider>
-        </div>
+        </animated.div>
       </main>
 
 
 
       <h1 className="actividades-titulo">Próximas Actividades</h1>
-      <div className="container-noticias-2">
+      <animated.div className="container-noticias-2" style={opacityAnimation}>
         <article className="article-container-2">
           <div className="container-img">
             <img
@@ -126,7 +174,7 @@ function JovenesYAdolescentes() {
             </p>
           </div>
         </article>
-      </div>
+      </animated.div>
 
       {fullscreenImage && (
         <div className="fullscreen-modal" onClick={handleCloseFullscreen}>

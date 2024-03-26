@@ -2,6 +2,8 @@ import './reu-fem.css';
 
 import Footer from '../components/footer.jsx';
 
+import { useSpring, animated } from 'react-spring';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -33,12 +35,22 @@ const handleFullscreenImage = (imageUrl) => {
 const handleCloseFullscreen = () => {
 	setFullscreenImage(null);
 };
+
+const [isVisible] = useState(true);
+
+// Animación de escala para el contenedor de la imagen
+const containerAnimation = useSpring({
+	from: { transform: 'scale(0)' }, // Escala inicial
+	to: { transform: isVisible ? 'scale(1)' : 'scale(0)' }, // Escala final basada en isVisible
+	config: { tension: 200, friction: 20 } // Configuración de la animación
+});
+
 	return (
 		<>
 		<h1 className="titulo-reu-fem">Reunión Femenina</h1>
 		{/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
-		<main className="main-container">
-				<div className="carrusel">
+		<main className="main-container" >
+				<animated.div className="carrusel" style={containerAnimation}>
 					<Slider {...settings}>
 						<div className='slick-slide'>
 							<img src="actividad-femenina/foto-2.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("actividad-femenina/foto-2.jpeg")}/>
@@ -53,7 +65,7 @@ const handleCloseFullscreen = () => {
 							<img src="actividad-femenina/foto-5.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("actividad-femenina/foto-5.jpeg")}/>
 						</div>
 					</Slider>
-				</div>
+				</animated.div>
 			</main>
 			
 			{fullscreenImage && (

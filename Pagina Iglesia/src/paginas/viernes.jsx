@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import { useSpring, animated } from 'react-spring';
+
 import Footer from '../components/footer.jsx';
 
 import { useState } from 'react';
@@ -33,13 +35,23 @@ const handleFullscreenImage = (imageUrl) => {
 const handleCloseFullscreen = () => {
 	setFullscreenImage(null);
 };
+
+const [isVisible] = useState(true);
+
+// Animación de escala para el contenedor de la imagen
+const containerAnimation = useSpring({
+	from: { transform: 'scale(0)' }, // Escala inicial
+	to: { transform: isVisible ? 'scale(1)' : 'scale(0)' }, // Escala final basada en isVisible
+	config: { tension: 200, friction: 20 } // Configuración de la animación
+});
+
 	return (
 		<>
 		<h1 className="titulo-viernes">Reunión de oración y estudio de la Palabra</h1>
 
 		{/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
 		<main className="main-container">
-				<div className="carrusel">
+				<animated.div className="carrusel" style={containerAnimation}>
 					<Slider {...settings}>
 						<div className='slick-slide'>
 							<img src="fotos-domingos/foto-domingo-1.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-1.jpeg")}/>
@@ -63,7 +75,7 @@ const handleCloseFullscreen = () => {
 							<img src="fotos-domingos/foto-domingo-7.jpeg" alt="" className='img-slider' onClick={() => handleFullscreenImage("fotos-domingos/foto-domingo-7.jpeg")}/>
 						</div>
 					</Slider>
-				</div>
+				</animated.div>
 			</main>
 			
 			{fullscreenImage && (

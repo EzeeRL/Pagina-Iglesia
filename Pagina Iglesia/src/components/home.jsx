@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { Link, Element } from "react-scroll";
+import { useSpring, animated } from "react-spring";
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+
 import "./home.css";
 import Nav from "./nav";
 import Footer from "./footer";
-import Cumpleaños from "../paginas/cumpleaños";
+// import Cumpleaños from "../paginas/cumpleaños";
 
-import { useEffect } from "react";
-import { useState } from "react";
 
 import axios from "axios";
 
@@ -33,6 +36,15 @@ function Home() {
   const [latestVideo, setLatestShort] = useState(null);
   const [fullscreenImage, setFullscreenImage] = useState(null);
 
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
+
+  const animationProps = useSpring({
+    opacity: isVisible ? 1 : 0, // Ajusta la opacidad de 0 a 1 dependiendo de si el elemento está visible
+    transform: isVisible ? "translateY(0) scale(1)" : "translateY(100px) scale(0.8)", // Ajusta la posición vertical de la animación
+  });
+  
+
   useEffect(() => {
     const fetchLatestShort = async () => {
       try {
@@ -54,6 +66,33 @@ function Home() {
 
     fetchLatestShort();
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          setIsVisible(true);
+        }
+      });
+    }, { threshold: 0.7 }); // Define el threshold (umbral) en 0.5 para activar la animación cuando el elemento está a la mitad de la pantalla
+  
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+  
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+  
+
+  const props = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+  });
+
 
   const handleFullscreenImage = (imageUrl) => {
     setFullscreenImage(imageUrl);
@@ -159,97 +198,106 @@ function Home() {
         </div>
       </main>
 
-      <h1 className="titulo-noticias">
-        <b className="underline-noticias">Noticias</b>
-      </h1>
+        <h1 className="titulo-noticias">
+          <b className="underline-noticias">Noticias</b>
+        </h1>
 
-      <div className="container-noticias" id="noticias-section">
-        <article 
-        // className="article-video"
-        className="article-container"
-        >
-          <div className="container-img">
-            <img src="noticias/placa-campa.png" alt="" className='img-noticias' onClick={() => handleFullscreenImage("noticias/placa-campa.png")}/>
-            {/* <video
+        <div className="container-noticias" id="noticias-section" ref={containerRef}>
+          <animated.article
+            // className="article-video"
+            className="article-container"
+            style={animationProps}
+          >
+            <div className="container-img">
+              <img
+                src="noticias/placa-campa.png"
+                alt=""
+                className="img-noticias"
+                onClick={() =>
+                  handleFullscreenImage("noticias/placa-campa.png")
+                }
+              />
+              {/* <video
               src="noticias/noticia-1.mp4"
               className="noticia-video"
               controls
             ></video> */}
-            <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
-            <p className="texto-noticias">
-              26 al 28 de Abril. <br />a las
-              <b className="txt-horario-noticia"> 19:00hs</b>
-            </p>
-            {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
-          </div>
-        </article>
+              <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
+              <p className="texto-noticias">
+                26 al 28 de Abril. <br />a las
+                <b className="txt-horario-noticia"> 19:00hs</b>
+              </p>
+              {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
+            </div>
+          </animated.article>
 
-        <article className="article-reel">
-          <div className="container-reel">
-            {latestVideo ? (
-              <>
-                <iframe
-                  width="210"
-                  height="315"
-                  src={`https://www.youtube.com/embed/${latestVideo.videoId}`}
-                  title={latestVideo.title}
-                  className="video-player"
-                  allowFullScreen
-                />
-                <p className="texto-reel">Nuestro último reel:</p>
-                <h4 className="titulo-texto-noticias">
-                  Titulo: {latestVideo.title}
-                </h4>
-                <a
-                  href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
-                  className="link-reels"
-                  target="_blank"
-                >
-                  Ver lista de reels
-                </a>
-              </>
-            ) : (
-              <>
-                <h2 className="titulo-aux">Video no disponible</h2>
-                <p className="txt-aux-reel">
-                  Mientras tanto, visitá nuestro canal de YouTube
-                </p>
-                <a
-                  href="https://www.youtube.com/@IglesiaVicenteLopez"
-                  target="_blank"
-                >
-                  <i className="fa-brands fa-youtube icons-redes-footer icon-youtube-aux"></i>
-                </a>
-                <a
-                  href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
-                  className="link-reels-aux"
-                  target="_blank"
-                >
-                  Ver lista de reels
-                </a>
-              </>
-            )}
-          </div>
-        </article>
+          <animated.article className="article-reel" style={animationProps}>
+            <div className="container-reel">
+              {latestVideo ? (
+                <>
+                  <iframe
+                    width="210"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${latestVideo.videoId}`}
+                    title={latestVideo.title}
+                    className="video-player"
+                    allowFullScreen
+                  />
+                  <p className="texto-reel">Nuestro último reel:</p>
+                  <h4 className="titulo-texto-noticias">
+                    Titulo: {latestVideo.title}
+                  </h4>
+                  <a
+                    href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
+                    className="link-reels"
+                    target="_blank"
+                  >
+                    Ver lista de reels
+                  </a>
+                </>
+              ) : (
+                <>
+                  <h2 className="titulo-aux">Video no disponible</h2>
+                  <p className="txt-aux-reel">
+                    Mientras tanto, visitá nuestro canal de YouTube
+                  </p>
+                  <a
+                    href="https://www.youtube.com/@IglesiaVicenteLopez"
+                    target="_blank"
+                  >
+                    <i className="fa-brands fa-youtube icons-redes-footer icon-youtube-aux"></i>
+                  </a>
+                  <a
+                    href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
+                    className="link-reels-aux"
+                    target="_blank"
+                  >
+                    Ver lista de reels
+                  </a>
+                </>
+              )}
+            </div>
+          </animated.article>
 
-        <article className="article-container">
-          <div className="container-img">
-            <img
-              src="noticias/noticia-2.png"
-              alt=""
-              className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
-            />
-            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
-            <p className="texto-noticias">
-              Sábado 6 de Abril<br />a partir de las
-              <b className="txt-horario-noticia"> 19:00hs</b>
-            </p>
-          </div>
-        </article>
-      </div>
+          <animated.article className="article-container" style={animationProps}>
+            <div className="container-img">
+              <img
+                src="noticias/noticia-2.png"
+                alt=""
+                className="img-noticias"
+                onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
+              />
+              <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
+              <p className="texto-noticias">
+                Sábado 6 de Abril
+                <br />a partir de las
+                <b className="txt-horario-noticia"> 19:00hs</b>
+              </p>
+            </div>
+          </animated.article>
+        </div>
 
-      {/* <div className="container-noticias-2">
+        {/* <div className="container-noticias-2">
         <article className="article-container-2">
           <div className="container-img">
             <img

@@ -1,29 +1,19 @@
 import './ev.css';
-
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
+import { useState } from 'react';
+import { useSpring, animated } from 'react-spring';
 import Footer from '../components/footer.jsx';
 
-import { useState } from 'react';
-
 function EspacioVaron() {
-    // SETTINGS SLIDER
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: false,
-        variableWidth: false,
-        centerMode: true,
-        centerPadding: '0',
-    };
+    const [isVisible] = useState(true);
 
+    // Animación de escala para el contenedor de la imagen
+    const containerAnimation = useSpring({
+        from: { transform: 'scale(0)' }, // Escala inicial
+        to: { transform: isVisible ? 'scale(1)' : 'scale(0)' }, // Escala final basada en isVisible
+        config: { tension: 200, friction: 20 } // Configuración de la animación
+    });
+
+    // Estado y funciones para manejar la imagen a pantalla completa
     const [fullscreenImage, setFullscreenImage] = useState(null);
 
     const handleFullscreenImage = (imageUrl) => {
@@ -40,9 +30,10 @@ function EspacioVaron() {
 
             <main className="main-container-ev">
                 <article className='article-container-ev'>
-                    <div className="container-img">
-                        <video src="noticias/noticia-video.mp4" className='noticia-video-ev' autoPlay="true" controls></video>
-                    </div>
+                    <animated.div className="container-img" style={containerAnimation}>
+                        {/* Agregamos la animación de escala al contenedor */}
+                        <img src="Espacio Varon/placa-ev.jpeg" alt="" className='placa-ev' onClick={() => handleFullscreenImage("Espacio Varon/placa-ev.jpeg")} />
+                    </animated.div>
                 </article>
             </main>
 
@@ -55,7 +46,7 @@ function EspacioVaron() {
                 </div>
             )}
 
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }
