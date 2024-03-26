@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link, Element } from "react-scroll";
 import { useSpring, animated } from "react-spring";
 
 
@@ -35,15 +34,14 @@ function Home() {
 
   const [latestVideo, setLatestShort] = useState(null);
   const [fullscreenImage, setFullscreenImage] = useState(null);
-
   const [isVisible, setIsVisible] = useState(false);
+  
   const containerRef = useRef(null);
 
   const animationProps = useSpring({
-    opacity: isVisible ? 1 : 0, // Ajusta la opacidad de 0 a 1 dependiendo de si el elemento está visible
-    transform: isVisible ? "translateY(0) scale(1)" : "translateY(100px) scale(0.8)", // Ajusta la posición vertical de la animación
-  });
-  
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+  });  
 
   useEffect(() => {
     const fetchLatestShort = async () => {
@@ -70,11 +68,11 @@ function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
           setIsVisible(true);
         }
       });
-    }, { threshold: 0.7 }); // Define el threshold (umbral) en 0.5 para activar la animación cuando el elemento está a la mitad de la pantalla
+    }, { threshold: 0.3 }); // Reducir el umbral a 0.3 para activar la animación antes
   
     if (containerRef.current) {
       observer.observe(containerRef.current);
@@ -86,13 +84,6 @@ function Home() {
       }
     };
   }, []);
-  
-
-  const props = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(20px)",
-  });
-
 
   const handleFullscreenImage = (imageUrl) => {
     setFullscreenImage(imageUrl);

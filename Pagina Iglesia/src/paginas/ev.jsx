@@ -30,7 +30,7 @@ function EspacioVaron() {
 
             <main className="main-container-ev">
                 <article className='article-container-ev'>
-                    <animated.div className="container-img" style={containerAnimation}>
+                    <animated.div className="container-img-ev" style={containerAnimation}>
                         {/* Agregamos la animación de escala al contenedor */}
                         <img src="Espacio Varon/placa-ev.jpeg" alt="" className='placa-ev' onClick={() => handleFullscreenImage("Espacio Varon/placa-ev.jpeg")} />
                     </animated.div>

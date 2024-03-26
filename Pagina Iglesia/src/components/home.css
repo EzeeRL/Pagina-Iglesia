@@ -84,24 +84,6 @@
 
 /* NOTICIAS */
 
-/* Define una clase con la animación de entrada */
-@keyframes fadeIn {
-	from {
-	  opacity: 0;
-	  transform: translateY(50px);
-	}
-	to {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-  }
-  
-  /* Aplica la animación a los elementos que están dentro de la sección */
-  .element .animado {
-	animation: fadeIn 2.4s ease forwards;
-  }
-  
-
 .titulo-noticias {
 	text-align: center;
 	margin-top: 100px;
@@ -120,7 +102,7 @@
 
 .article-container {
 	width: 320px;
-	height: 400px;
+	height: 380px;
 	margin: 50px;
 	border-radius: 15px;
 	background-color: rgb(255, 255, 255, 0.4);
@@ -167,6 +149,10 @@
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
+}
+
+.container-img {
+	padding: 15px;
 }
 
 .img-noticias {
