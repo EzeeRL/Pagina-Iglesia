@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { useState } from 'react';
 
+import { useSpring, animated } from 'react-spring';
+
 import Footer from '../components/footer.jsx';
 
 function Domingos() {
@@ -23,6 +25,13 @@ function Domingos() {
         centerMode: true,
         centerPadding: '0',
     };
+    const [isVisible] = useState(true);
+
+    const containerAnimation = useSpring({
+        from: { transform: 'scale(0)' }, // Escala inicial
+        to: { transform: isVisible ? 'scale(1)' : 'scale(0)' }, // Escala final basada en isVisible
+        config: { tension: 200, friction: 20 } // Configuración de la animación
+    });
 
     const [fullscreenImage, setFullscreenImage] = useState(null);
 
@@ -39,7 +48,7 @@ function Domingos() {
             <h1 className="titulo-domingos">Cena del Señor y Predicación del Evangelio</h1>
 
             {/* Primer Slider */}
-            <main className="main-container">
+            <animated.main className="main-container" style={containerAnimation}>
                 <div className="carrusel">
                     <Slider {...settings}>
                         <div className='slick-slide'>
@@ -65,11 +74,11 @@ function Domingos() {
                         </div>
                     </Slider>
                 </div>
-            </main>
+            </animated.main>
 
 			<h3 className='titulo-ebd'>Escuela Bíblica Dominical</h3>
 
-            <main className="main-container">
+            <animated.main className="main-container" style={containerAnimation}>
                 <div className="carrusel">
                     <Slider {...settings}>
                         <div className='slick-slide'>
@@ -104,7 +113,7 @@ function Domingos() {
                         </div>
                     </Slider>
                 </div>
-            </main>
+            </animated.main>
 
             {fullscreenImage && (
                 <div className="fullscreen-modal" onClick={handleCloseFullscreen}>

@@ -34,6 +34,7 @@ nav {
 .container-logo-iglesia {
     display: flex;
     align-items: center;
+    width: 100px;
 }
 
 .logo-img {
@@ -52,11 +53,11 @@ nav {
 }
 
 .container-links-nav {
-    width: 70%;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     /* background-color: aqua; */
 }
 
