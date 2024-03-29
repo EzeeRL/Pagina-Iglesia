@@ -1,18 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
 
 import "./home.css";
 import Nav from "./nav";
 import Footer from "./footer";
 // import Cumpleaños from "../paginas/cumpleaños";
-
 
 import axios from "axios";
 
@@ -35,13 +31,13 @@ function Home() {
   const [latestVideo, setLatestShort] = useState(null);
   const [fullscreenImage, setFullscreenImage] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const containerRef = useRef(null);
 
   const animationProps = useSpring({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? "translateY(0)" : "translateY(20px)",
-  });  
+  });
 
   useEffect(() => {
     const fetchLatestShort = async () => {
@@ -66,18 +62,21 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
-          setIsVisible(true);
-        }
-      });
-    }, { threshold: 0.3 }); // Reducir el umbral a 0.3 para activar la animación antes
-  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    ); // Reducir el umbral a 0.3 para activar la animación antes
+
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
-  
+
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
@@ -100,6 +99,16 @@ function Home() {
       <main className="main-container">
         <div className="carrusel">
           <Slider {...settings}>
+          <div className="slick-slide">
+              <img
+                src="placas-slider/semana-santa.jpg"
+                alt=""
+                className="img-slider"
+                onClick={() =>
+                  handleFullscreenImage("placas-slider/semana-santa.jpg")
+                }
+              />
+            </div>
             <div className="slick-slide">
               <img
                 src="placas-slider/placa-avi.jpeg"
@@ -122,6 +131,16 @@ function Home() {
             </div>
             <div className="slick-slide">
               <img
+                src="placas-slider/semana-santa.jpg"
+                alt=""
+                className="img-slider"
+                onClick={() =>
+                  handleFullscreenImage("placas-slider/semana-santa.jpg")
+                }
+              />
+            </div>
+            <div className="slick-slide">
+              <img
                 src="placas-slider/placa-viernes.jpeg"
                 alt=""
                 className="img-slider"
@@ -137,6 +156,16 @@ function Home() {
                 className="img-slider"
                 onClick={() =>
                   handleFullscreenImage("placas-slider/placa-evangelismo.jpeg")
+                }
+              />
+            </div>
+            <div className="slick-slide">
+              <img
+                src="placas-slider/semana-santa.jpg"
+                alt=""
+                className="img-slider"
+                onClick={() =>
+                  handleFullscreenImage("placas-slider/semana-santa.jpg")
                 }
               />
             </div>
@@ -189,40 +218,44 @@ function Home() {
         </div>
       </main>
 
-        <h1 className="titulo-noticias">
-          <b className="underline-noticias">Noticias</b>
-        </h1>
+      <h1 className="titulo-noticias">
+        <b className="underline-noticias">Noticias</b>
+      </h1>
 
-        <div className="container-noticias" id="noticias-section" ref={containerRef}>
-          <animated.article
-            // className="article-video"
-            className="article-container"
-            style={animationProps}
-          >
-            <div className="container-img">
-              <img
-                src="noticias/placa-campa.png"
-                alt=""
-                className="img-noticias"
-                onClick={() =>
-                  handleFullscreenImage("noticias/placa-campa.png")
-                }
-              />
-              {/* <video
+      <div
+        className="container-noticias"
+        id="noticias-section"
+        ref={containerRef}
+      >
+        <animated.article
+          // className="article-video"
+          className="article-container"
+          style={animationProps}
+        >
+          <div className="container-img">
+            <img
+              src="noticias/placa-campa.png"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/placa-campa.png")}
+            />
+            {/* <video
               src="noticias/noticia-1.mp4"
               className="noticia-video"
               controls
             ></video> */}
-              <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
-              <p className="texto-noticias">
-                26 al 28 de Abril. <br />a las
-                <b className="txt-horario-noticia"> 19:00hs</b>
-              </p>
-              {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
-            </div>
-          </animated.article>
+            <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
+            <p className="texto-noticias">
+              {/* <br /> */}
+              <b className="txt-horario-noticia">
+                <u>26 al 28 de Abril.</u>
+              </b>
+            </p>
+            {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
+          </div>
+        </animated.article>
 
-          <animated.article className="article-reel" style={animationProps}>
+        {/* <animated.article className="article-reel" style={animationProps}>
             <div className="container-reel">
               {latestVideo ? (
                 <>
@@ -268,28 +301,45 @@ function Home() {
                 </>
               )}
             </div>
-          </animated.article>
+          </animated.article> */}
 
-          <animated.article className="article-container" style={animationProps}>
-            <div className="container-img">
-              <img
-                src="noticias/noticia-2.png"
-                alt=""
-                className="img-noticias"
-                onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
-              />
-              <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
-              <p className="texto-noticias">
-                Sábado 6 de Abril
-                <br />a partir de las
-                <b className="txt-horario-noticia"> 19:00hs</b>
-              </p>
-            </div>
-          </animated.article>
-        </div>
+        <animated.article className="article-container" style={animationProps}>
+          <div className="container-img">
+            <img
+              src="noticias/placa-ev.jpeg"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
+            />
+            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            <p className="texto-noticias">
+              Jueves 4 de Abril
+              <br />a partir de las
+              <b className="txt-horario-noticia"> 20:00hs</b>
+            </p>
+          </div>
+        </animated.article>
 
-        {/* <div className="container-noticias-2">
-        <article className="article-container-2">
+        <animated.article className="article-container" style={animationProps}>
+          <div className="container-img">
+            <img
+              src="noticias/noticia-2.png"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
+            />
+            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
+            <p className="texto-noticias">
+              Sábado 6 de Abril
+              <br />a partir de las
+              <b className="txt-horario-noticia"> 19:00hs</b>
+            </p>
+          </div>
+        </animated.article>
+      </div>
+
+      <div className="container-noticias-2">
+        {/* <article className="article-container-2">
           <div className="container-img">
             <img
               src="noticias/noticia-3.jpeg"
@@ -305,15 +355,15 @@ function Home() {
               <b className="txt-horario-noticia"> 16:00hs</b>
             </p>
           </div>
-        </article>
+        </article> */}
 
         <article className="article-container-2">
           <div className="container-img">
             <img
-              src="noticias/noticia-4.jpg"
+              src="noticias/semana-santa.jpg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-4.jpg")}
+              onClick={() => handleFullscreenImage("noticias/semana-santa.jpg")}
             />
             <h4 className="titulo-texto-noticias">
               Inicio Escuela Bíblica Dominical
@@ -325,7 +375,7 @@ function Home() {
           </div>
         </article>
 
-        <article className="article-container-2">
+        {/* <article className="article-container-2">
           <div className="container-img">
             <img
               src="noticias/noticia-5.png"
@@ -339,8 +389,8 @@ function Home() {
               Precio de: <b className="txt-horario-noticia">$35.000</b>
             </p>
           </div>
-        </article>
-      </div> */}
+        </article> */}
+      </div>
 
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (

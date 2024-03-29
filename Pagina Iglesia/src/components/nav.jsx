@@ -54,8 +54,8 @@ function Nav() {
                 <animated.li style={linkAnimation}><Link to='/' className='link-nav'><i className="fa-solid fa-house"></i> Inicio</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Coros' className='link-nav'><i className="fa-solid fa-music"></i> Cancionero</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Ministerios' className='link-nav'><i className="fa-solid fa-calendar-days"></i> Ministerios</Link></animated.li>
-                <animated.li style={linkAnimation}><Link to='/MotivosdeOracion' className='link-nav'><i className="fa-solid fa-hands-praying"></i> Pedidos de Oración</Link></animated.li>
-                <animated.li style={linkAnimation}><Link to='/Campamento' className='link-nav'><i class="fa-solid fa-tents"></i> Campamento</Link></animated.li>
+                <animated.li style={linkAnimation}><Link to='/Oracion' className='link-nav'><i class="fa-solid fa-hands-praying"></i> Oracion</Link></animated.li>
+                <animated.li style={linkAnimation}><Link to='/Campa' className='link-nav'><i class="fa-solid fa-tents"></i> Campamento</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Contacto' className='link-nav'><i className="fa-solid fa-user"></i> Contacto</Link></animated.li>
             </ul>
             {/* Icono del menú móvil */}

@@ -18,10 +18,10 @@ import EspacioVaron from './paginas/ev.jsx';
 import JovenesYAdolescentes from './paginas/jov-ados.jsx';
 import Domingos from './paginas/domingos.jsx';
 import Viernes from './paginas/viernes.jsx';
-import Campamento from './paginas/inscripcion-campa.jsx';
 import Himnos from './paginas/himnos.jsx';
 import Coros from './paginas/coros.jsx';
-import MotivosDeOracion from './paginas/oracion.jsx';
+import Campa from './paginas/Campa.jsx';
+import Oracion from './paginas/Oracion.jsx';
 // import Prueba from './paginas/prueba.jsx';
 
 
@@ -48,10 +48,10 @@ function App() {
 		<Route path='/Viernes' element={<Viernes/>}/>
 		<Route path='/JovenesYAdolescentes' element={<JovenesYAdolescentes/>}/>
 		<Route path='/Domingos' element={<Domingos/>}/>
-		<Route path='/Campamento' element={<Campamento/>}/>
+		<Route path='/Campa' element={<Campa/>}/>
 		{/* <Route path='/Prueba' element={<Prueba/>}/> */}
 		<Route path='/Himnos' element={<Himnos/>}/>
-		<Route path='/MotivosDeOracion' element={<MotivosDeOracion/>}/>
+		<Route path='/Oracion' element={<Oracion/>}/>
 	</Routes>
 	</>
   )

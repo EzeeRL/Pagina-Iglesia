@@ -1,39 +1,38 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import "./oracion.css";
+import "./Oracion.css";
 
 import Footer from '../components/footer.jsx';
 
+function Oracion() {
+	const [state, handleSubmit] = useForm("xkndvqaa");
+	const [pedidosOracion, setPedidosOracion] = useState([]);
 
-function MotivosDeOracion() {
-  const [state, handleSubmit] = useForm("xkndvqaa");
-  const [pedidosOracion, setPedidosOracion] = useState([]);
+   const handleFormSubmit = async (event) => {
+     const formData = new FormData(event.target);
+     const nuevoPedido = formData.get("message");
 
-  const handleFormSubmit = async (event) => {
-    const formData = new FormData(event.target);
-    const nuevoPedido = formData.get("message");
+     setPedidosOracion([...pedidosOracion, nuevoPedido]);
 
-    setPedidosOracion([...pedidosOracion, nuevoPedido]);
+     await handleSubmit(event);
+   };
 
-    await handleSubmit(event);
-  };
+   if (state.succeeded) {
+     return (
+       <>
+         <div className="container-agradecimiento">
+           <p className="texto-agradecimiento">
+             ¡Gracias por enviarnos tu motivo de oración! <br />
+             Lo tendremos en cuenta y vamos a estar orando por vos.
+             <i className="fa-solid fa-heart icon-corazon"></i>
+           </p>
+         </div>
+       </>
+     );
+   }
 
-  if (state.succeeded) {
-    return (
-      <>
-        <div className="container-agradecimiento">
-          <p className="texto-agradecimiento">
-            ¡Gracias por enviarnos tu motivo de oración! <br />
-            Lo tendremos en cuenta y vamos a estar orando por vos.
-            <i className="fa-solid fa-heart icon-corazon"></i>
-          </p>
-        </div>
-      </>
-    );
-  }
-
-  return (
-    <>
+   return (
+     <>
       <h1 className="titulo-oracion">Motivos de Oración</h1>
 
       <main>
@@ -81,20 +80,11 @@ function MotivosDeOracion() {
             Enviar
           </button>
         </form>
-
-        {/* <div className="container-lista">
-          <h1>Lista de pedidos de Oración</h1>
-          <ul>
-            {pedidosOracion.map((pedido, index) => (
-              <li key={index}>{pedido}</li>
-            ))}
-          </ul>
-        </div> */}
       </main>
 
-      <Footer></Footer>
-    </>
-  );
-}
+	  <Footer></Footer>
+	  </>
+	  );
+};
 
-export default MotivosDeOracion;
+export default Oracion;
