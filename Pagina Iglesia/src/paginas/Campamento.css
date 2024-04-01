@@ -108,7 +108,7 @@
     .form-inscripcion {
       width: 80%; /* Reducir el ancho en dispositivos más pequeños */
       max-width: 400px; /* Ajustar el máximo ancho para dispositivos más pequeños */
-      height: 600px;
+      height: auto;
       margin-top: 150px;
     }
     .container-general-inscripcion {
@@ -119,9 +119,6 @@
   @media screen and (min-width: 730px) {
     .form-inscripcion {
       width: 500px;
-    }
-    .button-submit-inscripcion {
-      /* left: 20%; */
     }
   }
 

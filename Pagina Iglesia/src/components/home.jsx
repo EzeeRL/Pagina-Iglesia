@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+
 import { useSpring, animated } from "react-spring";
 
 import Slider from "react-slick";
@@ -11,6 +12,7 @@ import Footer from "./footer";
 // import Cumpleaños from "../paginas/cumpleaños";
 
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
   // SETTINGS SLIDER
@@ -28,38 +30,38 @@ function Home() {
     centerPadding: "0",
   };
 
-  const [latestVideo, setLatestShort] = useState(null);
+  const [latestVideo, setLatestVideo] = useState(null);
   const [fullscreenImage, setFullscreenImage] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const containerRef = useRef(null);
-
-  const animationProps = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(20px)",
-  });
 
   useEffect(() => {
-    const fetchLatestShort = async () => {
+    const fetchLatestVideo = async () => {
       try {
         const response = await axios.get(
           `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBSaOcJEpgiOEkE-VziGbQRvOMcoyADa2U&channelId=UCYCyujpetSCp4aq79i_HpwQ&part=snippet,id&order=date&maxResults=1&type=video&videoDuration=short`
         );
-        const latestShortData = response.data.items[0].snippet;
-        const latestShortInfo = {
-          title: latestShortData.title,
-          description: latestShortData.description,
-          thumbnailUrl: latestShortData.thumbnails.default.url,
+        const latestVideoData = response.data.items[0].snippet;
+        const latestVideoInfo = {
+          title: latestVideoData.title,
+          description: latestVideoData.description,
+          thumbnailUrl: latestVideoData.thumbnails.default.url,
           videoId: response.data.items[0].id.videoId,
         };
-        setLatestShort(latestShortInfo);
+        setLatestVideo(latestVideoInfo);
       } catch (error) {
-        console.error("Error fetching latest short:", error);
+        console.error("Error fetching latest video:", error);
       }
     };
 
-    fetchLatestShort();
+    fetchLatestVideo();
   }, []);
+
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  const animationProps = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -99,16 +101,6 @@ function Home() {
       <main className="main-container">
         <div className="carrusel">
           <Slider {...settings}>
-          <div className="slick-slide">
-              <img
-                src="placas-slider/semana-santa.jpg"
-                alt=""
-                className="img-slider"
-                onClick={() =>
-                  handleFullscreenImage("placas-slider/semana-santa.jpg")
-                }
-              />
-            </div>
             <div className="slick-slide">
               <img
                 src="placas-slider/placa-avi.jpeg"
@@ -131,16 +123,6 @@ function Home() {
             </div>
             <div className="slick-slide">
               <img
-                src="placas-slider/semana-santa.jpg"
-                alt=""
-                className="img-slider"
-                onClick={() =>
-                  handleFullscreenImage("placas-slider/semana-santa.jpg")
-                }
-              />
-            </div>
-            <div className="slick-slide">
-              <img
                 src="placas-slider/placa-viernes.jpeg"
                 alt=""
                 className="img-slider"
@@ -156,16 +138,6 @@ function Home() {
                 className="img-slider"
                 onClick={() =>
                   handleFullscreenImage("placas-slider/placa-evangelismo.jpeg")
-                }
-              />
-            </div>
-            <div className="slick-slide">
-              <img
-                src="placas-slider/semana-santa.jpg"
-                alt=""
-                className="img-slider"
-                onClick={() =>
-                  handleFullscreenImage("placas-slider/semana-santa.jpg")
                 }
               />
             </div>
@@ -247,61 +219,61 @@ function Home() {
             <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
             <p className="texto-noticias">
               {/* <br /> */}
-              <b className="txt-horario-noticia">
-                <u>26 al 28 de Abril.</u>
-              </b>
+              <b className="txt-horario-noticia">26 al 28 de Abril.</b>
             </p>
-            {/* <Link to='/Campamento' className='link-inscripcion-campa'>Inscribite ahora acá</Link> */}
+            <Link to="/Campa" className="link-inscripcion-campa">
+              Inscribite ahora acá
+            </Link>
           </div>
         </animated.article>
 
-        {/* <animated.article className="article-reel" style={animationProps}>
-            <div className="container-reel">
-              {latestVideo ? (
-                <>
-                  <iframe
-                    width="210"
-                    height="315"
-                    src={`https://www.youtube.com/embed/${latestVideo.videoId}`}
-                    title={latestVideo.title}
-                    className="video-player"
-                    allowFullScreen
-                  />
-                  <p className="texto-reel">Nuestro último reel:</p>
-                  <h4 className="titulo-texto-noticias">
-                    Titulo: {latestVideo.title}
-                  </h4>
-                  <a
-                    href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
-                    className="link-reels"
-                    target="_blank"
-                  >
-                    Ver lista de reels
-                  </a>
-                </>
-              ) : (
-                <>
-                  <h2 className="titulo-aux">Video no disponible</h2>
-                  <p className="txt-aux-reel">
-                    Mientras tanto, visitá nuestro canal de YouTube
-                  </p>
-                  <a
-                    href="https://www.youtube.com/@IglesiaVicenteLopez"
-                    target="_blank"
-                  >
-                    <i className="fa-brands fa-youtube icons-redes-footer icon-youtube-aux"></i>
-                  </a>
-                  <a
-                    href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
-                    className="link-reels-aux"
-                    target="_blank"
-                  >
-                    Ver lista de reels
-                  </a>
-                </>
-              )}
-            </div>
-          </animated.article> */}
+        <animated.article className="article-reel" style={animationProps}>
+          <div className="container-reel">
+            {latestVideo ? (
+              <>
+                <iframe
+                  width="210"
+                  height="315"
+                  src={`https://www.youtube.com/embed/${latestVideo.videoId}`}
+                  title={latestVideo.title}
+                  className="video-player"
+                  allowFullScreen
+                />
+                <p className="texto-reel">Nuestro último reel:</p>
+                <h4 className="titulo-texto-noticias">
+                  Titulo: {latestVideo.title}
+                </h4>
+                <a
+                  href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
+                  className="link-reels"
+                  target="_blank"
+                >
+                  Ver lista de reels
+                </a>
+              </>
+            ) : (
+              <>
+                <h2 className="titulo-aux">Video no disponible</h2>
+                <p className="txt-aux-reel">
+                  Mientras tanto, visitá nuestro canal de YouTube
+                </p>
+                <a
+                  href="https://www.youtube.com/@IglesiaVicenteLopez"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-youtube icons-redes-footer icon-youtube-aux"></i>
+                </a>
+                <a
+                  href={`https://youtube.com/playlist?list=PL5ZoETzk92AAVIJXcWY7Qtxs6zCQa7L5C&si=gcM3j4k6h3Iow5U2`}
+                  className="link-reels-aux"
+                  target="_blank"
+                >
+                  Ver lista de reels
+                </a>
+              </>
+            )}
+          </div>
+        </animated.article>
 
         <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
@@ -316,23 +288,6 @@ function Home() {
               Jueves 4 de Abril
               <br />a partir de las
               <b className="txt-horario-noticia"> 20:00hs</b>
-            </p>
-          </div>
-        </animated.article>
-
-        <animated.article className="article-container" style={animationProps}>
-          <div className="container-img">
-            <img
-              src="noticias/noticia-2.png"
-              alt=""
-              className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
-            />
-            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
-            <p className="texto-noticias">
-              Sábado 6 de Abril
-              <br />a partir de las
-              <b className="txt-horario-noticia"> 19:00hs</b>
             </p>
           </div>
         </animated.article>
@@ -357,23 +312,25 @@ function Home() {
           </div>
         </article> */}
 
-        <article className="article-container-2">
+        <animated.article
+          className="article-container-2"
+          style={animationProps}
+        >
           <div className="container-img">
             <img
-              src="noticias/semana-santa.jpg"
+              src="noticias/noticia-2.png"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/semana-santa.jpg")}
+              onClick={() => handleFullscreenImage("noticias/noticia-2.png")}
             />
-            <h4 className="titulo-texto-noticias">
-              Inicio Escuela Bíblica Dominical
-            </h4>
+            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
             <p className="texto-noticias">
-              Domingo 24 de Marzo <br />a partir de las
-              <b className="txt-horario-noticia"> 11:30hs</b>
+              Sábado 6 de Abril
+              <br />a partir de las
+              <b className="txt-horario-noticia"> 19:00hs</b>
             </p>
           </div>
-        </article>
+        </animated.article>
 
         {/* <article className="article-container-2">
           <div className="container-img">

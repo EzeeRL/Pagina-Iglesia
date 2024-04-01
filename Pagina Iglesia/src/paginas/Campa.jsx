@@ -3,12 +3,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm, ValidationError } from "@formspree/react";
 import "./Campamento.css";
-
-import Footer from "../components/footer.jsx";
+import es from 'date-fns/locale/es';
 
 function Campa() {
   const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState(""); // Nuevo estado para el apellido
+  const [apellido, setApellido] = useState("");
   const [edad, setEdad] = useState("");
   const [dni, setDni] = useState("");
   const [fechaNacimiento, setFechaNacimiento] = useState(null);
@@ -23,7 +22,7 @@ function Campa() {
 
     if (
       nombre.trim() === "" ||
-      apellido.trim() === "" || // Validar el apellido
+      apellido.trim() === "" ||
       edad === "" ||
       dni.trim() === "" ||
       fechaNacimiento === null ||
@@ -37,7 +36,7 @@ function Campa() {
 
     const formData = new FormData();
     formData.append("nombre", nombre);
-    formData.append("apellido", apellido); // Agregar apellido al formulario
+    formData.append("apellido", apellido);
     formData.append("edad", edad);
     formData.append("dni", dni);
     formData.append("fechaNacimiento", fechaNacimiento.toLocaleDateString());
@@ -48,7 +47,7 @@ function Campa() {
     }
 
     try {
-      const response = await fetch("https://formspree.io/f/mzbnjgbb", {
+      const response = await fetch("https://formspree.io/f/xyyrnbzb", {
         method: "POST",
         body: formData,
         headers: {
@@ -87,7 +86,7 @@ function Campa() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="form-inscripcion">
-            <h1 className="titulo-campa"><u>Inscripcion Campamento <br />2024</u></h1>
+            <h1 className="titulo-campa"><u>Inscripción Campamento <br />2024</u></h1>
             <div>
               <label htmlFor="nombre" className="label-inscripcion">
                 Nombre:
@@ -108,7 +107,7 @@ function Campa() {
                 type="text"
                 id="apellido"
                 value={apellido}
-                onChange={(e) => setApellido(e.target.value)} // Manejar cambios en el apellido
+                onChange={(e) => setApellido(e.target.value)}
                 className="input-inscripcion"
               />
             </div>
@@ -150,6 +149,7 @@ function Campa() {
                 showYearDropdown
                 showMonthDropdown
                 dropdownMode="select"
+                locale={es}
               />
             </div>
             <div>
@@ -191,7 +191,6 @@ function Campa() {
                   value={telefonoResponsable}
                   onChange={(e) => setTelefonoResponsable(e.target.value)}
                   className="input-inscripcion"
-                  placeholder="Ej: +54 9 11 1234-5678"
                 />
               </div>
             )}

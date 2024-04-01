@@ -161,6 +161,24 @@
 .titulo-cancion-select {
 	text-align: center;
 	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.container-px-letra {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider-tamaño-letra {
+	position: absolute;
+	margin-top: 100px;
+}
+
+.txt-tamaño-letra {
+	/* position: relative; */
+	font-size: 18px;
+	margin-top: 40px;
 }
 
 .texto-letra-general {

@@ -40,3 +40,73 @@
         width: 45%;
     }
 }
+
+.subtitulo-contacto {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-redes-contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.name-redes-contacto {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.icon-instagram-contacto {
+    position: relative;
+    top: -15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon-instagram-contacto:hover {
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    color: #fff;
+}
+
+.icon-youtube-contacto {
+    position: relative;
+    top: -15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon-youtube-contacto:hover {
+    background: #f50808;
+    color: #fff;
+}
+
+.icon-facebook-contacto {
+    position: relative;
+    top: -15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon-facebook-contacto:hover {
+    background: #1164f1;
+    color: #fff;
+}
+
+.email-contacto {
+    position: relative;
+    top: -15px;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    transition: 0.3s;
+}
+
+.email-contacto:hover {
+    color: #46e5fd;
+    border-bottom: 2px solid #46e5fd;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
