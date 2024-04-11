@@ -2,37 +2,37 @@ import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "./Oracion.css";
 
-import Footer from '../components/footer.jsx';
+import Footer from "../components/footer.jsx";
 
-function Oracion() {
-	const [state, handleSubmit] = useForm("xkndvqaa");
-	const [pedidosOracion, setPedidosOracion] = useState([]);
+function PedidosDeOracion() {
+  const [state, handleSubmit] = useForm("xkndvqaa");
+  const [pedidosOracion, setPedidosOracion] = useState([]);
 
-   const handleFormSubmit = async (event) => {
-     const formData = new FormData(event.target);
-     const nuevoPedido = formData.get("message");
+  const handleFormSubmit = async (event) => {
+    const formData = new FormData(event.target);
+    const nuevoPedido = formData.get("message");
 
-     setPedidosOracion([...pedidosOracion, nuevoPedido]);
+    setPedidosOracion([...pedidosOracion, nuevoPedido]);
 
-     await handleSubmit(event);
-   };
+    await handleSubmit(event);
+  };
 
-   if (state.succeeded) {
-     return (
-       <>
-         <div className="container-agradecimiento">
-           <p className="texto-agradecimiento">
-             ¡Gracias por enviarnos tu motivo de oración! <br />
-             Lo tendremos en cuenta y vamos a estar orando por vos.
-             <i className="fa-solid fa-heart icon-corazon"></i>
-           </p>
-         </div>
-       </>
-     );
-   }
+  if (state.succeeded) {
+    return (
+      <>
+        <div className="container-agradecimiento">
+          <p className="texto-agradecimiento">
+            ¡Gracias por enviarnos tu motivo de oración! <br />
+            Lo tendremos en cuenta y vamos a estar orando.
+            <i className="fa-solid fa-heart icon-corazon"></i>
+          </p>
+        </div>
+      </>
+    );
+  }
 
-   return (
-     <>
+  return (
+    <>
       <h1 className="titulo-oracion">Motivos de Oración</h1>
 
       <main>
@@ -40,14 +40,15 @@ function Oracion() {
         <form onSubmit={handleFormSubmit} className="formulario">
           <div className="campo">
             <label htmlFor="email" className="etiqueta">
-              Ingresá tu nombre o email para que podamos conocerte.
+              Si lo deseas, ingresá tu nombre o email para que podamos
+              conocerte. <br />
+              <b>(No es obligatorio)</b>
             </label>
             <input
               id="email"
               type="text"
               name="name"
               placeholder="Ingresá tu nombre o email"
-              required
               className="entrada"
             />
             <ValidationError
@@ -72,19 +73,15 @@ function Oracion() {
               className="error"
             />
           </div>
-          <button
-            type="submit"
-            disabled={state.submitting}
-            className="boton"
-          >
+          <button type="submit" disabled={state.submitting} className="boton">
             Enviar
           </button>
         </form>
       </main>
 
-	  <Footer></Footer>
-	  </>
-	  );
-};
+      <Footer></Footer>
+    </>
+  );
+}
 
-export default Oracion;
+export default PedidosDeOracion;

@@ -159,10 +159,10 @@ function JovenesYAdolescentes() {
         <article className="article-container-2">
           <div className="container-img">
             <img
-              src="noticias/noticia-3.jpeg"
+              src="ados-jov/proximas-actividades/actividad-ados.jpg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/noticia-3.jpeg")}
+              onClick={() => handleFullscreenImage("ados-jov/proximas-actividades/actividad-ados.jpg")}
             />
             <h4 className="titulo-texto-noticias">
               Actividad de Jóvenes y Adolescentes

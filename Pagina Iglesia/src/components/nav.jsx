@@ -46,7 +46,7 @@ function Nav() {
         <nav>
             <div className="container-logo-iglesia">
                 {/* Logo e H1 con animaciones */}
-                <animated.img src="logo/logo.png" alt="" className='logo-img' style={logoAnimation} />
+                <animated.img src="logo/logo-nuevo.png" alt="" className='logo-img' style={logoAnimation} />
                 <animated.h1 className='titulo-nav' style={titleAnimation}>Iglesia<b className='texto-especial-nav'>VTL</b></animated.h1>
             </div>
             <ul className={`container-links-nav ${mobileMenuOpen ? 'show-menu' : ''}`}>
@@ -54,7 +54,7 @@ function Nav() {
                 <animated.li style={linkAnimation}><Link to='/' className='link-nav'><i className="fa-solid fa-house"></i> Inicio</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Coros' className='link-nav'><i className="fa-solid fa-music"></i> Cancionero</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Ministerios' className='link-nav'><i className="fa-solid fa-calendar-days"></i> Ministerios</Link></animated.li>
-                <animated.li style={linkAnimation}><Link to='/Oracion' className='link-nav'><i className="fa-solid fa-hands-praying"></i> Oracion</Link></animated.li>
+                <animated.li style={linkAnimation}><Link to='/PedidosDeOracion' className='link-nav'><i className="fa-solid fa-hands-praying"></i> Pedidos de Oración</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Campa' className='link-nav'><i className="fa-solid fa-tents"></i> Campamento</Link></animated.li>
                 <animated.li style={linkAnimation}><Link to='/Contacto' className='link-nav'><i className="fa-solid fa-user"></i> Contacto</Link></animated.li>
             </ul>

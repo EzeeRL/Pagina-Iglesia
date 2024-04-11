@@ -32,7 +32,7 @@ function Contacto() {
           ></animated.iframe>
         </div>
         <p className="subtitulo-contacto">
-          También nos podes escribir a nuestro gmail:
+          También nos podes escribir a nuestro gmail haciendo click acá:
         </p>
         <div className="container-redes-contacto">
           <p className="name-redes-contacto">

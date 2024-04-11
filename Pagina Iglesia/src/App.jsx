@@ -21,7 +21,8 @@ import Viernes from './paginas/viernes.jsx';
 import Himnos from './paginas/himnos.jsx';
 import Coros from './paginas/coros.jsx';
 import Campa from './paginas/Campa.jsx';
-import Oracion from './paginas/Oracion.jsx';
+import PedidosDeOracion from './paginas/Oracion.jsx';
+import ListaDePedidos from './paginas/pedidos-lista.jsx';
 // import Prueba from './paginas/prueba.jsx';
 
 
@@ -51,7 +52,8 @@ function App() {
 		<Route path='/Campa' element={<Campa/>}/>
 		{/* <Route path='/Prueba' element={<Prueba/>}/> */}
 		<Route path='/Himnos' element={<Himnos/>}/>
-		<Route path='/Oracion' element={<Oracion/>}/>
+		<Route path='/PedidosDeOracion' element={<PedidosDeOracion/>}/>
+		<Route path='/ListaDePedidos' element={<ListaDePedidos/>}></Route>
 	</Routes>
 	</>
   )
