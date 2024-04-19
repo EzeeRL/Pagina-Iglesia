@@ -42,7 +42,8 @@ function PedidosDeOracion() {
             <label htmlFor="email" className="etiqueta">
               Si lo deseas, ingresá tu nombre o email para que podamos
               conocerte. <br />
-              <b>(No es obligatorio)</b>
+              <b>(No es obligatorio)</b> <br />
+              El pedido será subido a: <a href="https://icevtl.com/ListaDePedidos" target="_blank" className="link-pedidos">icevtl.com/ListaDePedidos</a>
             </label>
             <input
               id="email"

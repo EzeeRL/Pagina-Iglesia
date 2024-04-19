@@ -32,10 +32,12 @@
 		margin-left: 5px;
 		margin-right: 5px;
 	}
+	.container-footer-min {
+		margin-top: 250px;
+	}
 }
   
 .table-container {
-	margin-top: 80px;
     overflow-x: auto;
 }
 
@@ -50,6 +52,7 @@ th, td {
     padding: 10px;
     text-align: center;
     border: 2px solid #000;
+	border-radius: 8px;
 }
 
 td {

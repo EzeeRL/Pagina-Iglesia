@@ -47,7 +47,7 @@ function Campa() {
     }
 
     try {
-      const response = await fetch("https://formspree.io/f/xyyrnbzb", {
+      const response = await fetch("https://formspree.io/f/xbjnpqon", {
         method: "POST",
         body: formData,
         headers: {

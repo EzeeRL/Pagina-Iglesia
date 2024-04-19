@@ -102,7 +102,7 @@ function Articles() {
               controls
             ></video> */}
             <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
-            <p className="texto-noticias">
+            <p className="texto-noticias">Precio: $35.000 <br />
               <b className="txt-horario-noticia">26 al 28 de Abril.</b>
             </p>
             <Link to="/Campa" className="link-inscripcion-campa">
@@ -173,10 +173,11 @@ function Articles() {
               Reunión de Oración y Estudio
             </h4>
             <p className="texto-noticias">
-              Viernes 12 de Abril
+              Viernes 19 de Abril
               <br />a partir de las
               <b className="txt-horario-noticia"> 20:00hs</b>
             </p>
+            <Link to="/PedidosDeOracion" className="link-inscripcion-campa">Enviar pedido de oración</Link>
           </div>
         </animated.article>
       </div>

@@ -9,35 +9,61 @@ function ListaDePedidos() {
   const pedidosOracion = [
     {
       Nombre: "Ezequiel Ramos Lencina",
-      "Pedido de Oración": "Por la familia de Leo y Lila que perdieron el bebé.",
+      "Pedido de Oracion":
+        "Por la familia de Leo y Lila que perdieron el bebé.",
     },
     {
       Nombre: "Diana",
-      "Pedido de Oración": "Por la salud y la provisión de Gaby Stimolo.",
+      "Pedido de Oracion": "Por la salud y la provisión de Gaby Stimolo.",
     },
     {
       Nombre: "Marcela Moledo",
-      "Pedido de Oración": "El testimonio de vida de los hermanos que mañana pasarán por las aguas del bautismo, y que este testimonio impacte en cada hogar, lugar de estudio o trabajo.",
+      "Pedido de Oracion":
+        "El testimonio de vida de los hermanos que mañana pasarán por las aguas del bautismo, y que este testimonio impacte en cada hogar, lugar de estudio o trabajo.",
     },
     {
       Nombre: "Marcela Moledo",
-      "Pedido de Oración":
+      "Pedido de Oracion":
         "Oremos por Moisés Escobar y Alan Núñez, ambos con dengue",
     },
     {
       Nombre: "Silvina y Alejo y Bauti",
-      "Pedido de Oración":
+      "Pedido de Oracion":
         "Oración para bendecir nuestro Bautismo y para edificar amor en nuestros corazones juntos como cuerpo en nuestra Iglesia",
     },
     {
       Nombre: "Carlos Laffitte",
-      "Pedido de Oración":
+      "Pedido de Oracion":
         "El compromiso en el servicio/comunión con Dios y con la obra local. Que haya entusiasmo por todas las actividades programadas, en especial con el próximo campamento Asociarnos con los más necesitados y con los que tienen dificultades para trasladarse a los cultos Orar por Rita y su familia; por Walter Curumilla, por Lila, Eze, Lidia; Laura; Amanda;. Por los ancianos de edad. Por el despeje definitivo del SUM. Que se pueda concretar la venta de los fierros apilados",
     },
     {
       Nombre: "Ezequiel Ramos Lencina",
-      "Pedido de Oración":
+      "Pedido de Oracion":
         "Por la relación personal con Dios de cada uno de los hermanos de la iglesia y el grupo de Evangelismo",
+    },
+    {
+      Nombre: "Joao Leal",
+      "Pedido de Oracion":
+        "Por la operación de mi abuelo Gustavo que lo van a operar el lunes",
+    },
+    {
+      Nombre: "Diana",
+      "Pedido de Oracion": "Por ezequias y sus papás",
+    },
+    {
+      Nombre: "Richard Yubel",
+      "Pedido de Oracion":
+        "Por Mi Tio Eduardo Yubel,Proceso De Internacion/Recuperacion",
+    },
+    {
+      Nombre: "Liliana Amenos",
+      "Pedido de Oracion":
+      "Por la actividad femenina a comenzar en mayo. que crezcamos en amor y conocimiento de Dios, y disfrutemos un hermoso tiempo de comunión fraternal. Que muchas más puedan sumarse este año"
+    },
+    {
+      Nombre: "Anonimo",
+      "Pedido de Oracion": 
+      "Para que muchos más hermanos puedan inscribirse al Campamento. Todavía hay lugar. Y oremos por Nacho Ferro; a cargo de los mensajes."
     },
   ];
 
@@ -86,7 +112,7 @@ function ListaDePedidos() {
               <strong className="pedido-oracion">
                 {pedido.Nombre}: <br />{" "}
               </strong>
-              {pedido["Pedido de Oración"]}
+              {pedido["Pedido de Oracion"]}
             </li>
           ))}
         </ol>
