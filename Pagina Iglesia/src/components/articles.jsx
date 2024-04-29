@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
-import './articles.css';
+import "./articles.css";
 
 function Articles() {
   const containerRef = useRef(null);
@@ -84,8 +84,7 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
-        <animated.article
-          // className="article-video"
+        {/* <animated.article
           className="article-container"
           style={animationProps}
         >
@@ -96,11 +95,6 @@ function Articles() {
               className="img-noticias"
               onClick={() => handleFullscreenImage("noticias/placa-campa.png")}
             />
-            {/* <video
-              src="noticias/noticia-1.mp4"
-              className="noticia-video"
-              controls
-            ></video> */}
             <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
             <p className="texto-noticias">Precio: $35.000 <br />
               <b className="txt-horario-noticia">26 al 28 de Abril.</b>
@@ -109,7 +103,7 @@ function Articles() {
               Inscribite ahora acá
             </Link>
           </div>
-        </animated.article>
+        </animated.article> */}
 
         <animated.article className="article-reel" style={animationProps}>
           <div className="container-reel">
@@ -162,28 +156,31 @@ function Articles() {
         <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
             <img
-              src="noticias/placa-viernes.jpeg"
+              src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
               onClick={() =>
-                handleFullscreenImage("noticias/placa-viernes.jpeg")
+                handleFullscreenImage("noticias/placa-avi.jpeg")
               }
             />
             <h4 className="titulo-texto-noticias">
-              Reunión de Oración y Estudio
+              Adicciones VS Vida
             </h4>
             <p className="texto-noticias">
-              Viernes 19 de Abril
+              Lunes 29 de Abril
               <br />a partir de las
-              <b className="txt-horario-noticia"> 20:00hs</b>
+              <b className="txt-horario-noticia"> 20:00hs</b><br />
+              Zoom ID: <b className="txt-horario-noticia">546 067 9344</b>
             </p>
-            <Link to="/PedidosDeOracion" className="link-inscripcion-campa">Enviar pedido de oración</Link>
+            {/* <Link to="/PedidosDeOracion" className="link-inscripcion-campa">
+              Enviar pedido de oración
+            </Link> */}
           </div>
         </animated.article>
       </div>
 
-      <div className="container-noticias-2">
-        {/* <article className="article-container-2">
+      {/* <div className="container-noticias-2">
+        <article className="article-container-2">
           <div className="container-img">
             <img
               src="noticias/noticia-3.jpeg"
@@ -195,13 +192,14 @@ function Articles() {
               Actividad de Jóvenes y Adolescentes
             </h4>
             <p className="texto-noticias">
-              Sábado 23 de Marzo<br />a partir de las
+              Sábado 23 de Marzo
+              <br />a partir de las
               <b className="txt-horario-noticia"> 16:00hs</b>
             </p>
           </div>
-        </article> */}
+        </article>
 
-        {/* <animated.article
+        <animated.article
           className="article-container-2"
           style={animationProps}
         >
@@ -210,7 +208,9 @@ function Articles() {
               src="noticias/placa-nunca-mas-solos.png"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-nunca-mas-solos.png")}
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-nunca-mas-solos.png")
+              }
             />
             <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
             <p className="texto-noticias">
@@ -219,9 +219,9 @@ function Articles() {
               <b className="txt-horario-noticia"> 19:00hs</b>
             </p>
           </div>
-        </animated.article> */}
+        </animated.article>
 
-        {/* <article className="article-container-2">
+        <article className="article-container-2">
           <div className="container-img">
             <img
               src="noticias/placa-escuelita.jpg"
@@ -237,8 +237,8 @@ function Articles() {
               Precio de: <b className="txt-horario-noticia">$35.000</b>
             </p>
           </div>
-        </article> */}
-      </div>
+        </article>
+      </div> */}
 
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (
