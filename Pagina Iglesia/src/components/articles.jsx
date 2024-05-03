@@ -84,10 +84,8 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
-        {/* <animated.article
-          className="article-container"
-          style={animationProps}
-        >
+        {/* <animated.article className="article-reel" style={animationProps}>
+          {" "}
           <div className="container-img">
             <img
               src="noticias/placa-campa.png"
@@ -95,17 +93,64 @@ function Articles() {
               className="img-noticias"
               onClick={() => handleFullscreenImage("noticias/placa-campa.png")}
             />
-            <h4 className="titulo-texto-noticias">Campamento de Iglesia</h4>
-            <p className="texto-noticias">Precio: $35.000 <br />
-              <b className="txt-horario-noticia">26 al 28 de Abril.</b>
+            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            <p className="texto-noticias">
+              Jueves 2 de Mayo <br />
+              <b className="txt-horario-noticia">A partir de las 20:00hs</b>
             </p>
-            <Link to="/Campa" className="link-inscripcion-campa">
-              Inscribite ahora acá
-            </Link>
+          </div>
+        </animated.article> */}
+
+        {/* <animated.article
+          className="article-container"
+          style={animationProps}
+        >
+          <div className="container-img">
+            <img
+              src="noticias/placa-avi.jpeg"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
+            />
+            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
+            <p className="texto-noticias-aux">
+              Lunes 29 de Abril
+              <br />a partir de las
+              <b className="txt-horario-noticia"> 20:00hs</b>
+              <br />
+              Zoom ID: <b className="txt-horario-noticia">546 067 9344</b>
+            </p>
           </div>
         </animated.article> */}
 
         <animated.article className="article-reel" style={animationProps}>
+          {" "}
+          {/* CAMBIAR CLASE DEL ARTICLE PARA CUANDO ES UNA FOTO */}
+          <div className="container-img">
+            {/* <img
+              src="noticias/placa-campa.png"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/placa-campa.png")}
+            /> */}
+            <video
+              src="noticias/viernes.mp4"
+              className="noticia-video"
+              controls
+              allowFullScreen
+            ></video>
+            <h4 className="titulo-texto-noticias">Reunión de Oración y Estudio</h4>
+            <p className="texto-noticias">
+              Viernes 3 de Mayo <br />
+              <b className="txt-horario-noticia">A partir de las 20:00hs</b>
+            </p>
+            {/* <Link to="/Campa" className="link-inscripcion-campa">
+              Inscribite ahora acá
+            </Link> */}
+          </div>
+        </animated.article>
+
+        {/* <animated.article className="article-reel" style={animationProps}>
           <div className="container-reel">
             {latestVideo ? (
               <>
@@ -118,9 +163,7 @@ function Articles() {
                   allowFullScreen
                 />
                 <p className="texto-reel">Nuestro último Video:</p>
-                <h4 className="titulo-texto-noticias">
-                  Titulo: {latestVideo.title}
-                </h4>
+                <h4 className="titulo-reel">Titulo: {latestVideo.title}</h4>
                 <a
                   href={`https://www.youtube.com/@IglesiaVicenteLopez`}
                   className="link-reels"
@@ -151,32 +194,7 @@ function Articles() {
               </>
             )}
           </div>
-        </animated.article>
-
-        <animated.article className="article-container" style={animationProps}>
-          <div className="container-img">
-            <img
-              src="noticias/placa-avi.jpeg"
-              alt=""
-              className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/placa-avi.jpeg")
-              }
-            />
-            <h4 className="titulo-texto-noticias">
-              Adicciones VS Vida
-            </h4>
-            <p className="texto-noticias">
-              Lunes 29 de Abril
-              <br />a partir de las
-              <b className="txt-horario-noticia"> 20:00hs</b><br />
-              Zoom ID: <b className="txt-horario-noticia">546 067 9344</b>
-            </p>
-            {/* <Link to="/PedidosDeOracion" className="link-inscripcion-campa">
-              Enviar pedido de oración
-            </Link> */}
-          </div>
-        </animated.article>
+        </animated.article> */}
       </div>
 
       {/* <div className="container-noticias-2">

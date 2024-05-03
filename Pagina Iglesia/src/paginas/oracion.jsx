@@ -43,7 +43,8 @@ function PedidosDeOracion() {
               Si lo deseas, ingresá tu nombre o email para que podamos
               conocerte. <br />
               <b>(No es obligatorio)</b> <br />
-              El pedido será subido a: <a href="https://icevtl.com/ListaDePedidos" target="_blank" className="link-pedidos">icevtl.com/ListaDePedidos</a>
+              El pedido será subido a: <a href="https://icevtl.com/ListaDePedidos" target="_blank" className="link-pedidos">icevtl.com/ListaDePedidos</a> <br />
+              Para posteriormente anunciarlo el <b>Viernes a las 20:00hs</b> en la <b>Reunión de Oración.</b>
             </label>
             <input
               id="email"
