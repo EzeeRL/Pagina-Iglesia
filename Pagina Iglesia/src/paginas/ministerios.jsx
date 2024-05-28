@@ -24,63 +24,63 @@ const Ministerios = () => {
           </p>
         </div>
 
-        <div className="container-lunes">
+        <div className="container-lunes containers-dias">
           <h1 className="dia-ministerios">
-            <b className="underline-titulo">Lunes:</b>
+            <b className="underline-titulo">Lunes</b>
           </h1>
           <Link to="/AVI" className="links-ministerios">
             <u>Adicciones VS Vida 20:00hs</u>
           </Link>
         </div>
 
-        <div className="container-martes">
+        <div className="container-martes containers-dias">
           <h1 className="dia-ministerios martes">
-            <b className="underline-titulo">Martes:</b>
+            <b className="underline-titulo">Martes</b>
           </h1>
           <Link to="/ReunionFemenina" className="links-ministerios">
             <u>Reunión Femenina 18:00hs</u>
           </Link>
         </div>
 
-        <div className="container-miercoles">
+        <div className="container-miercoles containers-dias">
           <h1 className="dia-ministerios">
-            <b className="underline-titulo">Miércoles:</b>
+            <b className="underline-titulo">Miércoles</b>
           </h1>
           <Link to="/AVI" className="links-ministerios">
             <u>Adicciones VS Vida 20:00hs</u>
           </Link>
         </div>
 
-        <div className="container-jueves">
+        <div className="container-jueves containers-dias">
           <h1 className="dia-ministerios jueves">
-            <b className="underline-titulo ">Jueves:</b>
+            <b className="underline-titulo ">Jueves</b>
           </h1>
           <Link to="/EspacioVaron" className="links-ministerios">
             <u>Espacio Varón 20:00hs</u>
           </Link>
         </div>
 
-        <div className="container-viernes">
+        <div className="container-viernes containers-dias">
           <h1 className="dia-ministerios">
-            <b className="underline-titulo">Viernes:</b>
+            <b className="underline-titulo">Viernes</b>
           </h1>
           <Link to="/Viernes" className="links-ministerios">
             <u>Reunión de Oración y Estudio 20:00hs</u>
           </Link>
         </div>
 
-        <div className="container-sabado">
+        <div className="container-sabado containers-dias">
           <h1 className="dia-ministerios sabado">
-            <b className="underline-titulo">Sábado:</b>
+            <b className="underline-titulo">Sábado</b>
           </h1>
           <Link to="/JovenesYAdolescentes" className="links-ministerios">
             <u>Actividad de Jóvenes y Adolescnetes 19:00hs</u>
           </Link>
         </div>
 
-        <div className="container-domingo">
-          <h1 className="dia-ministerios">
-            <b className="underline-titulo">Domingo:</b>
+        <div className="container-domingo containers-dias">
+          <h1 className="dia-ministerios domingo">
+            <b className="underline-titulo">Domingo</b>
           </h1>
           <Link to="/Domingos" className="links-ministerios">
             <u className="links-domingo">Cena del Señor 10:00hs

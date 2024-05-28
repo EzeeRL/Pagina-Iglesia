@@ -56,6 +56,16 @@ function Home() {
             </div>
             <div className="slick-slide">
               <img
+                src="placas-slider/reunion-femenina.jpg"
+                alt=""
+                className="img-slider"
+                onClick={() =>
+                  handleFullscreenImage("placas-slider/reunion-femenina.jpg")
+                }
+              />
+            </div>
+            <div className="slick-slide">
+              <img
                 src="placas-slider/placa-ev.jpeg"
                 alt=""
                 className="img-slider"

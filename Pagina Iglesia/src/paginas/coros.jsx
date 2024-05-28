@@ -1409,6 +1409,24 @@ const Coros = () => {
       letra:
         "Yo te sirvo porque te amo, \r\nme has dado vida a mí.\r\nTú viniste desde los cielos, \r\npara dar tu vida aquí.\r\nTodos mis pecados \r\nperdonaste allí en el calvario.\r\nCuando te acercaste, me dijiste: ven a mí.\r\n\r\nPor eso te amo y te prometo \r\nque siempre te serviré,\r\ntestificado que me salvaste, \r\nvida nueva tengo en Ti.\r\nTodos mis problemas \r\naliviaste allí en el calvario.\r\nCuanto yo precisaba encontré también en Ti.",
     },
+    {
+      id: "235",
+      titulo: "Tú Y Solo Tú",
+      letra:
+      "Elijo hoy\r\nAgradecerte Dios\r\nTe adoraré, con mi corazón\r\nDespierto en tu presencia\r\nDespierto en ti, mi Dios\r\nBueno eres Dios, gracias\r\nPor tu misericordia, gracias\r\nEn espíritu y verdad, gracias\r\nYo te digo gracias\r\nComo el sol\r\nEs tu fidelidad\r\nTu infinito amor\r\nInmenso como el mar\r\nDespierto en tu presencia\r\nDespierto en ti, mi Dios\r\nBueno eres Dios, gracias\r\nPor tu misericordia, gracias\r\nEn espíritu y verdad, gracias\r\nYo te digo gracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nBueno eres Dios, gracias\r\nPor tu misericordia, gracias\r\nEn espíritu y verdad, gracias\r\nYo te digo gracias\r\nPor llamarme tu amigo, gracias\r\nPor ser mi defensor, gracias\r\nPor tu infinito amor, gracias\r\nYo te digo gracias\r\nOh, gracias Señor\r\nTe doy gracias\r\nQué más puedo te decir\r\nGracias\r\nPor lo que has hecho en mí\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nTú y sólo tú\r\nDespiertas mi interior\r\nMi gozo es darte gracias\r\nGracias\r\nMi gozo es darte gracias, toda mi vida\r\nYo te digo gracias\r\nMi gozo es darte gracias\r\nMi gozo es darte gracias\r\nGracias, Jesús",
+    },
+    {
+      id: "236",
+      titulo: "Cuerdas de Amor",
+      letra:
+      "Aunque pase el tiempo, sé\r\nQue tu promesa cumplirás\r\nNada en ti se perderá\r\nEsa es mi seguridad\r\nTus cuerdas de amor\r\nCayeron sobre mí\r\nTus cuerdas de amor\r\nCayeron sobre mí\r\nEs tu amor que me sostiene\r\nEl que me levanta\r\nEl que me da paz\r\nMe da seguridad\r\nEs tu amor que me sostiene\r\nEl que me levanta\r\nEl que me da paz\r\nMe da seguridad\r\nDe lo que vendrá\r\nTú tienes el control\r\nNunca pierdes el control",
+    },
+    {
+      id: "237",
+      titulo: "Tu Eres Digno de Gloria",
+      letra:
+      "Hoy te alabamos Señor\r\nY declaramos que Tú eres nuestro Dios\r\nTú eres el Dios de amor\r\nYa no somos esclavos del temor\r\nHoy te adoramos Señor\r\nY te cantamos con nuestro corazón\r\nTe damos todo el honor\r\nSobre el cielo y la tierra, Tú eres Señor\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nEres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nEres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\n¡Tú eres digno de gloria!\r\nHoy te alabamos Señor\r\nY declaramos que Tú eres nuestro Dios\r\nTú eres el Dios del amor\r\nYa no somos esclavos del temor\r\nHoy te adoramos Señor\r\nY te cantamos con nuestro corazón\r\nTe damos todo el honor\r\nSobre el cielo y la tierra, Tú eres Señor (Tú eres digno)\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nTú eres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nTú eres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\nEres digno, eres santo\r\nEres Rey, de toda creación\r\nEres digno, eres santo\r\nEres Rey, de toda creación\r\nEres digno, eres santo\r\nEres Rey, de toda creación\r\nEres digno, eres santo\r\nEres Rey, de toda creación\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nTú eres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nTú eres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nTú eres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\nTú eres digno de gloria\r\nSobre toda la tierra, Tú eres Dios\r\nTú eres digno de recibir toda adoración\r\nTodo el honor, sea a Ti\r\n¡Tú eres digno de gloria!\r\n¡Tú eres digno de gloria!\r\nNos humillamos delante de Ti, Señor\r\nY hoy nuestras voces\r\nSe unen en un clamor",
+    },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);

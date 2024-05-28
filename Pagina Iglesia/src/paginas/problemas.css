@@ -1,0 +1,70 @@
+.title-problemas {
+    text-align: center;
+    margin-top: 130px;
+}
+
+.subtitulo {
+    padding: 10px;
+}
+
+.main-problemas {
+    position: absolute;
+    left: 29%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.button-problemas {
+    width: 120px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-problemas:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries para hacer la página responsive */
+
+@media (max-width: 1220px) {
+    .main-problemas {
+        left: 20%;
+        width: 60%;
+    }
+	.title-problemas {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-problemas {
+        left: 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-problemas {
+        margin-top: 30%;
+    }
+
+    .main-problemas {
+        position: relative;
+        left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .button-problemas {
+        /* width: 100%; */
+		margin-bottom: 30px;
+    }
+}

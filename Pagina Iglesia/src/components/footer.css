@@ -65,6 +65,11 @@ a {
     color: #fff;
 }
 
+.icon-whatsapp:hover {
+    background: #00d757;
+    color: #fff;
+}
+
 .texto-spam {
     text-align: center;
 }
@@ -77,10 +82,27 @@ a {
 .email {
     font-weight: bold;
     border-bottom: 1px solid #000;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .email:hover {
+    color: #46e5fd;
+    border-bottom: 2px solid #46e5fd;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.report-problem {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.report-problem:hover {
     color: #46e5fd;
     border-bottom: 2px solid #46e5fd;
     text-shadow: 

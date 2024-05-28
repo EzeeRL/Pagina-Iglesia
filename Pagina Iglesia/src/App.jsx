@@ -23,6 +23,7 @@ import Coros from './paginas/coros.jsx';
 import Campa from './paginas/Campa.jsx';
 import PedidosDeOracion from './paginas/Oracion.jsx';
 import ListaDePedidos from './paginas/pedidos-lista.jsx';
+import Problemas from './paginas/problemas.jsx';
 // import Prueba from './paginas/prueba.jsx';
 
 
@@ -54,6 +55,7 @@ function App() {
 		<Route path='/Himnos' element={<Himnos/>}/>
 		<Route path='/PedidosDeOracion' element={<PedidosDeOracion/>}/>
 		<Route path='/ListaDePedidos' element={<ListaDePedidos/>}></Route>
+		<Route path='/Problemas' element={<Problemas/>}></Route>
 	</Routes>
 	</>
   )

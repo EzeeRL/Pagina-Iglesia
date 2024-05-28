@@ -19,7 +19,7 @@
 
 .article-container {
 	width: 320px;
-	height: 480px;
+	height: 400px;
 	margin: 50px;
 	border-radius: 15px;
 	background-color: rgb(255, 255, 255, 0.4);
@@ -39,7 +39,7 @@
 
 .article-reel {
 	width: 320px;
-	height: 512px; /* PARA CUANDO SI ANDA EL REEL */
+	height: 530px; /* PARA CUANDO SI ANDA EL REEL */
 	/* height: 400px; AUXILIAR PARA CUANDO NO ANDA LA CARGA DEL REEL */
 	margin: 50px;
 	margin-left: 35px;
@@ -314,4 +314,16 @@
 
 .titulo-aux {
 	margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+.img {
+	height: 300px;
 }
