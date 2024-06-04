@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import "./Oracion.css";
+import "./oracion.css";
 
 import Footer from "../components/footer.jsx";
 

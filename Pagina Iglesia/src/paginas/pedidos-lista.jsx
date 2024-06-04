@@ -8,15 +8,6 @@ function ListaDePedidos() {
   // JSON con los datos de los pedidos de oración
   const pedidosOracion = [
     {
-      Nombre: "Ezequiel Ramos Lencina",
-      "Pedido de Oracion":
-        "Por la familia de Leo y Lila que perdieron el bebé.",
-    },
-    {
-      Nombre: "Diana",
-      "Pedido de Oracion": "Por la salud y la provisión de Gaby Stimolo.",
-    },
-    {
       Nombre: "Carlos Laffitte",
       "Pedido de Oracion":
         "El compromiso en el servicio/comunión con Dios y con la obra local. Que haya entusiasmo por todas las actividades programadas, en especial con el próximo campamento Asociarnos con los más necesitados y con los que tienen dificultades para trasladarse a los cultos Orar por Rita y su familia; por Walter Curumilla, por Lila, Eze, Lidia; Laura; Amanda;. Por los ancianos de edad. Por el despeje definitivo del SUM. Que se pueda concretar la venta de los fierros apilados",

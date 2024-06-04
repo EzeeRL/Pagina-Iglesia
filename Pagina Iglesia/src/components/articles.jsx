@@ -2,8 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 
 import { useSpring, animated } from "react-spring";
 
-import { Link } from "react-router-dom";
-
 import axios from "axios";
 
 import "./articles.css";
@@ -14,7 +12,7 @@ function Articles() {
 
   const animationProps = useSpring({
     opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+    transform: isVisible ? "translateY(0)" : "translateY(80px)",
   });
 
   useEffect(() => {
@@ -26,8 +24,8 @@ function Articles() {
           }
         });
       },
-      { threshold: 0.3 }
-    ); // Reducir el umbral a 0.3 para activar la animación antes
+      { threshold: 1 }
+    );
 
     if (containerRef.current) {
       observer.observe(containerRef.current);
@@ -84,6 +82,23 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
+        <animated.article className="article-reel" style={animationProps}>
+          {" "}
+          <div className="container-img">
+            <img
+              src="noticias/placa-fem.jpg"
+              alt=""
+              className="imgs-vertical"
+              onClick={() => handleFullscreenImage("noticias/placa-fem.jpg")}
+            />
+            <h4 className="titulo-texto-noticias">Reunión Femenina</h4>
+            <p className="texto-noticias">
+              Martes 4 de Mayo <br />
+              <b className="txt-horario-noticia">A partir de las 17:00hs</b>
+            </p>
+          </div>
+        </animated.article>
+
         <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
             <img
@@ -94,7 +109,7 @@ function Articles() {
             />
             <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
             <p className="texto-noticias">
-              Miércoles 29 de Mayo a partir de las:
+              Miércoles 5 de Mayo a partir de las:
               <b className="txt-horario-noticia"> 20:00hs</b>
               <br />
               {/* Zoom ID: <b className="txt-horario-noticia">546 067 9344</b> */}
@@ -102,7 +117,7 @@ function Articles() {
           </div>
         </animated.article>
 
-        <animated.article className="article-reel" style={animationProps}>
+        {/* <animated.article className="article-reel" style={animationProps}>
           <div className="container-reel">
             {latestVideo ? (
               <>
@@ -145,27 +160,6 @@ function Articles() {
                 </a>
               </>
             )}
-          </div>
-        </animated.article>
-
-        {/* <animated.article className="article-container" style={animationProps}>
-          {" "}
-          <div className="container-img">
-            <img
-              src="noticias/placa-domingo.jpeg"
-              alt=""
-              className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/placa-domingo.jpeg")
-              }
-            />
-            <h4 className="titulo-texto-noticias">
-              Cena del Señor y Predicación del Evangelio
-            </h4>
-            <p className="texto-noticias">
-              Domingo 26 de Mayo <br />
-              <b className="txt-horario-noticia">A partir de las 10:00hs</b>
-            </p>
           </div>
         </animated.article> */}
 

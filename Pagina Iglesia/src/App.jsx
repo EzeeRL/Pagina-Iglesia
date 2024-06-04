@@ -21,9 +21,10 @@ import Viernes from './paginas/viernes.jsx';
 import Himnos from './paginas/himnos.jsx';
 import Coros from './paginas/coros.jsx';
 import Campa from './paginas/Campa.jsx';
-import PedidosDeOracion from './paginas/Oracion.jsx';
+
 import ListaDePedidos from './paginas/pedidos-lista.jsx';
 import Problemas from './paginas/problemas.jsx';
+import PedidosDeOracion from './paginas/oracion.jsx';
 // import Prueba from './paginas/prueba.jsx';
 
 
