@@ -50,7 +50,7 @@ function Footer() {
             <i className="fa-brands fa-facebook icons-redes-footer icon-facebook"></i>
           </animated.a>
           <animated.a
-            href="https://www.youtube.com/@IglesiaVicenteLopez"
+            href="https://www.youtube.com/c/IglesiaVicenteL%C3%B3pez"
             target="_blank"
             style={iconsSpring}
           >

@@ -19,12 +19,12 @@ function Articles() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+          if (entry.isIntersecting) {
             setIsVisible(true);
           }
         });
       },
-      { threshold: 1 }
+      { threshold: [0.25] }
     );
 
     if (containerRef.current) {
@@ -82,24 +82,7 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
-        <animated.article className="article-reel" style={animationProps}>
-          {" "}
-          <div className="container-img">
-            <img
-              src="noticias/placa-fem.jpg"
-              alt=""
-              className="imgs-vertical"
-              onClick={() => handleFullscreenImage("noticias/placa-fem.jpg")}
-            />
-            <h4 className="titulo-texto-noticias">Reunión Femenina</h4>
-            <p className="texto-noticias">
-              Martes 4 de Mayo <br />
-              <b className="txt-horario-noticia">A partir de las 17:00hs</b>
-            </p>
-          </div>
-        </animated.article>
-
-        <animated.article className="article-container" style={animationProps}>
+        {/* <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
             <img
               src="noticias/placa-avi.jpeg"
@@ -112,12 +95,33 @@ function Articles() {
               Miércoles 5 de Mayo a partir de las:
               <b className="txt-horario-noticia"> 20:00hs</b>
               <br />
-              {/* Zoom ID: <b className="txt-horario-noticia">546 067 9344</b> */}
+              Zoom ID: <b className="txt-horario-noticia">546 067 9344</b>
+            </p>
+          </div>
+        </animated.article> */}
+
+        <animated.article className="article-container" style={animationProps}>
+          {" "}
+          <div className="container-img">
+            <img
+              src="noticias/placa-viernes.jpeg"
+              alt=""
+              className="img-noticias"
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-viernes.jpeg")
+              }
+            />
+            <h4 className="titulo-texto-noticias">
+              Reunión de Oración y Estdio
+            </h4>
+            <p className="texto-noticias">
+              Viernes 15 de Junio <br />
+              <b className="txt-horario-noticia">A partir de las 20:00hs</b>
             </p>
           </div>
         </animated.article>
 
-        {/* <animated.article className="article-reel" style={animationProps}>
+        <animated.article className="article-reel" style={animationProps}>
           <div className="container-reel">
             {latestVideo ? (
               <>
@@ -132,7 +136,7 @@ function Articles() {
                 <p className="texto-reel">Nuestro último Video:</p>
                 <h4 className="titulo-reel">Titulo: {latestVideo.title}</h4>
                 <a
-                  href={`https://www.youtube.com/@IglesiaVicenteLopez`}
+                  href={`https://www.youtube.com/c/IglesiaVicenteL%C3%B3pez`}
                   className="link-reels"
                   target="_blank"
                 >
@@ -161,26 +165,26 @@ function Articles() {
               </>
             )}
           </div>
-        </animated.article> */}
+        </animated.article>
 
-        {/* <animated.article className="article-container" style={animationProps}>
+        <animated.article className="article-container" style={animationProps}>
           {" "}
           <div className="container-img">
             <img
-              src="noticias/reunion-femenina.jpg"
+              src="noticias/placa-ados.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/reunion-femenina.jpg")
-              }
+              onClick={() => handleFullscreenImage("noticias/placa-ados.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Reunión Femenina</h4>
+            <h4 className="titulo-texto-noticias">
+              Actividad de Jóvenes y Adolescentes
+            </h4>
             <p className="texto-noticias">
-              Martes 14 de Mayo <br />
-              <b className="txt-horario-noticia">A partir de las 17:00hs</b>
+              Sábado 15 de Junio <br />
+              <b className="txt-horario-noticia">A partir de las 18:00hs</b>
             </p>
           </div>
-        </animated.article> */}
+        </animated.article>
       </div>
 
       {/* <div className="container-noticias-2">

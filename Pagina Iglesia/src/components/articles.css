@@ -93,6 +93,16 @@
 	cursor: pointer;
 }
 
+.img-reel {
+	width: 290px;
+	height: 300px;
+	border-radius: 15px;
+	border-top: 3px solid #46e5fd;
+	border-bottom: 3px solid #46e5fd;
+	cursor: pointer;
+}
+
+
 .titulo-texto-noticias {
 	font-size: 20px;
 	text-align: center;
@@ -197,6 +207,14 @@
         height: auto;
         border-radius: 10px;
     }
+
+	.img-reel {
+		width: 90%;
+	}
+
+	.video-player {
+		width: 80%;
+	}
 }
 
 @media screen and (min-width: 768px) {
