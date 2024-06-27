@@ -82,40 +82,18 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
-        {/* <animated.article className="article-container" style={animationProps}>
-          <div className="container-img">
-            <img
-              src="noticias/placa-avi.jpeg"
-              alt=""
-              className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
-            />
-            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
-            <p className="texto-noticias">
-              Miércoles 5 de Mayo a partir de las:
-              <b className="txt-horario-noticia"> 20:00hs</b>
-              <br />
-              Zoom ID: <b className="txt-horario-noticia">546 067 9344</b>
-            </p>
-          </div>
-        </animated.article> */}
-
         <animated.article className="article-container" style={animationProps}>
           {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-viernes.jpeg"
+              src="noticias/placa-ev.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/placa-viernes.jpeg")
-              }
+              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">
-              Reunión de Oración y Estdio
-            </h4>
+            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
             <p className="texto-noticias">
-              Viernes 15 de Junio <br />
+              Jueves 27 de Junio <br />
               <b className="txt-horario-noticia">A partir de las 20:00hs</b>
             </p>
           </div>
@@ -168,20 +146,19 @@ function Articles() {
         </animated.article>
 
         <animated.article className="article-container" style={animationProps}>
-          {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-ados.jpeg"
+              src="noticias/placa-viernes.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-ados.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">
-              Actividad de Jóvenes y Adolescentes
-            </h4>
+            <h4 className="titulo-texto-noticias">Reunión de Oración y Estudio</h4>
             <p className="texto-noticias">
-              Sábado 15 de Junio <br />
-              <b className="txt-horario-noticia">A partir de las 18:00hs</b>
+              Viernes 28 de Junio a partir de las:
+              <b className="txt-horario-noticia"> 20:00hs</b>
+              <br />
+              {/* Zoom ID: <b className="txt-horario-noticia">546 067 9344</b> */}
             </p>
           </div>
         </animated.article>

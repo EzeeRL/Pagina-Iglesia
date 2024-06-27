@@ -16,11 +16,6 @@ function ListaDePedidos() {
       Nombre: "Diana",
       "Pedido de Oracion": "Por ezequias y sus papás",
     },
-    {
-      Nombre: "Liliana Amenos",
-      "Pedido de Oracion":
-      "Por la actividad femenina a comenzar en mayo. que crezcamos en amor y conocimiento de Dios, y disfrutemos un hermoso tiempo de comunión fraternal. Que muchas más puedan sumarse este año"
-    },
   ];
 
   // useEffect(() => {
