@@ -50,7 +50,7 @@ const containerAnimation = useSpring({
 		<h1 className="titulo-viernes">Reunión de oración y estudio de la Palabra</h1>
 
 		{/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
-		<main className="main-container">
+		<main className="main-container-ministerios">
 				<animated.div className="carrusel" style={containerAnimation}>
 					<Slider {...settings}>
 						<div className='slick-slide'>

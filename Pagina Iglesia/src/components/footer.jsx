@@ -60,6 +60,7 @@ function Footer() {
             href="https://www.instagram.com/iglesia.vtl/"
             target="_blank"
             style={iconsSpring}
+            className="container-icon-instagram"
           >
             <i className="fa-brands fa-instagram icons-redes-footer icon-instagram"></i>
           </animated.a>
@@ -67,6 +68,7 @@ function Footer() {
             href="https://whatsapp.com/channel/0029VaaaXzfKQuJCYrzv540X"
             target="_blank"
             style={iconsSpring}
+            className="container-icon-whatsapp"
           >
             <i className="fa-brands fa-whatsapp icons-redes-footer icon-whatsapp"></i>
           </animated.a>

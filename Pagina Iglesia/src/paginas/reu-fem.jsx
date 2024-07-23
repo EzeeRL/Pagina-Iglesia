@@ -49,7 +49,7 @@ const containerAnimation = useSpring({
 		<>
 		<h1 className="titulo-reu-fem">Reunión Femenina</h1>
 		{/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
-		<main className="main-container" >
+		<main className="main-container-ministerios" >
 				<animated.div className="carrusel" style={containerAnimation}>
 					<Slider {...settings}>
 						<div className='slick-slide'>

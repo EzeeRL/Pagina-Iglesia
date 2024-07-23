@@ -89,7 +89,7 @@ function JovenesYAdolescentes() {
         Reuniones de Jóvenes y Adolescentes todos los Sábados
       </h3>
       {/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
-      <main className="main-container">
+      <main className="main-container-ministerios">
         <animated.div className="carrusel" style={containerAnimation}>
           <Slider {...settings}>
             <div className="slick-slide">
@@ -154,7 +154,7 @@ function JovenesYAdolescentes() {
 
 
 
-      <h1 className="actividades-titulo">Próximas Actividades</h1>
+      {/* <h1 className="actividades-titulo">Próximas Actividades</h1>
       <animated.div className="container-noticias-2" style={opacityAnimation}>
         <article className="article-container-2">
           <div className="container-img">
@@ -174,7 +174,7 @@ function JovenesYAdolescentes() {
             </p>
           </div>
         </article>
-      </animated.div>
+      </animated.div> */}
 
       {fullscreenImage && (
         <div className="fullscreen-modal" onClick={handleCloseFullscreen}>

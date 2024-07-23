@@ -83,6 +83,9 @@ nav {
     }
 
     .mobile-menu-icon {
+        width: 20px;
+        height: 20px;
+        text-align: center;
         position: relative;
         right: 40px;
         display: block;

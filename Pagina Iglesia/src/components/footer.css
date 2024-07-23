@@ -1,5 +1,5 @@
 footer {
-    /* margin-top: 50px; */
+    margin-top: 150px;
     border-top: 3px solid #46e5fd;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -44,10 +44,20 @@ a {
     margin: 10px;
     background-color: rgb(219, 218, 218);
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 .icons-redes-footer:hover {
     transform: scale(1.08);
+    cursor: pointer;
+}
+
+.container-icon-instagram {
+    text-align: center;
+}
+
+.icon-instagram {
+    width: 30px;
 }
 
 .icon-instagram:hover {
@@ -63,6 +73,14 @@ a {
 .icon-facebook:hover {
     background: #1164f1;
     color: #fff;
+}
+
+.container-icon-whatsapp {
+    text-align: center;
+}
+
+.icon-whatsapp {
+    width: 30px;
 }
 
 .icon-whatsapp:hover {
@@ -125,6 +143,7 @@ a {
     footer {
         width: 100%;
         height: 425px;
+
     }
 
     .titulo-footer {

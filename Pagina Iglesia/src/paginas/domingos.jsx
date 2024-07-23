@@ -50,7 +50,7 @@ function Domingos() {
       </h1>
 
       {/* Primer Slider */}
-      <animated.main className="main-container" style={containerAnimation}>
+      <animated.main className="main-container-ministerios" style={containerAnimation}>
         <div className="carrusel">
           <Slider {...settings}>
             <div className="slick-slide">
@@ -129,7 +129,7 @@ function Domingos() {
 
       <h3 className="titulo-ebd">Escuela Bíblica Dominical</h3>
 
-      <animated.main className="main-container" style={containerAnimation}>
+      <animated.main className="main-container-ministerios-top" style={containerAnimation}>
         <div className="carrusel">
           <Slider {...settings}>
             <div className="slick-slide">
@@ -220,7 +220,7 @@ function Domingos() {
 
       <h3 className="titulo-nunca-mas-solos">Nunca más Solos</h3>
 
-      <animated.main className="main-container" style={containerAnimation}>
+      <animated.main className="main-container-ministerios-top" style={containerAnimation}>
         <div className="carrusel">
           <Slider {...settings}>
             <div className="slick-slide">

@@ -52,7 +52,7 @@ function AVI() {
       <h1 className="titulo-avi">Adicciones vs Vida</h1>
 
       {/* LOS ESTILOS DE ESTAS IMAGENES VIENEN SUJETOS AL CSS DEL HOME */}
-      <animated.main className="main-container" style={containerAnimation}>
+      <animated.main className="main-container-ministerios" style={containerAnimation}>
         <div className="carrusel">
           <Slider {...settings}>
             <div className="slick-slide">

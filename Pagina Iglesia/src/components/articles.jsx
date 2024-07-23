@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 
 import { useSpring, animated } from "react-spring";
 
@@ -86,14 +86,15 @@ function Articles() {
           {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-ev.jpeg"
+              src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
             <p className="texto-noticias">
-              Jueves 27 de Junio <br />
+              Lunes 22 y Miércoles 24 de Julio
+              <br />
               <b className="txt-horario-noticia">A partir de las 20:00hs</b>
             </p>
           </div>
@@ -148,17 +149,18 @@ function Articles() {
         <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
             <img
-              src="noticias/placa-viernes.jpeg"
+              src="noticias/placa-reu-alabanza.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-reu-alabanza.jpeg")
+              }
             />
-            <h4 className="titulo-texto-noticias">Reunión de Oración y Estudio</h4>
+            <h4 className="titulo-texto-noticias">Reunión de Alabanza</h4>
             <p className="texto-noticias">
-              Viernes 28 de Junio a partir de las:
+              Viernes 26 de Julio a partir de las:
               <b className="txt-horario-noticia"> 20:00hs</b>
               <br />
-              {/* Zoom ID: <b className="txt-horario-noticia">546 067 9344</b> */}
             </p>
           </div>
         </animated.article>
@@ -190,18 +192,18 @@ function Articles() {
         >
           <div className="container-img">
             <img
-              src="noticias/placa-nunca-mas-solos.png"
+              src="noticias/actividad-mujeres.jpeg"
               alt=""
-              className="img-noticias"
+              className="img-reel"
               onClick={() =>
-                handleFullscreenImage("noticias/placa-nunca-mas-solos.png")
+                handleFullscreenImage("noticias/actividad-mujeres.jpeg")
               }
             />
-            <h4 className="titulo-texto-noticias">Runión de Bautismo</h4>
+            <h4 className="titulo-texto-noticias">Jornada Femenina</h4>
             <p className="texto-noticias">
-              Sábado 6 de Abril
+              Sábado 29 de Abril
               <br />a partir de las
-              <b className="txt-horario-noticia"> 19:00hs</b>
+              <b className="txt-horario-noticia"> 15:30hs</b>
             </p>
           </div>
         </animated.article>
@@ -229,7 +231,7 @@ function Articles() {
       {fullscreenImage && (
         <div className="fullscreen-modal" onClick={handleCloseFullscreen}>
           <button className="close-button" onClick={handleCloseFullscreen}>
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
           <img
             src={fullscreenImage}

@@ -2,7 +2,7 @@
 
 .titulo-noticias {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: -150px;
 }
 
 .underline-noticias {
@@ -246,6 +246,7 @@
 }
   
 .close-button {
+	width: 45px;
     font-size: 20px;
     padding: 10px;
 	border: none;
