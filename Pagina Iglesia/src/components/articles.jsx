@@ -89,16 +89,40 @@ function Articles() {
               src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-avi.jpeg")
+              }
             />
-            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
+            <h4 className="titulo-texto-noticias">
+              Adicciones vs Vida
+            </h4>
             <p className="texto-noticias">
-              Lunes 22 y Miércoles 24 de Julio
+              Lunes 12 y Miércoles 14 de Agosto
               <br />
               <b className="txt-horario-noticia">A partir de las 20:00hs</b>
             </p>
           </div>
         </animated.article>
+        {/* <animated.article className="article-container" style={animationProps}>
+          <div className="container-img">
+            <img
+              src="noticias/placa-viernes.jpeg"
+              alt=""
+              className="img-noticias"
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-viernes.jpeg")
+              }
+            />
+            <h4 className="titulo-texto-noticias">
+              Reunión de Oración y Estudio
+            </h4>
+            <p className="texto-noticias">
+              Viernes 2 de Agosto a partir de las:
+              <b className="txt-horario-noticia"> 20:00hs</b>
+              <br />
+            </p>
+          </div>
+        </animated.article> */}
 
         <animated.article className="article-reel" style={animationProps}>
           <div className="container-reel">
@@ -143,25 +167,6 @@ function Articles() {
                 </a>
               </>
             )}
-          </div>
-        </animated.article>
-
-        <animated.article className="article-container" style={animationProps}>
-          <div className="container-img">
-            <img
-              src="noticias/placa-reu-alabanza.jpeg"
-              alt=""
-              className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/placa-reu-alabanza.jpeg")
-              }
-            />
-            <h4 className="titulo-texto-noticias">Reunión de Alabanza</h4>
-            <p className="texto-noticias">
-              Viernes 26 de Julio a partir de las:
-              <b className="txt-horario-noticia"> 20:00hs</b>
-              <br />
-            </p>
           </div>
         </animated.article>
       </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./pedidos-lista.css";
 import Footer from "../components/footer";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ListaDePedidos() {
   // JSON con los datos de los pedidos de oración

@@ -181,9 +181,9 @@
 	right: 47px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .titulo-noticias {
-        margin-top: -50px;
+        margin-top: 200px;
     }
 
     .container-noticias {
