@@ -19,7 +19,7 @@
 
 .article-container {
 	width: 320px;
-	height: 400px;
+	height: 440px;
 	margin: 50px;
 	border-radius: 15px;
 	background-color: rgb(255, 255, 255, 0.4);
@@ -105,7 +105,7 @@
 
 .titulo-texto-noticias {
 	font-size: 20px;
-	text-align: center;
+	text-align: start;
 }
 
 .titulo-reel {
@@ -113,9 +113,16 @@
 	text-align: center;
 }
 
+.container-info-noticia {
+	/* background-color: red; */
+	/* display: flex; */
+	align-items: center;
+	margin-top: -10px;
+}
+
 .texto-noticias {
-	font-size: 20px;
-	text-align: center;
+	font-size: 19px;
+	text-align: start;
 }
 
 .texto-noticias-aux {
@@ -345,4 +352,18 @@
 	border-top: 4px solid #46e5fd;
 	border-bottom: 4px solid #46e5fd;
 	cursor: pointer;
+}
+
+.red {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.blue {
+    color: rgb(0, 0, 255);
+    font-weight: bold;
+}
+
+.container-link {
+	margin-top: -15px;
 }
