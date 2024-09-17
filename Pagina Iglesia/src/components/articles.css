@@ -105,7 +105,7 @@
 
 .titulo-texto-noticias {
 	font-size: 20px;
-	text-align: start;
+	text-align: center;
 }
 
 .titulo-reel {
@@ -122,7 +122,8 @@
 
 .texto-noticias {
 	font-size: 19px;
-	text-align: start;
+	text-align: center;
+	line-height: 28px;
 }
 
 .texto-noticias-aux {
@@ -365,5 +366,5 @@
 }
 
 .container-link {
-	margin-top: -15px;
+	margin-top: 30px;
 }

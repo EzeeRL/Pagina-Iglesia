@@ -82,41 +82,24 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
-        <animated.article className="article-container" style={animationProps}>
+        <animated.article
+          className="article-container"
+          style={animationProps}
+        >
           <div className="container-img">
             <img
-              src="noticias/placa-domingo.jpeg"
+              src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/placa-domingo.jpeg")
-              }
+              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">
-              Cena del Señor y Predicación del Evangelio
-            </h4>
+            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
             <p className="texto-noticias">
-              Domingo 25 de Agosto a partir de las:
-              <b className="txt-horario-noticia"> 10:00hs</b>
+              Lunes 16 y Miércoles 18 de Septiembre. <br />
+              <b>A partir de las 20:00hs</b>
               <br />
-              <br />
+              <b>Zoom ID: 546 067 9344</b>
             </p>
-            {/* <a
-              href="https://www.youtube.com/playlist?list=PL5ZoETzk92AD3AYh3A7TeBG5o-sId2loa"
-              target="_blank"
-              className="link-reels viernes"
-            >
-              Ver lista de vídeos
-            </a> */}
-            <div className="container-link">
-              <a
-                href="https://www.youtube.com/playlist?list=PL5ZoETzk92AB-TXhr4ERHP8s02H92jL7v"
-                target="_blank"
-                className="link-reels domingos"
-              >
-                Ver lista de vídeos
-              </a>
-            </div>
           </div>
         </animated.article>
 
@@ -170,36 +153,70 @@ function Articles() {
           {" "}
           <div className="container-img">
             <img
+              src="noticias/placa-ev.jpeg"
+              alt=""
+              className="img-noticias"
+              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
+            />
+            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            <div className="container-info-noticia">
+              <p className="texto-noticias">
+                Jueves 19 de Septiembre
+                <br />
+                <b className="txt-horario-noticia">A partir de las 20:00hs</b>
+                <br />
+              </p>
+              <p className="texto-noticias"></p>
+              {/* <div className="container-link">
+                <a
+                  href="https://www.youtube.com/playlist?list=PL5ZoETzk92AB-TXhr4ERHP8s02H92jL7v"
+                  target="_blank"
+                  className="link-reels domingos"
+                >
+                  Ver lista de vídeos
+                </a>
+              </div> */}
+            </div>
+          </div>
+        </animated.article>
+
+        {/* <animated.article className="article-container" style={animationProps}>
+          <div className="container-img">
+            <img
               src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
               onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
             />
             <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
-            <div className="container-info-noticia">
-              <p className="texto-noticias">
-                Lunes 26 y Miércoles 28 de Agosto
-                <br />
-                <b className="txt-horario-noticia">A partir de las 20:00hs</b>
-                <br />
-              </p>
-              <p className="texto-noticias">
-                <b className="color">Zoom ID: 546 067 9344</b>
-              </p>
-              {/* <a
-                href="https://www.youtube.com/live/4OyVEZOc8SI?si=I5pQJQ7jV05sziyY"
+            <p className="texto-noticias">
+              Lunes 30 y Miércoles 4 de Septiembre a partir de las:
+              <b className="txt-horario-noticia"> 20:00hs</b>
+              <br />
+              <br />
+            </p>
+            <a
+              href="https://www.youtube.com/playlist?list=PL5ZoETzk92AD3AYh3A7TeBG5o-sId2loa"
+              target="_blank"
+              className="link-reels viernes"
+            >
+              Ver lista de vídeos
+            </a>
+            <div className="container-link">
+              <a
+                href="https://www.youtube.com/playlist?list=PL5ZoETzk92AB-TXhr4ERHP8s02H92jL7v"
                 target="_blank"
-                className="link-reels"
+                className="link-reels domingos"
               >
-                Ver Video
-              </a> */}
+                Ver lista de vídeos
+              </a>
             </div>
           </div>
-        </animated.article>
+        </animated.article> */}
       </div>
 
-      {/* <div className="container-noticias-2">
-        <article className="article-container-2">
+      <div className="container-noticias-2">
+        {/* <article className="article-container-2">
           <div className="container-img">
             <img
               src="noticias/reunion-femenina.jpeg"
@@ -216,31 +233,9 @@ function Articles() {
               <b className="txt-horario-noticia"> 17:00hs</b>
             </p>
           </div>
-        </article>
+        </article> */}
 
-        <animated.article
-          className="article-container-2"
-          style={animationProps}
-        >
-          <div className="container-img">
-            <img
-              src="noticias/actividad-mujeres.jpeg"
-              alt=""
-              className="img-reel"
-              onClick={() =>
-                handleFullscreenImage("noticias/actividad-mujeres.jpeg")
-              }
-            />
-            <h4 className="titulo-texto-noticias">Jornada Femenina</h4>
-            <p className="texto-noticias">
-              Sábado 29 de Abril
-              <br />a partir de las
-              <b className="txt-horario-noticia"> 15:30hs</b>
-            </p>
-          </div>
-        </animated.article>
-
-        <article className="article-container-2">
+        {/* <article className="article-container-2">
           <div className="container-img">
             <img
               src="noticias/placa-escuelita.jpg"
@@ -256,8 +251,8 @@ function Articles() {
               Precio de: <b className="txt-horario-noticia">$35.000</b>
             </p>
           </div>
-        </article>
-      </div> */}
+        </article> */}
+      </div>
 
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (
