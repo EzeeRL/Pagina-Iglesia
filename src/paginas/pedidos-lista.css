@@ -1,0 +1,54 @@
+.container-lista {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.titulo-lista {
+	text-align: center;
+	margin-top: 130px;
+}
+
+.ol-container-lista {
+	/* position: relative; */
+	width: 80%;
+	/* left: 8%; */
+	line-height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	border-top: 3px solid #46e5fd;
+	border-bottom: 3px solid #46e5fd;
+	border-radius: 15px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pedido-oracion {
+	text-align: start;
+}
+
+.texto-enviar-pedido {
+	text-align: center;
+}
+
+.container-button-redireccion {
+	display: flex;
+	justify-content: center;
+}
+
+.button-redireccion {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px;
+	background-color:#46e5fd;
+	backdrop-filter: blur(10px);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	margin-bottom: 30px;
+	transition: 0.3s;
+}
+
+.button-redireccion:hover {
+	transform: scale(1.08);
+	background-color: #000;
+	color: #fff;
+}

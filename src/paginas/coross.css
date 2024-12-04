@@ -1,0 +1,185 @@
+.container-cancionero {
+
+	/* background-color: red; */
+}
+
+.resultados-busqueda {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lista-coros {
+	width: 80%;
+	text-align: center;
+	margin-top: 25px;
+	margin-left: -30px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	border-top: 3px solid #46e5fd;
+	/* border-top-left-radius: 15px;
+	border-top-right-radius: 15px; */
+	border-radius: 15px;
+}
+
+.title-lista-coros {
+	/* font-size: 20px; */
+	text-align: center;
+	/* margin-left: 30px; */
+}
+
+.container-resultado-coro {
+	margin-bottom: 35px;
+}
+
+.coro {
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.coro:hover {
+	transform: scale(1.1);
+	color: #46e5fd;
+}
+
+.container-letra-coro {
+	width: 80%;
+	text-align: center;
+	margin-top: 30px;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	border-top: 3px solid #46e5fd;
+	/* border-top-left-radius: 15px;
+	border-top-right-radius: 15px; */
+	border-radius: 15px;
+}
+
+.titulo-coro {
+	text-align: center;
+	margin-top: -20px;
+}
+
+.letra-coro {
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.titulo-cancionero {
+	text-align: center;
+	margin-top: 130px;
+}
+
+@media screen and (max-width: 837px) {
+	.titulo-cancionero {
+		margin-top: 170px;
+	}
+}
+
+.subtitle {
+	text-align: center;
+}
+
+.container-buscador {
+	display: flex;
+	justify-content: center;
+}
+
+.buscador {
+	font-weight: bold;
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-bottom: 3px solid #46e5fd;
+	border-radius: 5px;
+	outline: none;
+	font-size: 18px;
+	color: #000;
+	margin-right: 10px;
+}
+
+.button-submit {
+	font-size: 21px;
+	border: none;
+	background-color: transparent;
+}
+
+.container-button-cambiar {
+	display: flex;
+	justify-content: center;
+}
+
+.button-cambiar-coros {
+	width: 130px;
+	height: 45px;
+	margin-top: 20px;
+	border: none;
+	border-bottom: 3px solid #46e5fd;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.button-cambiar-coros:hover {
+	transform: scale(1.05);
+	height: 42px;
+	border-bottom: 5px solid #46e5fd;
+}
+
+.button-volver {
+	font-size: 30px;
+	background-color: transparent;
+	border: none;
+	position: relative;
+	top: 15px;
+	left: -45%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.button-volver:hover {
+	transform: scale(1.1);
+}
+
+.pagination-button {}
+
+
+.pagination-button-active {
+	background-color: #000;
+	color: azure;
+}
+
+/* ERRORES */
+
+.container-error {
+	width: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #F0F0F0;
+	border-radius: 5px;
+	border-bottom: 3px solid #46e5fd;
+	margin: 30px auto;
+	animation: fadeIn 0.5s ease-in-out;
+	opacity: 1;
+}
+
+@keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  scale: 0.7;
+	}
+	to {
+	  opacity: 1;
+	  scale: 1;
+	}
+  }
+
+.message-error {
+	font-size: 18px;
+	font-weight: bold;
+	color: rgb(253, 68, 68);
+}

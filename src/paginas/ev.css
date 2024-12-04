@@ -1,0 +1,49 @@
+.titulo-ev {
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.main-container-ev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vh;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.container-img-ev {
+	padding: 15px;
+    border-top: 3px solid #46e5fd;
+	border-bottom: 3px solid #46e5fd;
+    border-radius: 15px;
+}
+
+/* .noticia-video-ev {
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+} */
+
+.placa-ev {
+    width: 500px;
+    height: 400px;
+    border-radius: 15px;
+    border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+.article-container-ev {
+    width: auto; /* Usamos un ancho relativo */
+    max-width: 800px; /* Limitamos el ancho máximo */
+    height: auto; /* Mantenemos la relación de aspecto */
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,52 @@
+.button-cambiar-himnos {
+	width: 100px;
+	height: 40px;
+	margin-top: 20px;
+	border: none;
+	border-bottom: 3px solid #46e5fd;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.title-lista-himnos {
+	text-align: center;
+}
+
+.resultados-busqueda {
+	text-align: center;
+	margin-left: -20px;
+}
+
+.lista-himnos {
+	width: 80%;
+	text-align: center;
+	margin-top: 25px;
+	margin-left: -30px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	border-top: 3px solid #46e5fd;
+	/* border-top-left-radius: 15px;
+	border-top-right-radius: 15px; */
+	border-radius: 15px;
+}
+
+.container-px-letra {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-cambiar-himnos {
+	width: 130px;
+	height: 45px;
+	transition: 0.3s;
+}
+
+.button-cambiar-himnos:hover {
+	transform: scale(1.05);
+	height: 42px;
+	border-bottom: 5px solid #46e5fd;
+}
