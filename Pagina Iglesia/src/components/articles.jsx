@@ -95,7 +95,7 @@ function Articles() {
             />
             <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
             <p className="texto-noticias">
-              Lunes 16 y Miércoles 18 de Septiembre. <br />
+              Lunes 9 y Miércoles 11 de Diciembre <br />
               <b>A partir de las 20:00hs</b>
               <br />
               <b>Zoom ID: 546 067 9344</b>
@@ -153,15 +153,15 @@ function Articles() {
           {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-ev.jpeg"
+              src="noticias/placa-viernes.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            <h4 className="titulo-texto-noticias">Reunión de Oración y Estudio</h4>
             <div className="container-info-noticia">
               <p className="texto-noticias">
-                Jueves 19 de Septiembre
+                Viernes 13 de Diciembre
                 <br />
                 <b className="txt-horario-noticia">A partir de las 20:00hs</b>
                 <br />
