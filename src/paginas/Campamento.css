@@ -1,132 +1,118 @@
-.titulo-campa {
-  text-align: center;
-  margin-top: 20px; /* Ajuste para dispositivos más pequeños */
-}
-
-/* @media screen and (max-width: 600px) {
-  .titulo-campa {
-    width: 300px;
-    margin-top: -50px;
-  }
-} */
-
-/* @media screen and ( max-width: 500px) {
-  .titulo-campa {
-    width: 100px;
-  }
-} */
-
-.container-general-inscripcion {
-  margin-top: 11vh;
-  height: 110vh;
-  position: relative;
+/* Estilos generales del formulario */
+.registro-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-image: url("/Campamento/placa-campa.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-  
-.container-enviado {
-  width: 90%;
-  max-width: 500px;
-  margin-top: -5vh;
-  background-color: rgba(241, 240, 240, 0.4);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  font-size: 18px;
-  text-align: center;
-  font-weight: bold;
-}
-  
-.form-inscripcion {
-  margin-top: 500px;
-  position: relative;
-  border: 1px solid #ccc;
+  justify-content: center;
+  margin: 110px auto;
   padding: 20px;
-  width: 90%;
-  border: none;
-  background-color: rgba(241, 240, 240, 0.4);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-}
-  
-.label-inscripcion {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.input-inscripcion {
-  border: 1px solid #fff;
-  padding: 5px;
+.registro-confirmacion {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.titulo-registro {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formulario-registro {
   width: 100%;
-  background: transparent;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-registro {
   margin-bottom: 15px;
+}
+
+.label-campo {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-campo {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.input-campo:focus {
+  border-color: #007BFF;
   outline: none;
 }
 
-.input-inscripcion:focus {
-  background-color: #fff; /* Cambiar el color de fondo cuando el input está enfocado */
+.boton-enviar {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.input-inscripcion::placeholder {
-  font-size: 14px;
-  font-weight: bold;
-  color: #000; /* Cambiar el color del texto de marcador de posición */
+.boton-enviar:hover {
+  background-color: #0056b3;
 }
-  
-  .button-submit-inscripcion {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    left: 38%;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    background-color: #004aad;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin-top: 10px;
-    transition: 0.2s;
-  }
-  
-  .button-submit-inscripcion:hover {
-    transform: scale(1.05);
-    background-color: #023981;
-  }
-  
-  @media screen and (min-width: 600px) {
-    .form-inscripcion {
-      width: 80%; /* Reducir el ancho en dispositivos más pequeños */
-      max-width: 400px; /* Ajustar el máximo ancho para dispositivos más pequeños */
-      height: auto;
-      margin-top: 150px;
-    }
-    .container-general-inscripcion {
-      height: 135vh;
-    }
-  }
-  
-  @media screen and (min-width: 730px) {
-    .form-inscripcion {
-      width: 500px;
-    }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estilos para el campo de fecha */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.react-datepicker__input-container input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .registro-container {
+    padding: 15px;
+    max-width: 100%;
   }
 
-  @media screen and (max-width: 599px) {
-    .container-general-inscripcion {
-      height: 170vh;
-    }
-    .form-inscripcion {
-      margin-top: 100px;
-    }
+  .titulo-registro {
+    font-size: 1.5rem;
   }
+
+  .formulario-registro {
+    width: 100%;
+  }
+}

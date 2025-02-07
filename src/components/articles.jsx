@@ -88,17 +88,17 @@ function Articles() {
         >
           <div className="container-img">
             <img
-              src="noticias/placa-avi.jpeg"
+              src="noticias/placa-viernes.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
+            <h4 className="titulo-texto-noticias">Reunión de Oración y Estudio</h4>
             <p className="texto-noticias">
-              Lunes 2 y Miércoles 4 de Diciembre. <br />
+              Viernes 31 de Enero<br />
               <b>A partir de las 20:00hs</b>
               <br />
-              <b>Zoom ID: 546 067 9344</b>
+              {/* <b>Zoom ID: 546 067 9344</b> */}
             </p>
           </div>
         </animated.article>
@@ -153,17 +153,17 @@ function Articles() {
           {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-ev.jpeg"
+              src="noticias/placa-domingo.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-domingo.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
+            <h4 className="titulo-texto-noticias">Cena del Señor y Predicación del Evangelio</h4>
             <div className="container-info-noticia">
               <p className="texto-noticias">
-                Jueves 5 de Diciembre
+                Domingo 2 de Febrero
                 <br />
-                <b className="txt-horario-noticia">A partir de las 20:00hs</b>
+                <b className="txt-horario-noticia">A partir de las 10:00hs</b>
                 <br />
               </p>
               <p className="texto-noticias"></p>

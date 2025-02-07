@@ -47,7 +47,7 @@ function Campa() {
     }
 
     try {
-      const response = await fetch("https://formspree.io/f/xbjnpqon", {
+      const response = await fetch("https://vtl-back.vercel.app/inscripcion", {
         method: "POST",
         body: formData,
         headers: {
@@ -77,18 +77,18 @@ function Campa() {
 
   return (
     <>
-      <div className="container-general-inscripcion">
+      <div className="registro-container">
         {formularioEnviado ? (
-          <div className="container-enviado">
+          <div className="registro-confirmacion">
             <h2>¡Formulario enviado correctamente!</h2>
             <p>Gracias por tu inscripción.</p>
             <p>Te esperamos el Viernes 26 en Vicente López 2113, Avellaneda</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="form-inscripcion">
-            <h1 className="titulo-campa"><u>Inscripción Campamento <br />2024</u></h1>
-            <div>
-              <label htmlFor="nombre" className="label-inscripcion">
+          <form onSubmit={handleSubmit} className="formulario-registro">
+            <h1 className="titulo-registro"><u>Inscripción Campamento <br />2024</u></h1>
+            <div className="campo-registro">
+              <label htmlFor="nombre" className="label-campo">
                 Nombre:
               </label>
               <input
@@ -96,11 +96,11 @@ function Campa() {
                 id="nombre"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                className="input-inscripcion"
+                className="input-campo"
               />
             </div>
-            <div>
-              <label htmlFor="apellido" className="label-inscripcion">
+            <div className="campo-registro">
+              <label htmlFor="apellido" className="label-campo">
                 Apellido:
               </label>
               <input
@@ -108,11 +108,11 @@ function Campa() {
                 id="apellido"
                 value={apellido}
                 onChange={(e) => setApellido(e.target.value)}
-                className="input-inscripcion"
+                className="input-campo"
               />
             </div>
-            <div>
-              <label htmlFor="edad" className="label-inscripcion">
+            <div className="campo-registro">
+              <label htmlFor="edad" className="label-campo">
                 Edad:
               </label>
               <input
@@ -120,11 +120,11 @@ function Campa() {
                 id="edad"
                 value={edad}
                 onChange={(e) => handleEdadChange(e)}
-                className="input-inscripcion"
+                className="input-campo"
               />
             </div>
-            <div>
-              <label htmlFor="dni" className="label-inscripcion">
+            <div className="campo-registro">
+              <label htmlFor="dni" className="label-campo">
                 DNI:
               </label>
               <input
@@ -132,18 +132,18 @@ function Campa() {
                 id="dni"
                 value={dni}
                 onChange={(e) => setDni(e.target.value)}
-                className="input-inscripcion"
+                className="input-campo"
               />
             </div>
-            <div>
-              <label htmlFor="fechaNacimiento" className="label-inscripcion">
+            <div className="campo-registro">
+              <label htmlFor="fechaNacimiento" className="label-campo">
                 Fecha de Nacimiento:
               </label>
               <DatePicker
                 id="fechaNacimiento"
                 selected={fechaNacimiento}
                 onChange={(date) => setFechaNacimiento(date)}
-                className="input-inscripcion"
+                className="input-campo"
                 dateFormat="dd/MM/yyyy"
                 placeholderText="Dia/Mes/Año"
                 showYearDropdown
@@ -152,8 +152,8 @@ function Campa() {
                 locale={es}
               />
             </div>
-            <div>
-              <label htmlFor="telefono" className="label-inscripcion">
+            <div className="campo-registro">
+              <label htmlFor="telefono" className="label-campo">
                 Ingrese su número de celular:
               </label>
               <input
@@ -161,14 +161,14 @@ function Campa() {
                 id="telefono"
                 value={telefono}
                 onChange={(e) => setTelefono(e.target.value)}
-                className="input-inscripcion"
+                className="input-campo"
               />
             </div>
             {esMenor && (
-              <div>
+              <div className="campo-registro">
                 <label
                   htmlFor="nombreResponsable"
-                  className="label-inscripcion"
+                  className="label-campo"
                 >
                   Nombre del responsable o tutor:
                 </label>
@@ -177,11 +177,11 @@ function Campa() {
                   id="nombreResponsable"
                   value={nombreResponsable}
                   onChange={(e) => setNombreResponsable(e.target.value)}
-                  className="input-inscripcion"
+                  className="input-campo"
                 />
                 <label
                   htmlFor="telefonoResponsable"
-                  className="label-inscripcion"
+                  className="label-campo"
                 >
                   Celular del responsable o tutor:
                 </label>
@@ -190,11 +190,11 @@ function Campa() {
                   id="telefonoResponsable"
                   value={telefonoResponsable}
                   onChange={(e) => setTelefonoResponsable(e.target.value)}
-                  className="input-inscripcion"
+                  className="input-campo"
                 />
               </div>
             )}
-            <button type="submit" className="button-submit-inscripcion">
+            <button type="submit" className="boton-enviar">
               Enviar
             </button>
           </form>
