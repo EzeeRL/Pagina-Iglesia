@@ -27,6 +27,7 @@ import Problemas from "./paginas/problemas.jsx";
 import PedidosDeOracion from "./paginas/oracion.jsx";
 import Coross from "./paginas/coros.jsx";
 import Himnoss from "./paginas/himnos.jsx";
+import CampamentoLista from "./paginas/anotados-campa.jsx";
 // import Prueba from './paginas/prueba.jsx';
 
 // SUBIR ACTUALIZACIONES A GITHUB:
@@ -62,6 +63,7 @@ function App() {
         <Route path="/PedidosDeOracion" element={<PedidosDeOracion />} />
         <Route path="/ListaDePedidos" element={<ListaDePedidos />}></Route>
         <Route path="/Problemas" element={<Problemas />}></Route>
+        <Route path="/CampamentoLista" element={<CampamentoLista />}></Route>
       </Routes>
     </>
   );

@@ -82,23 +82,21 @@ function Articles() {
         id="noticias-section"
         ref={containerRef}
       >
-        <animated.article
-          className="article-container"
-          style={animationProps}
-        >
+        <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
             <img
-              src="noticias/placa-viernes.jpeg"
+              src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-viernes.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Reunión de Oración y Estudio</h4>
+            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
             <p className="texto-noticias">
-              Viernes 31 de Enero<br />
+              Lunes 10 y Miércoles 12 de Febrero
+              <br />
               <b>A partir de las 20:00hs</b>
               <br />
-              {/* <b>Zoom ID: 546 067 9344</b> */}
+              <b>Zoom ID: 546 067 9344</b>
             </p>
           </div>
         </animated.article>
@@ -153,17 +151,21 @@ function Articles() {
           {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-domingo.jpeg"
+              src="noticias/placa-viernes.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-domingo.jpeg")}
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-viernes.jpeg")
+              }
             />
-            <h4 className="titulo-texto-noticias">Cena del Señor y Predicación del Evangelio</h4>
+            <h4 className="titulo-texto-noticias">
+              Reunión de Oración y Estudio
+            </h4>
             <div className="container-info-noticia">
               <p className="texto-noticias">
-                Domingo 2 de Febrero
+                Viernes 14 de Febrero
                 <br />
-                <b className="txt-horario-noticia">A partir de las 10:00hs</b>
+                <b className="txt-horario-noticia">A partir de las 20:00hs</b>
                 <br />
               </p>
               <p className="texto-noticias"></p>

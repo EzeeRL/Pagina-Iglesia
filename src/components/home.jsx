@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useInView } from "react-intersection-observer";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import "./home.css";
 import Nav from "./nav";
@@ -26,6 +26,7 @@ function Home() {
     variableWidth: false,
     centerMode: true,
     centerPadding: "0",
+    // arrows: false,
   };
 
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -112,7 +113,7 @@ function Home() {
       <animated.p className="subtitle-actividades" style={mainSubtitleSpring}>
         Hay actividades todos los días. <br />
         Podés ponerte en{" "}
-        <Link to='/Contacto' className="redireccion-contacto">
+        <Link to="/Contacto" className="redireccion-contacto">
           <u>contacto</u>
         </Link>{" "}
         con nosotros <br />
