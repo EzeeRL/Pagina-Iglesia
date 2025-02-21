@@ -81,11 +81,16 @@ function Campa() {
           <h2>¡Formulario enviado correctamente!</h2>
           <p>Gracias por tu inscripción.</p>
           <p>Te esperamos el Viernes 26 en Vicente López 2113, Avellaneda.</p>
+          <br />
+          <p>
+            El precio del campamento te será enviado por teléfono al número que
+            proporcionaste, así también los medios de pago.
+          </p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="formulario-registro">
           <h1 className="titulo-registro">
-            <u>Inscripción Campamento 2024</u>
+            <u>Inscripción Campamento 2025</u>
           </h1>
           <div className="campo-registro">
             <label htmlFor="nombre">Nombre:</label>
