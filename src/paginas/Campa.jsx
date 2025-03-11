@@ -15,6 +15,9 @@ function Campa() {
   const [nombreResponsable, setNombreResponsable] = useState("");
   const [telefonoResponsable, setTelefonoResponsable] = useState("");
   const [formularioEnviado, setFormularioEnviado] = useState(false);
+  const [iglesia, setIglesia] = useState(""); // Nuevo estado para la iglesia
+  const [quienInvito, setQuienInvito] = useState(""); // Nuevo estado para quien invitó
+  const [mostrarCampoInvitacion, setMostrarCampoInvitacion] = useState(false); // Estado para mostrar/ocultar el campo adicional
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,7 +29,9 @@ function Campa() {
       !dni.trim() ||
       !fechaNacimiento ||
       !telefono.trim() ||
-      (esMenor && (!nombreResponsable.trim() || !telefonoResponsable.trim()))
+      !iglesia ||
+      (esMenor && (!nombreResponsable.trim() || !telefonoResponsable.trim())) ||
+      (iglesia === "Otra" && !quienInvito.trim())
     ) {
       alert("Debes completar todos los campos del formulario");
       return;
@@ -37,23 +42,47 @@ function Campa() {
       apellido,
       edad: parseInt(edad, 10),
       dni,
-      fechaNacimiento: fechaNacimiento.toISOString().split("T")[0], // Formato YYYY-MM-DD
+      fechaNacimiento: fechaNacimiento.toISOString().split("T")[0],
       telefono,
       esMenor,
       nombreResponsable: esMenor ? nombreResponsable : null,
       telefonoResponsable: esMenor ? telefonoResponsable : null,
+      iglesia,
+      quienInvito: iglesia === "Otra" ? quienInvito : null,
+    };
+
+    const makeAPIData = {
+      Nombre: formData.nombre,
+      Apellido: formData.apellido,
+      DNI: formData.dni,
+      "Fecha de Nacimiento": formData.fechaNacimiento,
+      Telefono: formData.telefono,
+      "Telefono del Responsable": formData.telefonoResponsable || "",
+      "¿Quién lo Invitó?": formData.quienInvito || "",
+      "Estado de Pago": "Pendiente", // Puedes ajustar este valor según corresponda
+      edad: parseInt(edad, 10),
+      iglesia,
     };
 
     try {
-      const response = await fetch("https://vtl-back.vercel.app/inscripcion", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const [response1, response2] = await Promise.all([
+        fetch("https://vtl-back.vercel.app/inscripcion", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }),
+        fetch("https://hook.us2.make.com/darva34iuoqp85wmosd8pz7h6xpnv0ln", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(makeAPIData),
+        }),
+      ]);
 
-      if (response.ok) {
+      if (response1.ok && response2.ok) {
         setFormularioEnviado(true);
       } else {
         alert(
@@ -74,17 +103,21 @@ function Campa() {
     setEsMenor(parseInt(nuevaEdad, 10) < 18);
   };
 
+  const handleIglesiaChange = (e) => {
+    const valorIglesia = e.target.value;
+    setIglesia(valorIglesia);
+    setMostrarCampoInvitacion(valorIglesia === "Otra"); // Mostrar el campo adicional si se selecciona "Otra"
+  };
+
   return (
     <div className="registro-container">
       {formularioEnviado ? (
         <div className="registro-confirmacion">
           <h2>¡Formulario enviado correctamente!</h2>
           <p>Gracias por tu inscripción.</p>
-          <p>Te esperamos el Viernes 26 en Vicente López 2113, Avellaneda.</p>
-          <br />
           <p>
-            El precio del campamento te será enviado por teléfono al número que
-            proporcionaste, así también los medios de pago.
+            Te esperamos el Viernes 28 de Marzo en Vicente López 2113
+            Avellaneda, a las 19hs.
           </p>
         </div>
       ) : (
@@ -163,6 +196,35 @@ function Campa() {
               required
             />
           </div>
+          <div className="campo-registro">
+            <label htmlFor="iglesia">¿De qué Iglesia sos?</label>
+            <select
+              id="iglesia"
+              value={iglesia}
+              onChange={handleIglesiaChange}
+              className="input-campo"
+              required
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="Vicente López">Vicente López</option>
+              <option value="Otra">Otra, específicar cual</option>
+            </select>
+          </div>
+          {mostrarCampoInvitacion && (
+            <div className="campo-registro">
+              <label htmlFor="quienInvito">
+                ¿De qué Iglesia sos y quién te invitó?
+              </label>
+              <input
+                type="text"
+                id="quienInvito"
+                value={quienInvito}
+                onChange={(e) => setQuienInvito(e.target.value)}
+                className="input-campo"
+                required
+              />
+            </div>
+          )}
           {esMenor && (
             <>
               <div className="campo-registro">

@@ -94,7 +94,7 @@ function Articles() {
             <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
             <div className="container-info-noticia">
               <p className="texto-noticias">
-                Lunes 24 y Miércoles 26 de Febrero
+                Lunes 10 y Miércoles 12 de Marzo
                 <br />
                 <b className="txt-horario-noticia">A partir de las 20:00hs</b>
                 <br />
@@ -163,18 +163,14 @@ function Articles() {
         <animated.article className="article-container" style={animationProps}>
           <div className="container-img">
             <img
-              src="noticias/placa-viernes.jpeg"
+              src="noticias/placa-ev.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() =>
-                handleFullscreenImage("noticias/placa-viernes.jpeg")
-              }
+              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">
-              Reunión de Oración y Estudio
-            </h4>
+            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
             <p className="texto-noticias">
-              Viernes 28 de Febrero
+              Jueves 13 de Marzo
               <br />
               <b>A partir de las 20:00hs</b>
               <br />
