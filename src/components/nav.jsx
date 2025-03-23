@@ -75,12 +75,12 @@ function Nav() {
             <i className="fa-solid fa-calendar-days icons-nav"></i> Ministerios
           </Link>
         </animated.li>
-        <animated.li style={linkAnimation}>
+        {/* <animated.li style={linkAnimation}>
           <Link to="/PedidosDeOracion" className="link-nav">
             <i className="fa-solid fa-hands-praying icons-nav"></i> Pedidos de
             Oración
           </Link>
-        </animated.li>
+        </animated.li> */}
         <animated.li style={linkAnimation}>
           <Link to="/Contacto" className="link-nav">
             <i className="fa-solid fa-user icons-nav"></i> Contacto

@@ -219,7 +219,7 @@ function Home() {
         </animated.div>
       </main>
 
-      <Articles></Articles>
+      {/* <Articles></Articles> */}
 
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (

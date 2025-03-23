@@ -83,34 +83,25 @@ function Articles() {
         ref={containerRef}
       >
         <animated.article className="article-container" style={animationProps}>
-          {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-avi.jpeg"
+              src="noticias/placa-domingo.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
+              onClick={() =>
+                handleFullscreenImage("noticias/placa-domingo.jpeg")
+              }
             />
-            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
-            <div className="container-info-noticia">
-              <p className="texto-noticias">
-                Lunes 10 y Miércoles 12 de Marzo
-                <br />
-                <b className="txt-horario-noticia">A partir de las 20:00hs</b>
-                <br />
-                <b>Zoom ID: 546 067 9344</b>
-              </p>
-              <p className="texto-noticias"></p>
-              {/* <div className="container-link">
-                <a
-                  href="https://www.youtube.com/playlist?list=PL5ZoETzk92AB-TXhr4ERHP8s02H92jL7v"
-                  target="_blank"
-                  className="link-reels domingos"
-                >
-                  Ver lista de vídeos
-                </a>
-              </div> */}
-            </div>
+            <h4 className="titulo-texto-noticias">
+              Cena del Señor y Predicación del Evangelio
+            </h4>
+            <p className="texto-noticias">
+              Domingo 16 de Marzo
+              <br />
+              <b>A partir de las 9:30hs</b>
+              <br />
+              {/* <b>Zoom ID: 546 067 9344</b> */}
+            </p>
           </div>
         </animated.article>
 
@@ -161,21 +152,34 @@ function Articles() {
         </animated.article>
 
         <animated.article className="article-container" style={animationProps}>
+          {" "}
           <div className="container-img">
             <img
-              src="noticias/placa-ev.jpeg"
+              src="noticias/placa-avi.jpeg"
               alt=""
               className="img-noticias"
-              onClick={() => handleFullscreenImage("noticias/placa-ev.jpeg")}
+              onClick={() => handleFullscreenImage("noticias/placa-avi.jpeg")}
             />
-            <h4 className="titulo-texto-noticias">Espacio Varón</h4>
-            <p className="texto-noticias">
-              Jueves 13 de Marzo
-              <br />
-              <b>A partir de las 20:00hs</b>
-              <br />
-              {/* <b>Zoom ID: 546 067 9344</b> */}
-            </p>
+            <h4 className="titulo-texto-noticias">Adicciones VS Vida</h4>
+            <div className="container-info-noticia">
+              <p className="texto-noticias">
+                Lunes 17 y Miércoles 19 de Marzo
+                <br />
+                <b className="txt-horario-noticia">A partir de las 20:00hs</b>
+                <br />
+                <b>Zoom ID: 546 067 9344</b>
+              </p>
+              <p className="texto-noticias"></p>
+              {/* <div className="container-link">
+                <a
+                  href="https://www.youtube.com/playlist?list=PL5ZoETzk92AB-TXhr4ERHP8s02H92jL7v"
+                  target="_blank"
+                  className="link-reels domingos"
+                >
+                  Ver lista de vídeos
+                </a>
+              </div> */}
+            </div>
           </div>
         </animated.article>
 

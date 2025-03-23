@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
-import './ministerios.css';
-import Footer from '../components/footer.jsx';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
+import "./ministerios.css";
+import Footer from "../components/footer.jsx";
 
 const Ministerios = () => {
   const tableAnimation = useSpring({
@@ -14,7 +14,7 @@ const Ministerios = () => {
 
   const createOpacityAnimation = () => {
     const [ref, inView] = useInView({
-      triggerOnce: false,  // Permite que el observador se dispare cada vez que el elemento entra y sale de la vista
+      triggerOnce: false, // Permite que el observador se dispare cada vez que el elemento entra y sale de la vista
       threshold: 0.1,
     });
 
@@ -47,7 +47,11 @@ const Ministerios = () => {
             detallada acerca de cada una y fotos
           </p>
         </div>
-        <animated.div className="container-lunes containers-dias" ref={lunesAnim.ref} style={lunesAnim.style}>
+        <animated.div
+          className="container-lunes containers-dias"
+          ref={lunesAnim.ref}
+          style={lunesAnim.style}
+        >
           <h1 className="dia-ministerios">
             <b className="underline-titulo">Lunes</b>
           </h1>
@@ -56,7 +60,11 @@ const Ministerios = () => {
           </Link>
         </animated.div>
 
-        <animated.div className="container-martes containers-dias" ref={martesAnim.ref} style={martesAnim.style}>
+        <animated.div
+          className="container-martes containers-dias"
+          ref={martesAnim.ref}
+          style={martesAnim.style}
+        >
           <h1 className="dia-ministerios martes">
             <b className="underline-titulo">Martes</b>
           </h1>
@@ -65,7 +73,11 @@ const Ministerios = () => {
           </Link>
         </animated.div>
 
-        <animated.div className="container-miercoles containers-dias" ref={miercolesAnim.ref} style={miercolesAnim.style}>
+        <animated.div
+          className="container-miercoles containers-dias"
+          ref={miercolesAnim.ref}
+          style={miercolesAnim.style}
+        >
           <h1 className="dia-ministerios">
             <b className="underline-titulo">Miércoles</b>
           </h1>
@@ -74,7 +86,11 @@ const Ministerios = () => {
           </Link>
         </animated.div>
 
-        <animated.div className="container-jueves containers-dias" ref={juevesAnim.ref} style={juevesAnim.style}>
+        <animated.div
+          className="container-jueves containers-dias"
+          ref={juevesAnim.ref}
+          style={juevesAnim.style}
+        >
           <h1 className="dia-ministerios jueves">
             <b className="underline-titulo ">Jueves</b>
           </h1>
@@ -83,7 +99,11 @@ const Ministerios = () => {
           </Link>
         </animated.div>
 
-        <animated.div className="container-viernes containers-dias" ref={viernesAnim.ref} style={viernesAnim.style}>
+        <animated.div
+          className="container-viernes containers-dias"
+          ref={viernesAnim.ref}
+          style={viernesAnim.style}
+        >
           <h1 className="dia-ministerios">
             <b className="underline-titulo">Viernes</b>
           </h1>
@@ -92,7 +112,11 @@ const Ministerios = () => {
           </Link>
         </animated.div>
 
-        <animated.div className="container-sabado containers-dias" ref={sabadoAnim.ref} style={sabadoAnim.style}>
+        <animated.div
+          className="container-sabado containers-dias"
+          ref={sabadoAnim.ref}
+          style={sabadoAnim.style}
+        >
           <h1 className="dia-ministerios sabado">
             <b className="underline-titulo">Sábado</b>
           </h1>
@@ -101,13 +125,17 @@ const Ministerios = () => {
           </Link>
         </animated.div>
 
-        <animated.div className="container-domingo containers-dias" ref={domingoAnim.ref} style={domingoAnim.style}>
+        <animated.div
+          className="container-domingo containers-dias"
+          ref={domingoAnim.ref}
+          style={domingoAnim.style}
+        >
           <h1 className="dia-ministerios domingo">
             <b className="underline-titulo">Domingo</b>
           </h1>
           <Link to="/Domingos" className="links-ministerios">
             <u className="links-domingo">
-              Cena del Señor 10:00hs
+              Cena del Señor 9:30hs
               <br />
               Predicación el Evangelio 11:30hs
               <br />
