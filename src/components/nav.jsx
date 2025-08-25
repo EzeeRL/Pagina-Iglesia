@@ -60,11 +60,11 @@ function Nav() {
             <i className="fa-solid fa-house icons-nav"></i> Inicio
           </Link>
         </animated.li>
-        <animated.li style={linkAnimation}>
+        {/* <animated.li style={linkAnimation}>
           <Link to="/Campa" className="link-nav">
             <i class="fa-solid fa-tents icons-nav"></i> Campamento
           </Link>
-        </animated.li>
+        </animated.li> */}
         <animated.li style={linkAnimation}>
           <Link to="/Coros" className="link-nav">
             <i className="fa-solid fa-music icons-nav"></i> Cancionero

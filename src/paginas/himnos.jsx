@@ -23,6 +23,19 @@ const Himnos = () => {
     setBusqueda(event.target.value);
   };
 
+  // Función para eliminar duplicados basada en el ID
+  const eliminarDuplicados = (array) => {
+    const seen = new Set();
+    return array.filter((item) => {
+      // Verificamos si ya hemos visto este ID
+      const duplicate = seen.has(item.ID);
+      // Añadimos el ID al conjunto de "vistos"
+      seen.add(item.ID);
+      // Mantenemos solo los elementos no duplicados
+      return !duplicate;
+    });
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -35,27 +48,32 @@ const Himnos = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.text(); // Captura el mensaje de error del servidor
+        const errorData = await response.text();
         setErrMesage(errorData);
-
         throw new Error(`Error en la solicitud: ${errorData}`);
       }
 
       const data = await response.json();
       console.log(data);
       setErr(false);
-      setTitulo2(data[0].Titulo)
-      setResultados(data);
+
+      // Eliminar duplicados antes de establecer los resultados
+      const resultadosUnicos = eliminarDuplicados(data);
+
+      if (resultadosUnicos.length > 0) {
+        setTitulo2(resultadosUnicos[0].Titulo);
+      }
+
+      setResultados(resultadosUnicos);
     } catch (error) {
       setErr(true);
-
       console.error("Error al buscar himnos:", error.message);
     }
   };
 
   useEffect(() => {
     console.log(titulo2);
-  }, [titulo2])
+  }, [titulo2]);
 
   useEffect(() => {
     const fetchHimnos = async () => {
@@ -103,7 +121,7 @@ const Himnos = () => {
 
   const volverAtras = () => {
     setLetraCoro("");
-    setResultados("");
+    setResultados([]);
   };
 
   let versos = [];
@@ -149,7 +167,7 @@ const Himnos = () => {
           <input
             type="text"
             className="buscador"
-            placeholder="Buscar himno..."
+            placeholder=" Ingrese un himno"
             value={busqueda}
             onChange={handleBusqueda}
           />
@@ -190,15 +208,15 @@ const Himnos = () => {
       <div className="resultados-busqueda">
         {resultados.length > 0 ? (
           resultados.map((coro) => (
-            <div key={coro.id} className="container-letra-coro">
+            <div key={coro.ID} className="container-letra-himno">
               <button onClick={volverAtras} className="button-volver">
                 <i className="fa-solid fa-circle-arrow-left icono-volver"></i>
               </button>
-              <h2 className="titulo-coro">{titulo2}</h2>
+              <h2 className="titulo-himno">{coro.Titulo}</h2>
               <div className="letra-coro">
-                {versosRes.map((verso, index) => (
+                {coro.Letra.split("\n").map((verso, index) => (
                   <p
-                    key={`${coro.id}-${index}`}
+                    key={`${coro.ID}-${index}`}
                     style={{ fontSize: `${tamañoLetra}px` }}
                   >
                     {verso}

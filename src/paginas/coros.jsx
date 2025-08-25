@@ -143,7 +143,7 @@ const Coros = () => {
             <input
               type="text"
               className="buscador"
-              placeholder="Buscar coro..."
+              placeholder=" Ingrese un coro"
               value={busqueda}
               onChange={handleBusqueda}
             />

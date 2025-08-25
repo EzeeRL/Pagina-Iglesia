@@ -7,13 +7,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	/* background-color: red; */
 }
 
 .lista-coros {
 	width: 80%;
 	text-align: center;
-	margin-top: 25px;
-	margin-left: -30px;
+	/* margin-top: 25px;
+	margin-left: -30px; */
+	margin: 0 auto;
 	padding: 10px;
 	background-color: rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(10px);
@@ -56,8 +59,10 @@
 }
 
 .titulo-coro {
+	width: 75%;
 	text-align: center;
-	margin-top: -20px;
+	margin: -20px auto;
+	margin-bottom: 20px;
 }
 
 .letra-coro {
@@ -88,10 +93,10 @@
 .buscador {
 	font-weight: bold;
 	width: 300px;
-	height: 30px;
+	height: 50px;
 	border: none;
 	border-bottom: 3px solid #46e5fd;
-	border-radius: 5px;
+	border-radius: 8px;
 	outline: none;
 	font-size: 18px;
 	color: #000;
