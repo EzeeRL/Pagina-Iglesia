@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquear páginas internas / administrativas
+Disallow: /ListaDePedidos
+Disallow: /Problemas
+Disallow: /CampamentoLista
+Disallow: /AndresInscripcion
+
+Sitemap: https://icevtl.org/sitemap.xml
