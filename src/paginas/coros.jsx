@@ -79,7 +79,7 @@ const Coros = () => {
         throw new Error("Error al obtener la letra del coro");
       }
 
-      const data = await response.json();
+      const data = await response.json();      
       setLetraCoro(data.letra);
       setTitulo(data.titulo);
       console.log(data);
