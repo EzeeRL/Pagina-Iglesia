@@ -1,215 +1,355 @@
-/* .titulo-cancionero {
-	text-align: center;
-	margin-top: 200px;
+.cancionero-page {
+  width: 100%;
+
+  padding: 160px 8% 120px;
+
+  background: var(--bg);
+
+  min-height: 100vh;
 }
 
-.subtitle {
-	text-align: center;
+/* HERO */
+
+.cancionero-hero {
+  max-width: 800px;
+
+  margin: auto;
+
+  text-align: center;
+
+  margin-bottom: 90px;
 }
 
-.container-buscador {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.cancionero-tag {
+  letter-spacing: 4px;
+
+  color: var(--accent);
+
+  font-size: 0.85rem;
 }
-  
+
+.titulo-cancionero {
+  font-size: 4rem;
+
+  color: var(--primary);
+
+  margin-top: 18px;
+  margin-bottom: 20px;
+
+  line-height: 1;
+}
+
+.cancionero-description {
+  color: var(--brown);
+
+  line-height: 1.8;
+
+  margin-bottom: 45px;
+}
+
+/* SEARCH */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 32px;
+}
+
 .buscador {
-	font-weight: bold;
-	width: 300px;
-	height: 25px;
-	border: none;
-	border-bottom: 3px solid #46e5fd;
-	border-radius: 5px;
-	outline: none;
-	font-size: 18px;
-	color: #000;
-	margin-right: 10px;
+  width: 100%;
+  max-width: 520px;
+
+  height: 60px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 18px;
+
+  padding: 0 24px;
+
+  font-size: 1rem;
+
+  background: white;
+
+  outline: none;
+
+  transition: 0.3s;
 }
 
-.button-submit {
-	border: none;
-	background-color: transparent;
+.buscador:focus {
+  border-color: var(--accent);
 }
 
-.icono-buscador {
-	font-size: 20px;
-	margin-left: -5px;
-	margin-right: 20px;
-    cursor: pointer;
+.search-button {
+  height: 60px;
+
+  padding: 0 28px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: var(--primary);
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
 }
 
-#filtro {
-	font-size: 18px;
-	font-weight: bold;
-	border: none;
-	border-bottom: 3px solid #46e5fd;
-	border-radius: 5px;
-	outline: none;
-	cursor: pointer;
+.search-button:hover {
+  transform: translateY(-2px);
 }
 
-.options {
-	font-weight: bold;
+/* TABS */
+
+.cancionero-tabs {
+  display: flex;
+  justify-content: center;
+
+  gap: 16px;
 }
 
-.container-button-cambiar {
-	text-align: center;
+.tab-button,
+.tab-active {
+  height: 48px;
+
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-weight: 600;
 }
 
-.button-cambiar-coros {
-	width: 100px;
-	height: auto;
-	margin-top: 20px;
-	border: none;
-	border-bottom: 3px solid #46e5fd;
-	border-radius: 5px;
-	font-size: 18px;
-	font-weight: bold;
-	cursor: pointer;
+.tab-active {
+  background: var(--primary);
+  color: white;
 }
 
-@media screen and (max-width: 768px) {
-	.button-cambiar {
-		width: 130px;
-		height: 45px;
-		position: absolute;
-		bottom: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-		top: 80px;
-	}
+.tab-button {
+  background: white;
+  color: var(--text);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* LIST */
+
+.songs-list {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+.song-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 26px 0;
+
+  border: none;
+
+  background: transparent;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.song-item:hover {
+  padding-left: 12px;
+}
+
+.song-item-left {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.song-number {
+  color: var(--accent);
+
+  font-size: 0.9rem;
+
+  min-width: 40px;
+
+  text-align: left;
+}
+
+.song-name {
+  font-size: 1.15rem;
+
+  color: var(--text);
+
+  text-align: left;
+}
+
+.song-arrow {
+  color: var(--brown);
+
+  transition: 0.3s;
+}
+
+.song-item:hover .song-arrow {
+  transform: translateX(4px);
+}
+
+/* SONG VIEW */
+
+.song-view {
+  width: 100%;
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.song-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+.back-button {
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: var(--primary);
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.song-title {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 50px;
+  line-height: 1.1;
+}
+
+.song-lyrics {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.song-lyrics p {
+  line-height: 1.9;
+  color: var(--text);
+  text-align: left;
+}
+
+/* PAGINATION */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 70px;
+}
+
+.pagination-button,
+.pagination-active {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination-button {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pagination-active {
+  background: var(--primary);
+  color: white;
+}
+
+/* ERROR */
+
+.error-box {
+  width: fit-content;
+
+  margin: 0 auto 40px;
+
+  padding: 18px 26px;
+
+  border-radius: 16px;
+
+  background: rgba(150, 36, 36, 0.08);
+
+  color: var(--primary);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .cancionero-page {
+    padding-top: 140px;
   }
 
-.titulo-indice {
-	text-align: center;
-	margin-top: 100px;
-}
-
-.txt-indice {
-	border-bottom-left-radius: 5px;
-}
-
-.container-indice-coros {
-	width: 80%;
-	position: relative;
-	left: 10%;
-	text-align: center;
-	line-height: 35px;
-    background-color: rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(10px);
-	border-top: 3px solid #46e5fd;
-	border-radius: 15px;
-}
-
-.link-coros {
-	font-size: 25px;
-	margin-left: 10px;
-	text-decoration: none;
-	transition: 0.3s;
-}
-
-.link-coros:hover {
-	font-size: 28px;
-	color: #46e5fd;
-}
-
-.container-buttons-paginacion {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin-top: 20px;
-}
-
-.buttons-paginacion {
-	width: 40px;
-	font-size: 20px;
-	margin: 10px;
-	border: none;
-	border-radius: 5px;
-	background: #dbdddd;
-	color: #000;
-	cursor: pointer;
-}
-
-.texto-pag-sig-and-next {
-	font-size: 20px;
-}
-
-.container-letra {
-	width: 80%;
-	margin-top: 50px;
-	margin-left: 10%;
-	background-color: rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(10px);
-	border-top: 3px solid #46e5fd;
-	border-radius: 15px;
-}
-
-@media screen and (max-width:768px) {
-	.container-letra {
-		margin-top: 70px;
-	}
-}
-
-.titulo-cancion-select {
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 50px;
-}
-
-
-
-.slider-tamaño-letra {
-	position: absolute;
-	margin-top: 100px;
-}
-
-.txt-tamaño-letra {
-	font-size: 18px;
-	margin-top: 40px;
-}
-
-.texto-letra-general {
-	font-size: 18px;
-	text-align: center;
-	line-height: 30px;
-}
-
-.texto-estribillo {
-	text-align: center;
-	margin-top: 60px;
-}
-
-.texto-estrofa {
-	margin-top: 60px;
-}
-
-@media screen and (max-width: 768px) {
-	.container-indice {
-		padding: 10px;
-	}
-
-	.buscador {
-		font-size: 23px;
-		width: 400px;
-		height: 40px;
-		margin-left: 30px;
-	}
+  .titulo-cancionero {
+    font-size: 2.8rem;
   }
 
-@media screen and (max-width: 500px) {
-	.buscador {
-		width: 300px;
-		margin-left: 12px;
-	}
+  .search-form {
+    flex-direction: column;
+  }
+
+  .buscador,
+  .search-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .song-item-left {
+    gap: 18px;
+  }
+
+  .song-name {
+    font-size: 1rem;
+  }
+
+  .song-title {
+    font-size: 2.2rem;
+  }
+
+  .song-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
 }
-
-
-@media screen and (max-width: 373px) {
-	.icono-buscador {
-		position: relative;
-		top: -30px;
-		left: 285px;
-	}
-} */

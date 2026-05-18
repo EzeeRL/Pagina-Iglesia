@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./himnoss.css";
+import "./cancionero.css";
 
 const Himnos = () => {
   const [busqueda, setBusqueda] = useState("");
@@ -13,7 +13,7 @@ const Himnos = () => {
   const [tamañoLetra, setTamañoLetra] = useState(16);
   const [versosRes, setVersosRes] = useState([]);
   const [err, setErr] = useState(false);
-  const [errMesage, setErrMesage] = useState(false);
+  const [errMesage, setErrMesage] = useState("");
   const [titulo2, setTitulo2] = useState("");
 
   const itemsPerPage = 50;
@@ -23,21 +23,19 @@ const Himnos = () => {
     setBusqueda(event.target.value);
   };
 
-  // Función para eliminar duplicados basada en el ID
   const eliminarDuplicados = (array) => {
     const seen = new Set();
+
     return array.filter((item) => {
-      // Verificamos si ya hemos visto este ID
       const duplicate = seen.has(item.ID);
-      // Añadimos el ID al conjunto de "vistos"
       seen.add(item.ID);
-      // Mantenemos solo los elementos no duplicados
       return !duplicate;
     });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const response = await fetch("https://vtl-back.vercel.app/totalHimnos", {
         method: "POST",
@@ -49,15 +47,16 @@ const Himnos = () => {
 
       if (!response.ok) {
         const errorData = await response.text();
+
         setErrMesage(errorData);
-        throw new Error(`Error en la solicitud: ${errorData}`);
+
+        throw new Error(errorData);
       }
 
       const data = await response.json();
-      console.log(data);
+
       setErr(false);
 
-      // Eliminar duplicados antes de establecer los resultados
       const resultadosUnicos = eliminarDuplicados(data);
 
       if (resultadosUnicos.length > 0) {
@@ -67,26 +66,24 @@ const Himnos = () => {
       setResultados(resultadosUnicos);
     } catch (error) {
       setErr(true);
-      console.error("Error al buscar himnos:", error.message);
+      console.error(error);
     }
   };
-
-  useEffect(() => {
-    console.log(titulo2);
-  }, [titulo2]);
 
   useEffect(() => {
     const fetchHimnos = async () => {
       try {
         const response = await fetch("https://vtl-back.vercel.app/listHimno");
+
         if (!response.ok) {
-          throw new Error("Error al obtener los himnos");
+          throw new Error("Error al obtener himnos");
         }
+
         const data = await response.json();
+
         setList(data);
-        console.log(data);
       } catch (error) {
-        console.error("Error al obtener los himnos:", error);
+        console.error(error);
       }
     };
 
@@ -104,14 +101,15 @@ const Himnos = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Error al obtener la letra del himno");
+        throw new Error("Error al obtener himno");
       }
 
       const data = await response.json();
+
       setLetraCoro(data.letra);
       setTitulo(data.titulo);
     } catch (error) {
-      console.error("Error al obtener la letra del himno:", error);
+      console.error(error);
     }
   };
 
@@ -125,12 +123,12 @@ const Himnos = () => {
   };
 
   let versos = [];
+
   if (letraCoro) {
     versos = letraCoro.split("\n");
   }
 
   useEffect(() => {
-    console.log(resultados);
     if (
       resultados &&
       resultados.length > 0 &&
@@ -149,7 +147,7 @@ const Himnos = () => {
 
   const paginatedList = list.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   const manejarCambioTamaño = (event) => {
@@ -157,125 +155,163 @@ const Himnos = () => {
   };
 
   return (
-    <div className="container-cancionero">
-      <h1 className="titulo-cancionero">Himnos</h1>
-      <h3 className="subtitle">
-        Por favor, no dejar espacios al final del texto de la búsqueda
-      </h3>
-      <div className="container-buscador">
-        <form onSubmit={handleSubmit} className="form-buscador">
+    <div className="cancionero-page">
+      {/* HERO */}
+
+      <section className="cancionero-hero">
+        <span className="cancionero-tag">CANCIONERO</span>
+
+        <h1 className="titulo-cancionero">Himnos</h1>
+
+        <p className="cancionero-description">
+          Encuentra rápidamente los himnos, buscando por titulo o letra de la
+          canción. <br /> Por favor, no dejar espacios ni puntos al final de la
+          búsqueda.
+        </p>
+
+        {/* SEARCH */}
+
+        <form onSubmit={handleSubmit} className="search-form">
           <input
             type="text"
-            className="buscador"
-            placeholder=" Ingrese un himno"
+            placeholder="Buscar himno..."
             value={busqueda}
             onChange={handleBusqueda}
+            className="buscador"
           />
-          <button type="submit" className="button-submit">
-            <i className="fa-solid fa-magnifying-glass icono-buscador"></i>
+
+          <button type="submit" className="search-button">
+            Buscar
           </button>
         </form>
-      </div>
-      {err ? (
-        <div className="container-error">
-          <p className="message-error">{errMesage}</p>
+
+        {/* TABS */}
+
+        <div className="cancionero-tabs">
+          <button onClick={handleCoros} className="tab-button">
+            Coros
+          </button>
+
+          <button className="tab-active">Himnos</button>
         </div>
-      ) : null}
-      <div className="container-button-cambiar">
-        <button onClick={handleCoros} className="button-cambiar-himnos">
-          Ver Coros
-        </button>
-      </div>
+      </section>
+
+      {/* ERROR */}
+
+      {err && <div className="error-box">{errMesage}</div>}
+
+      {/* SONG VIEW */}
+
       {letraCoro ||
       (resultados.length > 0 &&
         typeof resultados[0] === "object" &&
         resultados[0] !== null) ? (
-        <div className="container-px-letra">
-          <p className="txt-tamaño-letra">Tamaño de la letra:</p>
-          <input
-            type="range"
-            min="10"
-            max="50"
-            value={tamañoLetra}
-            onChange={manejarCambioTamaño}
-            className="slider-tamaño-letra"
-          />
-        </div>
-      ) : null}
-      {!letraCoro ? (
-        <h1 className="title-lista-himnos">Lista de Himnos</h1>
-      ) : null}
-      <div className="resultados-busqueda">
-        {resultados.length > 0 ? (
-          resultados.map((coro) => (
-            <div key={coro.ID} className="container-letra-himno">
-              <button onClick={volverAtras} className="button-volver">
-                <i className="fa-solid fa-circle-arrow-left icono-volver"></i>
-              </button>
-              <h2 className="titulo-himno">{coro.Titulo}</h2>
-              <div className="letra-coro">
-                {coro.Letra.split("\n").map((verso, index) => (
+        <section className="song-view">
+          <div className="song-header">
+            <button onClick={volverAtras} className="back-button">
+              ← Volver
+            </button>
+
+            <div className="font-size-control">
+              <span>A-</span>
+
+              <input
+                type="range"
+                min="10"
+                max="50"
+                value={tamañoLetra}
+                onChange={manejarCambioTamaño}
+              />
+
+              <span>A+</span>
+            </div>
+          </div>
+
+          {resultados.length > 0 ? (
+            resultados.map((coro) => (
+              <div key={coro.ID}>
+                <h2 className="song-title">
+                  {coro.ID} · {coro.Titulo}
+                </h2>
+
+                <div className="song-lyrics">
+                  {coro.Letra.split("\n").map((verso, index) => (
+                    <p
+                      key={`${coro.ID}-${index}`}
+                      style={{
+                        fontSize: `${tamañoLetra}px`,
+                      }}
+                    >
+                      {verso}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+          ) : (
+            <>
+              <h2 className="song-title">{titulo}</h2>
+
+              <div className="song-lyrics">
+                {versos.map((verso, index) => (
                   <p
-                    key={`${coro.ID}-${index}`}
-                    style={{ fontSize: `${tamañoLetra}px` }}
+                    key={`${titulo}-${index}`}
+                    style={{
+                      fontSize: `${tamañoLetra}px`,
+                    }}
                   >
                     {verso}
                   </p>
                 ))}
               </div>
-            </div>
-          ))
-        ) : letraCoro ? (
-          <div className="container-letra-himno">
-            <button onClick={volverAtras} className="button-volver">
-              <i className="fa-solid fa-circle-arrow-left icono-volver"></i>
-            </button>
-            <h2 className="titulo-himno">{titulo}</h2>
-            <div className="letra-himno">
-              {versos.map((verso, index) => (
-                <p
-                  key={`${titulo}-${index}`}
-                  style={{ fontSize: `${tamañoLetra}px` }}
-                >
-                  {verso}
-                </p>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="lista-himnos">
-            <ol>
-              {paginatedList.map((himno) => (
-                <div key={himno.ID} className="resultado-himno">
-                  <h2
-                    onClick={() => handleLetra(himno.Titulo)}
-                    className="himno"
-                  >
-                    {himno.ID}: {himno.Titulo}
-                  </h2>
+            </>
+          )}
+        </section>
+      ) : (
+        <>
+          {/* LIST */}
+
+          <section className="songs-list">
+            {paginatedList.map((himno) => (
+              <button
+                key={himno.ID}
+                onClick={() => handleLetra(himno.Titulo)}
+                className="song-item"
+              >
+                <div className="song-item-left">
+                  <span className="song-number">
+                    {String(himno.ID).padStart(3, "0")}
+                  </span>
+
+                  <span className="song-name">{himno.Titulo}</span>
                 </div>
-              ))}
-            </ol>
-            <div className="container-pagination">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                (pageNumber) => (
-                  <button
-                    key={pageNumber}
-                    onClick={() => handleChangePage(pageNumber)}
-                    className={
-                      pageNumber === currentPage
-                        ? "pagination-button-active"
-                        : "pagination-button"
-                    }
-                  >
-                    {pageNumber}
-                  </button>
-                )
-              )}
-            </div>
+
+                <span className="song-arrow">→</span>
+              </button>
+            ))}
+          </section>
+
+          {/* PAGINATION */}
+
+          <div className="pagination">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (pageNumber) => (
+                <button
+                  key={pageNumber}
+                  onClick={() => handleChangePage(pageNumber)}
+                  className={
+                    pageNumber === currentPage
+                      ? "pagination-active"
+                      : "pagination-button"
+                  }
+                >
+                  {pageNumber}
+                </button>
+              ),
+            )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./coross.css";
+import "./cancionero.css";
 
 const Coros = () => {
   const [busqueda, setBusqueda] = useState("");
@@ -79,7 +79,7 @@ const Coros = () => {
         throw new Error("Error al obtener la letra del coro");
       }
 
-      const data = await response.json();      
+      const data = await response.json();
       setLetraCoro(data.letra);
       setTitulo(data.titulo);
       console.log(data);
@@ -128,69 +128,86 @@ const Coros = () => {
 
   const paginatedList = list.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   return (
-    <>
-      <div className="container-cancionero">
+    <div className="cancionero-page">
+      {/* HERO */}
+
+      <section className="cancionero-hero">
+        <span className="cancionero-tag">CANCIONERO</span>
+
         <h1 className="titulo-cancionero">Coros</h1>
-        <h3 className="subtitle">
-          Por favor, no dejar espacios al final del texto de la búsqueda
-        </h3>
-        <div className="container-buscador">
-          <form onSubmit={handleSubmit} className="form-buscador">
-            <input
-              type="text"
-              className="buscador"
-              placeholder=" Ingrese un coro"
-              value={busqueda}
-              onChange={handleBusqueda}
-            />
-            <button type="submit" className="button-submit">
-              <i className="fa-solid fa-magnifying-glass icono-buscador"></i>
-            </button>
-          </form>
-        </div>
-        {err ? (
-          <div className="container-error">
-            <p className="message-error">{errMesage}</p>
-          </div>
-        ) : null}
-        <div className="container-button-cambiar">
-          <button onClick={handleHimnos} className="button-cambiar-coros">
-            Ver Himnos
+
+        <p className="cancionero-description">
+          Encuentra rápidamente los coros, buscando por titulo o letra de la canción. <br /> Por favor, no dejar espacios ni puntos al final de la búsqueda.
+        </p>
+
+        {/* SEARCH */}
+
+        <form onSubmit={handleSubmit} className="search-form">
+          <input
+            type="text"
+            placeholder="Buscar coro..."
+            value={busqueda}
+            onChange={handleBusqueda}
+            className="buscador"
+          />
+
+          <button type="submit" className="search-button">
+            Buscar
+          </button>
+        </form>
+
+        {/* TABS */}
+
+        <div className="cancionero-tabs">
+          <button className="tab-active">Coros</button>
+
+          <button onClick={handleHimnos} className="tab-button">
+            Himnos
           </button>
         </div>
-        {letraCoro ||
-        (resultados.length > 0 &&
-          typeof resultados[0] === "object" &&
-          resultados[0] !== null) ? (
-          <div className="container-px-letra">
-            <p className="txt-tamaño-letra">Tamaño de la letra:</p>
-            <input
-              type="range"
-              min="10"
-              max="50"
-              value={tamañoLetra}
-              onChange={manejarCambioTamaño}
-              className="slider-tamaño-letra"
-            />
-          </div>
-        ) : null}
-        {!letraCoro ? (
-          <h1 className="title-lista-coros">Lista de Coros</h1>
-        ) : null}
+      </section>
 
-        <div className="resultados-busqueda">
+      {/* ERROR */}
+
+      {err && <div className="error-box">{errMesage}</div>}
+
+      {/* SONG VIEW */}
+
+      {letraCoro ||
+      (resultados.length > 0 &&
+        typeof resultados[0] === "object" &&
+        resultados[0] !== null) ? (
+        <section className="song-view">
+          <div className="song-header">
+            <button onClick={volverAtras} className="back-button">
+              ← Volver
+            </button>
+
+            <div className="font-size-control">
+              <span>A-</span>
+
+              <input
+                type="range"
+                min="10"
+                max="50"
+                value={tamañoLetra}
+                onChange={manejarCambioTamaño}
+              />
+
+              <span>A+</span>
+            </div>
+          </div>
+
           {resultados.length > 0 ? (
             resultados.map((coro) => (
-              <div key={coro.id} className="container-letra-coro">
-                <button onClick={volverAtras} className="button-volver">
-                  <i className="fa-solid fa-circle-arrow-left icono-volver"></i>
-                </button>
-                <h2 className="titulo-coro">{coro.titulo}</h2>
-                <div className="letra-coro">
+              <div key={coro.id}>
+                <h2 className="song-title">{coro.titulo}</h2>
+
+                <div className="song-lyrics">
                   {versosRes.map((verso, index) => (
                     <p key={index} style={{ fontSize: `${tamañoLetra}px` }}>
                       {verso}
@@ -199,53 +216,68 @@ const Coros = () => {
                 </div>
               </div>
             ))
-          ) : letraCoro ? (
-            <div className="container-letra-coro">
-              <button onClick={volverAtras} className="button-volver">
-                <i className="fa-solid fa-circle-arrow-left icono-volver"></i>
-              </button>
-              <h2 className="titulo-coro">{titulo}</h2>
-              <div className="letra-coro">
+          ) : (
+            <>
+              <h2 className="song-title">{titulo}</h2>
+
+              <div className="song-lyrics">
                 {versos.map((verso, index) => (
                   <p key={index} style={{ fontSize: `${tamañoLetra}px` }}>
                     {verso}
                   </p>
                 ))}
               </div>
-            </div>
-          ) : (
-            <div className="lista-coros">
-              <ul>
-                {paginatedList.map((coro, index) => (
-                  <div key={index} className="container-resultado-coro">
-                    <h2 onClick={() => handleLetra(coro)} className="coro">
-                      {coro}
-                    </h2>
-                  </div>
-                ))}
-              </ul>
-              <div className="pagination">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                  (pageNumber) => (
-                    <button
-                      key={pageNumber}
-                      onClick={() => handleChangePage(pageNumber)}
-                      className={
-                        pageNumber === currentPage
-                          ? "pagination-button-active"
-                          : "pagination-button"
-                      }
-                    >
-                      {pageNumber}
-                    </button>
-                  )
-                )}
-              </div>
-            </div>
+            </>
           )}
-        </div>
-      </div>
-    </>
+        </section>
+      ) : (
+        <>
+          {/* LIST */}
+
+          <section className="songs-list">
+            {paginatedList.map((coro, index) => (
+              <button
+                key={index}
+                onClick={() => handleLetra(coro)}
+                className="song-item"
+              >
+                <div className="song-item-left">
+                  <span className="song-number">
+                    {String(
+                      (currentPage - 1) * itemsPerPage + index + 1,
+                    ).padStart(3, "0")}
+                  </span>
+
+                  <span className="song-name">{coro}</span>
+                </div>
+
+                <span className="song-arrow">→</span>
+              </button>
+            ))}
+          </section>
+
+          {/* PAGINATION */}
+
+          <div className="pagination">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (pageNumber) => (
+                <button
+                  key={pageNumber}
+                  onClick={() => handleChangePage(pageNumber)}
+                  className={
+                    pageNumber === currentPage
+                      ? "pagination-active"
+                      : "pagination-button"
+                  }
+                >
+                  {pageNumber}
+                </button>
+              ),
+            )}
+          </div>
+        </>
+      )}
+    </div>
   );
 };
 

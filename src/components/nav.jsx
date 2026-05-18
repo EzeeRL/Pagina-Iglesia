@@ -15,11 +15,11 @@ export default function Navbar() {
         </div>
 
         <nav className="navbar-links">
-          <a href="">Inicio</a>
-          <a href="">Nosotros</a>
-          <a href="">Predicas</a>
-          <a href="">Cancionero</a>
-          <a href="">Contacto</a>
+          <a href="/">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez" target="_blank">Predicas</a>
+          <a href="/Coros">Cancionero</a>
+          <a href="/Contacto">Contacto</a>
         </nav>
 
         <button className="live-btn">EN VIVO</button>

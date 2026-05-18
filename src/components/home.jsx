@@ -46,7 +46,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="about-content">
+        <div className="about-content" id="nosotros">
           <span className="section-tag">QUIÉNES SOMOS</span>
 
           <h2>Creemos en comunidad, autenticidad y propósito.</h2>
