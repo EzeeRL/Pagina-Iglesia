@@ -16,13 +16,13 @@ export default function Navbar() {
 
         <nav className="navbar-links">
           <a href="/">Inicio</a>
-          <a href="#nosotros">Nosotros</a>
+          <a href="/#nosotros">Nosotros</a>
           <a href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez" target="_blank">Predicas</a>
           <a href="/Coros">Cancionero</a>
           <a href="/Contacto">Contacto</a>
         </nav>
 
-        <button className="live-btn">EN VIVO</button>
+        <a href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez" target="_blank" className="live-btn">EN VIVO</a>
       </header>
 
       {/* MOBILE NAVBAR */}

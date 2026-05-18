@@ -23,40 +23,59 @@ export default function Footer() {
       <div className="footer-info">
         <div className="footer-column">
           <h3>Links</h3>
-          <a href="">Inicio</a>
-          <a href="">Nosotros</a>
-          <a href="">Predicas</a>
-          <a href="">Cancionero</a>
-          <a href="">Contacto</a>
+          <a href="/">Inicio</a>
+          <a href="/#nosotros">Nosotros</a>
+          <a
+            href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+            target="_blank"
+          >
+            Predicas
+          </a>
+          <a href="/Coros">Cancionero</a>
+          <a href="/Contacto">Contacto</a>
         </div>
 
         <div className="footer-column">
           <h3>Horarios</h3>
-          <p>Viernes — 20:00 HS</p>
-          <p>Domingo — 9:30 HS</p>
-          <p>Escuela Bíblica Infantil</p>
+          <p>Viernes — 20:00hs</p>
+          <p>Domingo — 9:30hs</p>
+          <p>Escuela Bíblica Infantil - 11:30hs</p>
         </div>
 
         <div className="footer-column">
           <h3>Contacto</h3>
-          <p>Vicente López 2113</p>
-          <p>Sarandí, Avellaneda</p>
-          <p>Buenos Aires, Argentina</p>
+          <p>Vicente López 2113 Sarandí, Avellaneda, Buenos Aires, Argentina</p>
           <p>icevtl@gmail.com</p>
         </div>
 
         <div className="footer-column">
           <h3>Redes</h3>
-          <a href="">Instagram</a>
-          <a href="">YouTube</a>
-          <a href="">Facebook</a>
+          <a href="https://www.instagram.com/iglesia.vtl/" target="_blank">
+            Instagram
+          </a>
+          <a
+            href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+            target="_blank"
+          >
+            YouTube
+          </a>
+          <a
+            href="https://www.facebook.com/iglesia.vicentelopez"
+            target="_blank"
+          >
+            Facebook
+          </a>
         </div>
       </div>
 
       {/* CAJÓN AMARILLO - Abajo: copyright + botón a la derecha */}
       <div className="footer-bottom">
         <p>© 2026 Iglesia Vicente López Solo Cristo Salva.</p>
-        <a href="" className="footer-live-btn">
+        <a
+          href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+          target="_blank"
+          className="footer-live-btn"
+        >
           VER EN VIVO
         </a>
       </div>

@@ -85,20 +85,15 @@
 .live-btn,
 .mobile-live-btn {
   border: none;
-
   background: var(--primary);
   color: white;
-
   padding: 16px 30px;
-
   border-radius: 999px;
-
   cursor: pointer;
-
   font-weight: 600;
   font-size: 0.95rem;
-
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .live-btn:hover,

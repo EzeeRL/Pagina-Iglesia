@@ -126,6 +126,10 @@ body {
   font-size: 0.85rem;
 }
 
+.about-content {
+  scroll-margin-top: 160px;
+}
+
 .about-content h2 {
   font-size: 3rem;
   color: var(--brown);

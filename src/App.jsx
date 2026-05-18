@@ -32,11 +32,7 @@ import CampamentoLista from "./paginas/anotados-campa.jsx";
 import AndresCampa from "./paginas/AndresCampa.jsx";
 import Footer from "./components/footer.jsx";
 // import Prueba from './paginas/prueba.jsx';
-
-// SUBIR ACTUALIZACIONES A GITHUB:
-// git add . (prepara todos los cambios)
-// git commit -m "aca va un comentario de la actualizacion"
-// git push (enviar actualizacion a gitHub)
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   return (
@@ -44,6 +40,7 @@ function App() {
       {/* <Nav></Nav> */}
       <Navbar></Navbar>
 
+      <ScrollToHash></ScrollToHash>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Coros" element={<Coros />} />
