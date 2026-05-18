@@ -1,6 +1,7 @@
 import React from "react";
-import Nav from "./components/nav.jsx";
+// import Nav from "./components/nav.jsx";
 import "./App.css";
+import Navbar from "./components/nav.jsx";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -29,6 +30,7 @@ import Coross from "./paginas/coros.jsx";
 import Himnoss from "./paginas/himnos.jsx";
 import CampamentoLista from "./paginas/anotados-campa.jsx";
 import AndresCampa from "./paginas/AndresCampa.jsx";
+import Footer from "./components/footer.jsx";
 // import Prueba from './paginas/prueba.jsx';
 
 // SUBIR ACTUALIZACIONES A GITHUB:
@@ -39,7 +41,8 @@ import AndresCampa from "./paginas/AndresCampa.jsx";
 function App() {
   return (
     <>
-      <Nav></Nav>
+      {/* <Nav></Nav> */}
+      <Navbar></Navbar>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -67,6 +70,8 @@ function App() {
         <Route path="/CampamentoLista" element={<CampamentoLista />}></Route>
         <Route path="/AndresInscripcion" element={<AndresCampa />}></Route>
       </Routes>
+
+      <Footer></Footer>
     </>
   );
 }

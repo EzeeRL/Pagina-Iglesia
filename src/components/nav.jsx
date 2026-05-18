@@ -1,99 +1,56 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import "./nav.css";
-import { Link, useLocation } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
 
-function Nav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const toggleMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location.pathname]);
-
-  const linkAnimation = useSpring({
-    opacity: 1,
-    transform: "scale(1.0)",
-    config: { tension: 200, friction: 20 },
-    from: { opacity: 0, transform: "scale(0.6)" },
-    delay: mobileMenuOpen ? 300 : 0,
-  });
-
-  const titleAnimation = useSpring({
-    opacity: 1,
-    transform: "scale(1.0)",
-    config: { tension: 200, friction: 20 },
-    from: { opacity: 0, transform: "scale(0.6)" },
-    delay: mobileMenuOpen ? 300 : 0,
-  });
-
-  const logoAnimation = useSpring({
-    opacity: 1,
-    transform: "scale(1.0)",
-    config: { tension: 200, friction: 20 },
-    from: { opacity: 0, transform: "scale(0.6)" },
-    delay: mobileMenuOpen ? 300 : 0,
-  });
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav>
-      <div className="container-logo-iglesia">
-        <animated.img
-          src="logo/logo-nuevo.png"
-          alt=""
-          className="logo-img"
-          style={logoAnimation}
-        />
-        <animated.h1 className="titulo-nav" style={titleAnimation}>
-          Iglesia<b className="texto-especial-nav">VTL</b>
-        </animated.h1>
-      </div>
-      <ul
-        className={`container-links-nav ${mobileMenuOpen ? "show-menu" : ""}`}
-      >
-        <animated.li style={linkAnimation}>
-          <Link to="/" className="link-nav">
-            <i className="fa-solid fa-house icons-nav"></i> Inicio
-          </Link>
-        </animated.li>
-        {/* <animated.li style={linkAnimation}>
-          <Link to="/Campa" className="link-nav">
-            <i class="fa-solid fa-tents icons-nav"></i> Campamento
-          </Link>
-        </animated.li> */}
-        <animated.li style={linkAnimation}>
-          <Link to="/Coros" className="link-nav">
-            <i className="fa-solid fa-music icons-nav"></i> Cancionero
-          </Link>
-        </animated.li>
-        <animated.li style={linkAnimation}>
-          <Link to="/Ministerios" className="link-nav">
-            <i className="fa-solid fa-calendar-days icons-nav"></i> Ministerios
-          </Link>
-        </animated.li>
-        {/* <animated.li style={linkAnimation}>
-          <Link to="/PedidosDeOracion" className="link-nav">
-            <i className="fa-solid fa-hands-praying icons-nav"></i> Pedidos de
-            Oración
-          </Link>
-        </animated.li> */}
-        <animated.li style={linkAnimation}>
-          <Link to="/Contacto" className="link-nav">
-            <i className="fa-solid fa-user icons-nav"></i> Contacto
-          </Link>
-        </animated.li>
-      </ul>
-      <div className="mobile-menu-icon" onClick={toggleMenu}>
-        <i
-          className={`fas ${mobileMenuOpen ? "fa-times" : "fa-bars menu-icon"}`}
-        ></i>
-      </div>
-    </nav>
+    <div className="contianer-nav">
+      {/* DESKTOP NAVBAR */}
+
+      <header className="navbar desktop-navbar">
+        <div className="navbar-logo">
+          <img src="/logo/logo-2026.png" alt="Logo" />
+        </div>
+
+        <nav className="navbar-links">
+          <a href="">Inicio</a>
+          <a href="">Nosotros</a>
+          <a href="">Predicas</a>
+          <a href="">Cancionero</a>
+          <a href="">Contacto</a>
+        </nav>
+
+        <button className="live-btn">EN VIVO</button>
+      </header>
+
+      {/* MOBILE NAVBAR */}
+
+      <header className="mobile-navbar">
+        <div className="mobile-navbar-top">
+          <div className="navbar-logo">
+            <img src="/logo/logo-2026.png" alt="Logo" />
+          </div>
+
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={30} /> : <Menu size={30} />}
+          </button>
+        </div>
+
+        <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+          <a href="">Inicio</a>
+          <a href="">Nosotros</a>
+          <a href="">Eventos</a>
+          <a href="">Predicas</a>
+          <a href="">Contacto</a>
+
+          <button className="mobile-live-btn">EN VIVO</button>
+        </div>
+      </header>
+    </div>
   );
 }
-
-export default Nav;
