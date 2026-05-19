@@ -15,9 +15,19 @@ const Himnos = () => {
   const [err, setErr] = useState(false);
   const [errMesage, setErrMesage] = useState("");
   const [titulo2, setTitulo2] = useState("");
+  const [todosLosHimnos, setTodosLosHimnos] = useState([]); // Nuevo estado para guardar todos los himnos
 
   const itemsPerPage = 50;
   const navigate = useNavigate();
+
+  // Función para normalizar texto (quitar tildes y convertir a minúsculas)
+  const normalizarTexto = (texto) => {
+    if (!texto) return "";
+    return texto
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  };
 
   const handleBusqueda = (event) => {
     setBusqueda(event.target.value);
@@ -36,36 +46,43 @@ const Himnos = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (!busqueda.trim()) {
+      setErrMesage("Por favor, ingrese un término de búsqueda");
+      setErr(true);
+      return;
+    }
+
     try {
-      const response = await fetch("https://vtl-back.vercel.app/totalHimnos", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ termino: busqueda }),
+      // Normalizar el término de búsqueda
+      const busquedaNormalizada = normalizarTexto(busqueda);
+
+      // Buscar localmente en todos los himnos
+      const resultadosBusqueda = todosLosHimnos.filter((himno) => {
+        const tituloNormalizado = normalizarTexto(himno.Titulo);
+        const letraNormalizada = normalizarTexto(himno.Letra || "");
+
+        // Buscar coincidencias en título o letra
+        return (
+          tituloNormalizado.includes(busquedaNormalizada) ||
+          letraNormalizada.includes(busquedaNormalizada)
+        );
       });
-
-      if (!response.ok) {
-        const errorData = await response.text();
-
-        setErrMesage(errorData);
-
-        throw new Error(errorData);
-      }
-
-      const data = await response.json();
 
       setErr(false);
 
-      const resultadosUnicos = eliminarDuplicados(data);
+      const resultadosUnicos = eliminarDuplicados(resultadosBusqueda);
 
       if (resultadosUnicos.length > 0) {
         setTitulo2(resultadosUnicos[0].Titulo);
+      } else {
+        setErrMesage("No se encontraron coincidencias");
+        setErr(true);
       }
 
       setResultados(resultadosUnicos);
     } catch (error) {
       setErr(true);
+      setErrMesage("Error al buscar himnos");
       console.error(error);
     }
   };
@@ -81,6 +98,40 @@ const Himnos = () => {
 
         const data = await response.json();
 
+        // Cargar todos los himnos completos (con letra) para búsqueda local
+        const himnosCompletos = await Promise.all(
+          data.map(async (himno) => {
+            try {
+              const responseLetra = await fetch(
+                "https://vtl-back.vercel.app/himno",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ titulo: himno.Titulo }),
+                },
+              );
+
+              if (responseLetra.ok) {
+                const dataLetra = await responseLetra.json();
+                return {
+                  ...himno,
+                  Letra: dataLetra.letra,
+                };
+              }
+              return himno;
+            } catch (error) {
+              console.error(
+                `Error al obtener letra de ${himno.Titulo}:`,
+                error,
+              );
+              return himno;
+            }
+          }),
+        );
+
+        setTodosLosHimnos(himnosCompletos);
         setList(data);
       } catch (error) {
         console.error(error);
@@ -120,6 +171,7 @@ const Himnos = () => {
   const volverAtras = () => {
     setLetraCoro("");
     setResultados([]);
+    setErr(false);
   };
 
   let versos = [];
@@ -135,7 +187,7 @@ const Himnos = () => {
       typeof resultados[0] === "object" &&
       resultados[0] !== null
     ) {
-      setVersosRes(resultados[0].Letra.split("\n"));
+      setVersosRes(resultados[0].Letra ? resultados[0].Letra.split("\n") : []);
     }
   }, [resultados]);
 
@@ -235,7 +287,7 @@ const Himnos = () => {
                 </h2>
 
                 <div className="song-lyrics">
-                  {coro.Letra.split("\n").map((verso, index) => (
+                  {(coro.Letra || "").split("\n").map((verso, index) => (
                     <p
                       key={`${coro.ID}-${index}`}
                       style={{
