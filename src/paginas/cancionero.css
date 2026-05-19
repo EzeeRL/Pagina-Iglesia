@@ -249,6 +249,18 @@
   gap: 14px;
 }
 
+.menos {
+  font-size: 14px;
+}
+
+.mas {
+  font-size: 20px;
+}
+
+.value-range {
+  color: var(--primary);
+}
+
 .song-title {
   font-size: 3rem;
   color: var(--primary);

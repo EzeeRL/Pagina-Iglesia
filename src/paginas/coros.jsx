@@ -190,7 +190,7 @@ const Coros = () => {
             </button>
 
             <div className="font-size-control">
-              <span>A-</span>
+              <span className="menos">A-</span>
 
               <input
                 type="range"
@@ -198,9 +198,10 @@ const Coros = () => {
                 max="50"
                 value={tamañoLetra}
                 onChange={manejarCambioTamaño}
+                className="value-range"
               />
 
-              <span>A+</span>
+              <span className="mas">A+</span>
             </div>
           </div>
 
