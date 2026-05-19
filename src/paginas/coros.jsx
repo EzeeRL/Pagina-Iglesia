@@ -10,7 +10,6 @@ const Coros = () => {
   const [letraCoro, setLetraCoro] = useState("");
   const [titulo, setTitulo] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [versosRes, setVersosRes] = useState([]);
   const [err, setErr] = useState(false);
   const [errMesage, setErrMesage] = useState("");
 
@@ -23,6 +22,7 @@ const Coros = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const response = await fetch("https://vtl-back.vercel.app/totalCoros", {
         method: "POST",
@@ -31,16 +31,21 @@ const Coros = () => {
         },
         body: JSON.stringify({ termino: busqueda }),
       });
+
       if (!response.ok) {
-        const errorData = await response.text(); // Captura el mensaje de error del servidor
+        const errorData = await response.text();
+
         setErrMesage(errorData);
 
         throw new Error(`Error en la solicitud: ${errorData}`);
       }
 
       const data = await response.json();
+
       setErr(false);
       setResultados(data);
+
+      console.log(data);
     } catch (error) {
       setErr(true);
       console.error("Error al buscar coros:", error);
@@ -51,11 +56,15 @@ const Coros = () => {
     const fetchCoros = async () => {
       try {
         const response = await fetch("https://vtl-back.vercel.app/listCoro");
+
         if (!response.ok) {
           throw new Error("Error al obtener los coros");
         }
+
         const data = await response.json();
+
         setList(data);
+
         console.log(data);
       } catch (error) {
         console.error("Error al obtener los coros:", error);
@@ -80,8 +89,10 @@ const Coros = () => {
       }
 
       const data = await response.json();
+
       setLetraCoro(data.letra);
       setTitulo(data.titulo);
+
       console.log(data);
     } catch (error) {
       console.error("Error al obtener la letra del coro:", error);
@@ -94,25 +105,14 @@ const Coros = () => {
 
   const volverAtras = () => {
     setLetraCoro("");
-    setResultados("");
+    setResultados([]);
   };
 
   let versos = [];
+
   if (letraCoro) {
     versos = letraCoro.split("\n");
   }
-
-  useEffect(() => {
-    console.log(resultados);
-    if (
-      resultados &&
-      resultados.length > 0 &&
-      typeof resultados[0] === "object" &&
-      resultados[0] !== null
-    ) {
-      setVersosRes(resultados[0].letra.split("\n"));
-    }
-  }, [resultados]);
 
   const [tamañoLetra, setTamañoLetra] = useState(16);
 
@@ -141,7 +141,9 @@ const Coros = () => {
         <h1 className="titulo-cancionero">Coros</h1>
 
         <p className="cancionero-description">
-          Encuentra rápidamente los coros, buscando por titulo o letra de la canción. <br /> Por favor, no dejar espacios ni puntos al final de la búsqueda.
+          Encuentra rápidamente los coros, buscando por titulo o letra de la
+          canción. <br />
+          Por favor, no dejar espacios ni puntos al final de la búsqueda.
         </p>
 
         {/* SEARCH */}
@@ -203,19 +205,23 @@ const Coros = () => {
           </div>
 
           {resultados.length > 0 ? (
-            resultados.map((coro) => (
-              <div key={coro.id}>
-                <h2 className="song-title">{coro.titulo}</h2>
+            resultados.map((coro) => {
+              const versosResultado = coro.letra.split("\n");
 
-                <div className="song-lyrics">
-                  {versosRes.map((verso, index) => (
-                    <p key={index} style={{ fontSize: `${tamañoLetra}px` }}>
-                      {verso}
-                    </p>
-                  ))}
+              return (
+                <div key={coro.id}>
+                  <h2 className="song-title">{coro.titulo}</h2>
+
+                  <div className="song-lyrics">
+                    {versosResultado.map((verso, index) => (
+                      <p key={index} style={{ fontSize: `${tamañoLetra}px` }}>
+                        {verso}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           ) : (
             <>
               <h2 className="song-title">{titulo}</h2>

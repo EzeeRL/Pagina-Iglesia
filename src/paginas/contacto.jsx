@@ -67,7 +67,7 @@ function Contacto() {
           <div className="contact-card">
             <span className="card-label">CONTACTO</span>
 
-            <h3>Email</h3>
+            <h3 className="email-text">Email</h3>
 
             <a
               href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlKnTKrVwZcZcGbHvVXCHKKpVLTtFxdXXmbxxlLvSZlWzLdfCrKJwJBCQrxrtXmTZjgcBB"

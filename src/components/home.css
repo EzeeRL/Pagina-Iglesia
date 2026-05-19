@@ -77,6 +77,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .primary-btn {
@@ -88,6 +89,8 @@ body {
 .secondary-btn {
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #000;
 }
 
 .primary-btn:hover,

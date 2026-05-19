@@ -37,15 +37,21 @@ export default function Footer() {
 
         <div className="footer-column">
           <h3>Horarios</h3>
+          <p>Martes — 17:00hs</p>
           <p>Viernes — 20:00hs</p>
           <p>Domingo — 9:30hs</p>
-          <p>Escuela Bíblica Infantil - 11:30hs</p>
+          <p>Domingo — Escuela Bíblica Infantil - 11:30hs</p>
         </div>
 
         <div className="footer-column">
           <h3>Contacto</h3>
           <p>Vicente López 2113 Sarandí, Avellaneda, Buenos Aires, Argentina</p>
-          <p>icevtl@gmail.com</p>
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHxwJpFZrmMFFHstpVhcKTFtcmqzHshMQvzGJZbvbJlBFMGrJksxcBLbHnHKttPwdwkRRxF"
+            target="_blank"
+          >
+            icevtl@gmail.com
+          </a>
         </div>
 
         <div className="footer-column">

@@ -3,7 +3,6 @@ import "./Home.css";
 export default function Home() {
   return (
     <main className="home">
-
       {/* HERO */}
 
       <section className="hero">
@@ -22,9 +21,17 @@ export default function Home() {
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-btn">Ver horarios</button>
+            <a href="#horarios" className="primary-btn">
+              Ver horarios
+            </a>
 
-            <button className="secondary-btn">Ver transmisiones</button>
+            <a
+              href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+              target="_blank"
+              className="secondary-btn"
+            >
+              Ver transmisiones
+            </a>
           </div>
         </div>
 
@@ -60,7 +67,7 @@ export default function Home() {
 
       {/* HORARIOS */}
 
-      <section className="schedule">
+      <section className="schedule" id="horarios">
         <div className="section-header">
           <span className="section-tag">HORARIOS</span>
           <h2>Nuestras reuniones</h2>
@@ -77,11 +84,28 @@ export default function Home() {
           </div>
 
           <div className="schedule-card">
+            <h3>MARTES</h3>
+            <span>17:00 HS</span>
+            <p>
+              Reunión Femenina.
+            </p>
+          </div>
+
+          <div className="schedule-card">
             <h3>MIÉRCOLES</h3>
             <span>20:00 HS</span>
             <p>
               Adicciones VS Vida. <br />
               Zoom ID: 546 067 9344
+            </p>
+          </div>
+
+          <div className="schedule-card">
+            <h3>JUEVES</h3>
+            <span>20:00 HS</span>
+            <p>
+              Espacio Varón <br />
+              Primer y tercer jueves de cada mes.
             </p>
           </div>
 
@@ -126,7 +150,6 @@ export default function Home() {
 
         <span>Mateo 18:20</span>
       </section>
-
     </main>
   );
 }

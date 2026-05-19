@@ -17,12 +17,23 @@ export default function Navbar() {
         <nav className="navbar-links">
           <a href="/">Inicio</a>
           <a href="/#nosotros">Nosotros</a>
-          <a href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez" target="_blank">Predicas</a>
+          <a
+            href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+            target="_blank"
+          >
+            Predicas
+          </a>
           <a href="/Coros">Cancionero</a>
           <a href="/Contacto">Contacto</a>
         </nav>
 
-        <a href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez" target="_blank" className="live-btn">EN VIVO</a>
+        <a
+          href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+          target="_blank"
+          className="live-btn"
+        >
+          EN VIVO
+        </a>
       </header>
 
       {/* MOBILE NAVBAR */}
@@ -42,11 +53,16 @@ export default function Navbar() {
         </div>
 
         <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
-          <a href="">Inicio</a>
-          <a href="">Nosotros</a>
-          <a href="">Eventos</a>
-          <a href="">Predicas</a>
-          <a href="">Contacto</a>
+          <a href="/">Inicio</a>
+          <a href="/#nosotros">Nosotros</a>
+          <a
+            href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+            target="_blank"
+          >
+            Predicas
+          </a>
+          <a href="/Coros">Cancionero</a>
+          <a href="/Contacto">Contacto</a>
 
           <button className="mobile-live-btn">EN VIVO</button>
         </div>
