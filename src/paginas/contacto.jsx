@@ -15,7 +15,7 @@ function Contacto() {
           <p className="contact-description">
             Hay un lugar para vos y tu familia.
             <br />
-            Te esperamos en Sarandí, Avellaneda.
+            Te esperamos en Vicente López 2113 Sarandí, Avellaneda.
           </p>
 
           <div className="contact-buttons">

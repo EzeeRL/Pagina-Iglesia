@@ -78,7 +78,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>© 2026 Iglesia Vicente López Solo Cristo Salva.</p>
         <a
-          href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+          href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez/streams"
           target="_blank"
           className="footer-live-btn"
         >

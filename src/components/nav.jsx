@@ -28,7 +28,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
+          href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez/streams"
           target="_blank"
           className="live-btn"
         >
@@ -64,7 +64,13 @@ export default function Navbar() {
           <a href="/Coros">Cancionero</a>
           <a href="/Contacto">Contacto</a>
 
-          <button className="mobile-live-btn">EN VIVO</button>
+          <a
+            href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez/streams"
+            target="_blank"
+            className="mobile-live-btn"
+          >
+            EN VIVO
+          </a>
         </div>
       </header>
     </div>

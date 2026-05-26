@@ -1,6 +1,20 @@
 import "./Home.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function Home() {
+  const sliderImages = [
+    "/slider/img-1.jpeg",
+    "/slider/img-2.jpeg",
+    "/slider/img-3.jpeg",
+    "/slider/img-4.jpeg",
+    "/slider/img-5.jpeg",
+    "/slider/img-6.jpeg",
+  ];
+
   return (
     <main className="home">
       {/* HERO */}
@@ -9,15 +23,12 @@ export default function Home() {
         <div className="hero-content">
           <span className="subtitle">UNA CASA PARA TODOS</span>
 
-          <h1>
-            Un lugar para
-            <br />
-            encontrar esperanza.
-          </h1>
+          <h1>Una familia de Fe</h1>
 
           <p>
-            Tu esperanza y salvación están en Jesús. <br />
-            Solo Cristo Salva
+            Tu esperanza y salvación están en Jesús.
+            <br />
+            Sólo Cristo Salva
           </p>
 
           <div className="hero-buttons">
@@ -28,6 +39,7 @@ export default function Home() {
             <a
               href="https://www.youtube.com/@IglesiaVicenteL%C3%B3pez"
               target="_blank"
+              rel="noreferrer"
               className="secondary-btn"
             >
               Ver transmisiones
@@ -36,33 +48,108 @@ export default function Home() {
         </div>
 
         <div className="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?q=80&w=1200&auto=format&fit=crop"
-            alt="Iglesia"
-          />
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            slidesPerView={1}
+            className="hero-swiper"
+          >
+            {sliderImages.map((image, index) => (
+              <SwiperSlide key={index}>
+                <img src={image} alt={`Iglesia ${index + 1}`} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
 
-      {/* ABOUT */}
+      {/* 5 SOLAS */}
 
-      <section className="about">
-        <div className="about-image">
-          <img
-            src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop"
-            alt="Comunidad"
-          />
+      <section className="beliefs" id="nosotros">
+        <div className="beliefs-header">
+          <span className="section-tag">LO QUE CREEMOS</span>
+          <h2>Pilares teológicos de las iglesias evangélicas</h2>
         </div>
 
-        <div className="about-content" id="nosotros">
-          <span className="section-tag">QUIÉNES SOMOS</span>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={1}
+          spaceBetween={0}
+          loop={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          className="faith-swiper"
+        >
+          <SwiperSlide>
+            <div className="belief-slide">
+              <h3>Sola Scriptura</h3>
+              <span>Sólo la Escritura</span>
 
-          <h2>Creemos en comunidad, autenticidad y propósito.</h2>
+              <p>
+                La Biblia es la autoridad final y suficiente para la fe y la
+                práctica cristiana.
+              </p>
+            </div>
+          </SwiperSlide>
 
-          <p>
-            Queremos ser una iglesia cercana, cálida y enfocada en acompañar
-            personas en cada etapa de su vida.
-          </p>
-        </div>
+          <SwiperSlide>
+            <div className="belief-slide">
+              <h3>Sola Fide</h3>
+              <span>Sólo por la Fe</span>
+
+              <p>
+                La salvación se recibe únicamente por la fe en Jesucristo, no
+                por obras o méritos humanos.
+              </p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="belief-slide">
+              <h3>Sola Gratia</h3>
+              <span>Sólo por la Gracia</span>
+
+              <p>
+                La salvación es un regalo inmerecido de Dios, otorgado por su
+                gracia.
+              </p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="belief-slide">
+              <h3>Solus Christus</h3>
+              <span>Sólo Cristo</span>
+
+              <p>
+                Jesucristo es el único mediador entre Dios y los hombres y el
+                único camino para la salvación.
+              </p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="belief-slide">
+              <h3>Soli Deo Gloria</h3>
+              <span>Sólo a Dios sea la Gloria</span>
+
+              <p>
+                Toda la gloria por la creación, la salvación y la vida cristiana
+                pertenece únicamente a Dios.
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
 
       {/* HORARIOS */}
@@ -78,7 +165,8 @@ export default function Home() {
             <h3>LUNES</h3>
             <span>20:00 HS</span>
             <p>
-              Adicciones VS Vida. <br />
+              Adicciones VS Vida.
+              <br />
               Zoom ID: 546 067 9344
             </p>
           </div>
@@ -86,16 +174,15 @@ export default function Home() {
           <div className="schedule-card">
             <h3>MARTES</h3>
             <span>17:00 HS</span>
-            <p>
-              Reunión Femenina.
-            </p>
+            <p>Reunión Femenina.</p>
           </div>
 
           <div className="schedule-card">
             <h3>MIÉRCOLES</h3>
             <span>20:00 HS</span>
             <p>
-              Adicciones VS Vida. <br />
+              Adicciones VS Vida.
+              <br />
               Zoom ID: 546 067 9344
             </p>
           </div>
@@ -104,7 +191,8 @@ export default function Home() {
             <h3>JUEVES</h3>
             <span>20:00 HS</span>
             <p>
-              Espacio Varón <br />
+              Espacio Varón
+              <br />
               Primer y tercer jueves de cada mes.
             </p>
           </div>
@@ -145,10 +233,12 @@ export default function Home() {
 
       <section className="verse">
         <p>
-          “Porque donde están dos o tres reunidos en mi nombre, allí estoy yo.”
+          “Porque <b>tanto amó Dios al mundo</b> que dio a su <b>Hijo único</b>,
+          para que <b>todo</b> el que cree en él <b>no se pierda</b>, sino que
+          tenga <b>vida eterna</b>.”
         </p>
 
-        <span>Mateo 18:20</span>
+        <span>Juan 3:16</span>
       </section>
     </main>
   );
