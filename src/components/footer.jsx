@@ -13,7 +13,7 @@ export default function Footer() {
             Solo Cristo Salva
           </h2>
           <p>
-            Una comunidad centrada en Jesús, en la esperanza y en vidas
+            Una familia centrada en Jesús, en la esperanza y en vidas
             transformadas.
           </p>
         </div>
